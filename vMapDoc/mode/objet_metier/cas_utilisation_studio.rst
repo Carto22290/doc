@@ -50,7 +50,7 @@ Dans l'info-bulle
 Au quel cas il faut modifier l'attribut **SQL Summary** dans la
 définition de l'objet métier et utiliser des balises *"bo\_link"*.
 
-Exemple:
+Exemple :
 
 .. code:: sql
 
@@ -60,7 +60,7 @@ Exemple:
 la fin de l'URL pour effectuer une recherche Google du nom de
 l'enregistrement sélectionné.
 
-**Il est possible de concaténer une propertie avec le lien:** en écrivant **{{getPropertie('[nom de la propertie]')}}**.
+**Il est possible de concaténer une propertie avec le lien :** en écrivant **{{getPropertie('[nom de la propertie]')}}**.
 Dans l'exemple ci-dessous la valeur de la propertie "*services_alias*" est affichée dans l'info-bulle.
 
 .. code:: sql
