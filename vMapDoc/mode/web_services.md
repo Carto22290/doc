@@ -5,14 +5,14 @@
 ## 1. Définition
 Les web services sont la partie back-end de l'application, ils se composent de plusieurs ressources qui permettent au client d'interroger la base de données, de lire/modifier des fichiers et d'effectuer des opérations sur la machine physique du serveur. 
 
-Dans vMap et autres produits Veremes ils sont mis en place par une API-REST cela signifie qu'on accède aux données selon des règles bien spécifiques.
+Dans vMap et autres produits Veremes, ils sont mis en place par une API-REST ce qui signifie que l'on accède aux données selon des règles bien spécifiques.
 
-Exemple de requête permettant de lister les cartes vMap
+Exemple de requête permettant de lister les cartes vMap : 
 ```
 https://corbieres/vmap_rest/vmap/maps
 ```
 
-Exemple de requête permettant de voir les informations de la carte ayant pour identifiant le nombre 15
+Exemple de requête permettant de voir les informations de la carte ayant pour identifiant le nombre 15 : 
 ```
 https://corbieres/vmap_rest/vmap/maps/{15}
 ```
