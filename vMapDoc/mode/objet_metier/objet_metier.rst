@@ -153,6 +153,9 @@ La fenêtre fenêtre suivante apparaît et l'utilisateur peut :
 Le studio est divisé en quatre principales zones de gestion
 des formulaires :
 
+.. figure:: ../../studio_zones.png
+   :alt: Studio - Gestion des formulaires
+
 3.2.2.1. La zone d'administration du fichier
 ''''''''''''''''''''''''''''''''''''''''''''
 
