@@ -1,9 +1,7 @@
 Cas concrets d'utilisation dans vMap
 ==============================================
 
-Ce document décrit des exemples d'utilisation du studio dans vMap, il
-est très utile pour comprendre le fonctionnement du studio ainsi que de
-vMap
+Ce document décrit des exemples d'utilisation du studio utiles pour comprendre son fonctionnement ainsi que l'intégralité de l'application. 
 
 Affichage d'onglets dans un formulaire
 --------------------------------------
