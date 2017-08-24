@@ -20,7 +20,7 @@ La création d’un objet métier s’opère en deux temps :
 
 Renseigner les champs suivants :
 
--   Titre: nom de l’objet métier tel qu’il apparaîtra dans le requêteur et dans le formulaire de création d’objet
+-   Titre : nom de l’objet métier tel qu’il apparaîtra dans le requêteur et dans le formulaire de création d’objet
 
 ![Titre de l'objet tel qu'il apparaît dans le requêteur]
 
@@ -42,7 +42,7 @@ Renseigner les champs suivants :
 
 ### 3.1. Définitions
 
-Pour chaque objet métier, plusieurs formulaires sont utilisables et paramétrables pour plusieurs cas d'utilisation:
+Pour chaque objet métier, plusieurs formulaires sont utilisables et paramétrables pour plusieurs cas d'utilisation :
 
 ### 3.1.1. Formulaire de recherche de l’objet métier (search)
 
