@@ -45,7 +45,7 @@ Ainsi l'API-REST retournera au client un résultat JSON où XML contenant les in
 ## 2. Utilisation
 
 ### 2.1. En-têtes
-Il y a diverses en-têtes essentielles à l'utilisation des ressources
+Il y a diverses en-têtes essentielles à l'utilisation des ressources.
 
 #### 2.1.1. Accept
 
@@ -61,17 +61,17 @@ Le format application/x-vm-json diffère en donnant comme nom du tableau "data".
 
 
 #### 2.1.2. Token
-Le token de connexion identifie l'utilisateur de l'application, c'est grâce à lui que la ressource saura si le demandeur possède les droits suffisants pour avoir un résultat, et c'est par son intermédiaire que se feront les connexions à la base de données.
+Le token de connexion identifie l'utilisateur de l'application, c'est grâce à lui que la ressource sait si le demandeur possède les droits suffisants pour avoir un résultat, et c'est par son intermédiaire que se font les connexions à la base de données.
 
-**Pour des raisons de sécurité il est strictement interdit de passer le token en tant que paramètre dans l'URL** et il faut donc le passer dans l'entête: si une personne malveillante a accès au réseau (man in the middle) elle pourra alors voir ce token et donc usurper l'identité d'un autre utilisateur.
+**Pour des raisons de sécurité il est strictement interdit de passer le token en tant que paramètre dans l'URL** et il faut donc le passer dans l'en-tête: si une personne malveillante a accès au réseau (man in the middle), elle pourrait alors voir ce token et donc usurper l'identité d'un autre utilisateur.
 
 
 #### 2.1.3. X-HTTP-Method-Override
-Lorsqu'on utilise régulièrement l'API-REST il est possible que l'on soit confronté à des problèmes des longueur des URL: au bout d un certain nombre de caractères, les navigateurs refuseront d’exécuter la requête et afficheront l'erreur suivante:
+Lorsqu'on utilise régulièrement l'API-REST, il est possible que l'on soit confronté à des problèmes des longueur des URL: au bout d un certain nombre de caractères, les navigateurs refuseront d’exécuter la requête et afficheront l'erreur suivante:
 ```
 414 URI Too Long
 ``` 
-Pour palier à cela, nous avons mis en place l'entête X-HTTP-Method-Override qui sert à envoyer une requête de type POST avec des paramètres figurant dans le body (sans limite de taille) et de les faire interpréter comme des requêtes GET:
+Pour palier à cela, nous avons mis en place l'en-tête X-HTTP-Method-Override qui sert à envoyer une requête de type POST avec des paramètres figurant dans le body (sans limite de taille) et de les faire interpréter comme des requêtes GET:
 ```
 General
     Request Method:POST
@@ -84,28 +84,28 @@ Request Headers
 ### 2.2. Paramètres génériques
 
 #### 2.2.1. order_by
-Permet de définir l'ordre d'affichage en cas ou il y ait plusieurs données, par défaut il vaudra l'identifiant de la ressource
+Permet de définir l'ordre d'affichage en cas ou il y ait plusieurs données. Il vaut, par défaut, l'identifiant de la ressource
 
 #### 2.2.2. sort_order
-Couplé au paramètre "order_by" il permet de définir l'ordre avec les valeurs suivantes:
+Couplé au paramètre "order_by" il permet de définir l'ordre avec les valeurs suivantes :
 
 - asc: ordre ascendant
 - desc: ordre descendant
 
 #### 2.2.3. limit
-Si le paramètre limit est fourni, alors le tableau retourné se limitera à "n" éléments
+Si le paramètre limit est fourni, alors le tableau retourné se limite à "n" éléments
 
 #### 2.2.4. offset
 Souvent couplé avec les paramètres "limit" et "order_by", il peut permettre par exemple d'effectuer une pagination sur une liste
 
 #### 2.2.5. attributs
-Définit les attributs qui seront retournés par le client, pour les renseigner il faudra écrire ces attributs en les séparant par le caractère "|"
+Définit les attributs qui sont retournés par le client. Pour les renseigner il faut écrire ces attributs en les séparant par le caractère "|".
 
 #### 2.2.6. distinct
-True/false permet de distinguer les valeurs résultantes
+True/false permet de distinguer les valeurs résultantes.
 
 #### 2.2.7. filter
-Donne la possibilité à l’utilisateur de filtrer les données, pour cela il faudra écrire un objet JSON  composé de **relations** et d'**opérateurs**.
+Donne la possibilité à l’utilisateur de filtrer les données. Pour cela il faut écrire un objet JSON  composé de **relations** et d'**opérateurs**.
 
 ##### 2.2.7.1. Relations
 
@@ -121,9 +121,9 @@ Les relations définissent le type de condition à utiliser selon la structure J
     }]
 }
 ```
-Ici on demande d'ajouter les filtres définis par les opérateurs selon la relation "AND", on aurait pu également utiliser une relation "OR".
+Ici on demande d'ajouter les filtres définis par les opérateurs selon la relation "AND". On aurait pu également utiliser une relation "OR".
 
-Il est également possible de faire dans une même requête du AND et du OR en incorporant une relation comme ci c'était un opérateur:
+Il est également possible de faire dans une même requête du AND et du OR en incorporant une relation comme ci c'était un opérateur :
 ```json
 {
     "relation": "AND",
@@ -144,10 +144,10 @@ Ainsi on obtiendra une requête constituée de AND et de OR (voir l'exemple ci-a
 
 ##### 2.2.7.2. Opérateurs
 
-Les opérateurs sont plus simples à comprendre, ils se composent de trois ou quatre arguments:
+Les opérateurs sont plus simples à comprendre, ils se composent de trois ou quatre arguments :
 
 - **column**: nom de la colonne sur laquelle appliquer le filtre
-- **value**: valeur sur laquelle il faudra filtrer
+- **value**: valeur sur laquelle opérer le  filtre
 - **compare_operator**: type de comparaison ("=", "!=", "<>", ">=", "<=", ">", "<", "IN", "NOT IN", "IS NULL", "IS NOT NULL", "LIKE", "INTERSECT")
 - **compare_operator_options (optionnel)**: ajoute des options suivant le type de compare_operator.
 
@@ -195,7 +195,7 @@ auteur='laurent' AND allume='true' AND route_id=10
 ```
 ___
 
-Si un seul opérateur est utilisé, alors pas la peine de renseigner de relation:
+Si un seul opérateur est utilisé, alors il n'est pas nécessaire de renseigner de relation :
 ```json
 {
     "column":"auteur",
@@ -209,7 +209,7 @@ auteur='laurent'
 ```
 ___
 
-En utilisant des relations imbriquées on peut effectuer des filtres complexes:
+En utilisant des relations imbriquées, on peut effectuer des filtres complexes :
 ```json
 {
     "relation": "AND",
@@ -237,7 +237,7 @@ auteur='laurent' AND (allume='true' OR route_id=10)
 ```
 ___
 
-On peut utiliser "compare_operator" = "IN" en utilisant des valeurs situées dans un tableau:
+On peut utiliser "compare_operator" = "IN" en utilisant des valeurs situées dans un tableau :
 ```json
 {
     "relation": "AND",
@@ -280,7 +280,7 @@ auteur LIKE 'laur'%
 ```
 ___
 
-En utilisant "compare_operator_options.case_insensitive" sur un type "LIKE" on peut rendre le filtre insensible à la casse:
+En utilisant "compare_operator_options.case_insensitive" sur un type "LIKE", on peut rendre le filtre insensible à la casse :
 ```json
 {
     "column":"auteur",
@@ -310,7 +310,7 @@ nom IS NOT NULL
 ```
 ___
 
-On peut effectuer des intersections géométriques utilisant PostGIS:
+On peut effectuer des intersections géométriques utilisant PostGIS :
 ```json
 {
     "column":"geom",
@@ -320,7 +320,7 @@ On peut effectuer des intersections géométriques utilisant PostGIS:
 ```
 ___
 
-L'option "source_proj" utilisée ici n'est pas obligatoire mais conseillée si on connaît le système de projection de la table:
+L'option "source_proj" utilisée ici n'est pas obligatoire mais conseillée si on connaît le système de projection de la table :
 ```json
 {
     "column":"geom",
@@ -333,7 +333,7 @@ L'option "source_proj" utilisée ici n'est pas obligatoire mais conseillée si o
 ```
 ___
 
-On peut utiliser un buffer lors de l'intersection, et même spécifier sur quelle type de géométrie s'appliquera le buffer:
+On peut utiliser un buffer lors de l'intersection, et même spécifier sur quelle type de géométrie s'appliquera le buffer :
 ```json
 {  
     "column":"geom",
@@ -349,13 +349,13 @@ On peut utiliser un buffer lors de l'intersection, et même spécifier sur quell
 
 
 ## 3. Exemple de création d'un web service et de ses ressources
-Dans une installation classique, les web services se trouvent sous forme de dossiers dans le répertoire vmap/vas/rest/ws. Dans ces dossiers se trouvent les fichiers indispensables ainsi que les ressources des web services.
+Dans une installation classique, les web services se trouvent sous forme de dossiers dans le répertoire vmap/vas/rest/ws. Dans ces dossiers se trouvent les fichiers indispensables, ainsi que les ressources des web services.
 
-Dans cet exemple nous allons créer un web service "customWS" dans lequel nous allons créer une ressource "villes"
+Dans cet exemple, nous allons créer un web service "customWS" dans lequel nous allons créer une ressource "villes". 
 
 
 ### 3.1. Création du dossier et des fichiers indispensables
-Parmi les fichiers indispensables, nous retrouvons les fichiers suivants:
+Parmi les fichiers indispensables, nous retrouvons les fichiers suivants :
 
 - **overview.phtml**: Permet d'afficher la ressource dans la page d'aide au développement
 - **CustomWS.class.inc**: Classe mère du projet
