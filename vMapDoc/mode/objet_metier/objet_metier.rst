@@ -107,12 +107,10 @@ permet à l'utilisateur de créer un objet et de renseigner ses attributs.
 3.2 Studio
 ~~~~~~~~~~
 
-Afin d'administrer ces formulaires pouvant être très complexes, nous
-avons développé un studio permettant à l'administrateur de gérer
+Afin d'administrer ces formulaires pouvant être très complexes, un studio a été developpé permettant à l'administrateur de gérer
 graphiquement les différents formulaires des objets métier.
 
-Pour accéder au studio, il suffit de cliquer sur la section Formulaires
-lors de l'édition d'un objet métier.
+Le studio est accessible via la section Formulaire après avoir éditer un objet métier. 
 
 .. figure:: ../../images/formulaire_studio.png
    :alt: image
@@ -158,12 +156,14 @@ des formulaires :
 3.2.2.1. La zone d'administration du fichier
 ''''''''''''''''''''''''''''''''''''''''''''
 
-Il s'agit d'une des zones les plus importantes car elle permet la sauvegarde et
-l'affichage des fichiers. Il y a trois types de formulaires : le
-**formulaire par défaut** qui est le formulaire généré automatiquement,
-le **formulaire publié** qui est le formulaire en cours d'utilisation
-dans l'application, et enfin le **formulaire personnalisé** qui est le
-formulaire en cours d'édition.
+Il s'agit d'une des zones fondamentale car elle permet la sauvegarde et
+l'affichage des fichiers. 
+
+Il y a trois types de formulaires : 
+- le **formulaire par défaut** qui est le formulaire généré automatiquement. Le développeur peut choisir de conserver en l'etat ce formulaire ou de le personnaliser. 
+- le **formulaire publié** qui est le formulaire en cours d'utilisation
+dans l'application
+- le **formulaire personnalisé** qui est le formulaire en cours d'édition.
 
 .. figure:: ../../images/formulaire_zone_fichier.png
    :alt: image
