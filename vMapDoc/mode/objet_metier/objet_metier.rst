@@ -169,17 +169,16 @@ Il y a trois types de formulaires :
 .. figure:: ../../images/formulaire_zone_fichier.png
    :alt: image
 
-Pour modifier un formulaire, l'administrateur se place sur
-**Perso**, sélectionne le type de formulaire sur lequel il veut
-travailler (display, search, update, insert), édite ce qu'il veut
-modifier et enfin **publie le formulaire personnalisé** car sans cela
-les modifications ne seront pas visibles par les utilisateurs.
+Pour modifier un formulaire, l'administrateur clique sur le bouton 
+**Perso** puis  sélectionne le type de formulaire sur lequel il veut
+travailler (display, search, update, insert). Il édite ce ce dernier et **publie le formulaire personnalisé** car sans cela
+les modifications ne serainent pas visibles par les utilisateurs.
 
-Le menu déroulant **Fichier** donnera la possibilité de gérer les
+Le menu déroulant **Fichier** permet de gérer les
 versions des formulaires (publier le formulaire personnalisé, régénérer
 le formulaire par défaut etc..)
 
-Le menu déroulant **Édition** permettra quand à lui d'opérer des actions
+Le menu déroulant **Édition** permet d'opérer des actions
 d'administration sur le formulaire comme par exemple la **gestion des
 onglets**.
 
