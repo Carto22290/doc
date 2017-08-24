@@ -55,9 +55,9 @@ Il y a diverses en-têtes essentielles à l'utilisation des ressources
 - application/x-vm-json
 
 ##### Définition
-Cette entête détermine le format de réponse demandé par le client. 
-Les formats application/json et application/xml retourneront un objet possédant un tableau qui porte le nom de la ressource (dans le cas de l'exemple ci-dessus il s'agit de "maps").
-Le format application/x-vm-json diffère en donnant comme nom du tableau "data", cela permettant de faire des requêtes génériques par le client
+Cette en-tête détermine le format de réponse demandé par le client. 
+Les formats application/json et application/xml retournent un objet possédant un tableau portant le nom de la ressource (dans le cas de l'exemple ci-dessus,  il s'agit de "maps").
+Le format application/x-vm-json diffère en donnant comme nom du tableau "data". Cela permet de faire des requêtes génériques par le client. 
 
 
 #### 2.1.2. Token
