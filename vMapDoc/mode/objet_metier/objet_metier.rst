@@ -62,7 +62,7 @@ Renseigner les champs suivants :
 ~~~~~~~~~~~~~~~~
 
 Pour chaque objet métier, plusieurs formulaires sont utilisables et
-paramétrables pour plusieurs cas d'utilisation:
+paramétrables : 
 
 3.1.1. Formulaire de recherche de l’objet métier (search)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
