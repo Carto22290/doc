@@ -99,8 +99,7 @@ en édition.
 
 Utilisable par les personnes ayant des **droit en insertion** sur la
 table liée et accessible par le bouton **"Éditer les attributs"**, il
-permet à l'utilisateur de renseigner les arguments de l'enregistrement à
-insérer.
+permet à l'utilisateur de créer un objet et de renseigner ses attributs.  
 
 .. figure:: ../../images/formulaire_insert.png
    :alt: image
