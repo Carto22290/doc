@@ -160,7 +160,7 @@ Il s'agit d'une des zones fondamentales car elle permet la sauvegarde et l'affic
 
 Il existe trois types de formulaires : 
 
-- le **formulaire par défaut** formul,généré automatiquement. Le développeur peut choisir de conserver en l'etat ce formulaire ou de le personnaliser. 
+- le **formulaire par défaut**, formulaire généré automatiquement. Le développeur peut choisir de conserver en l'etat ce formulaire ou de le personnaliser. 
 
 - le **formulaire publié**, formulaire en cours d'utilisation dans l'application
 
