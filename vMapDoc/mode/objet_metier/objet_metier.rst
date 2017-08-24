@@ -156,7 +156,7 @@ des formulaires :
 3.2.2.1. La zone d'administration du fichier
 ''''''''''''''''''''''''''''''''''''''''''''
 
-Concrètement la zone la plus importante car elle permet la sauvegarde et
+Il s'agit d'une des zones les plus importantes car elle permet la sauvegarde et
 l'affichage des fichiers. Il y a trois types de formulaires : le
 **formulaire par défaut** qui est le formulaire généré automatiquement,
 le **formulaire publié** qui est le formulaire en cours d'utilisation
