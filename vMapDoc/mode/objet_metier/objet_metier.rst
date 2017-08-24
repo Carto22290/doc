@@ -127,19 +127,19 @@ présentes sur la table liée. Si le typage en base de données est bien
 fait et que cela est possible, le type de champ affiché dans le
 formulaire sera également implémenté (texte, nombre, date etc...).
 
-Pour cela, il suffit de cliquer **confirmer** lors de l'affichage du
-message suivant:
+Pour cela, il suffit de cliquer sur **confirmer** lors de l'affichage du
+message suivant :
 
 .. figure:: ../../images/formulaire_message_creation.png
    :alt: image
 
-Ou bien, dans le **formulaire par défaut** de cliquer sur **Régénérer le
-formulaire par défaut**
+On peut également cliquer dans le **formulaire par défaut** sur **Régénérer le
+formulaire par défaut**.
 
 .. figure:: ../../images/formulaire_reset_default_button.png
    :alt: image
 
-Alors apparaîtra la fenêtre suivante où l'utilisateur peut:
+La fenêtre fenêtre suivante apparaît et l'utilisateur peut :
 
 -  Sélectionner les arguments à afficher
 -  Changer pour chaque champ le nom qui sera affiché dans le formulaire
@@ -147,10 +147,10 @@ Alors apparaîtra la fenêtre suivante où l'utilisateur peut:
 .. figure:: ../../images/formulaire_selection_colonnes.png
    :alt: image
 
-3.2.2. Description du studio
+3.2.2. Utilisation du studio
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Le studio est divisé en quatre zones principales permettant la gestion
+Le studio est divisé en quatre principales zones de gestion
 des formulaires :
 
 3.2.2.1. La zone d'administration du fichier
