@@ -44,8 +44,8 @@ Ainsi l'API-REST retournera au client un résultat JSON où XML contenant les in
 
 ## 2. Utilisation
 
-### 2.1. Entêtes
-Il y a diverses entêtes essentielles à l'utilisation des ressources
+### 2.1. En-têtes
+Il y a diverses en-têtes essentielles à l'utilisation des ressources
 
 #### 2.1.1. Accept
 
