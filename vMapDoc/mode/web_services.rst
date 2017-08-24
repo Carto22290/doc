@@ -16,14 +16,14 @@ Dans vMap et autres produits Veremes ils sont mis en place par une
 API-REST, ce signifie que l'on accède aux données selon des règles bien
 spécifiques.
 
-Exemple de requête permettant de lister les cartes vMap
+Exemple de requête permettant de lister les cartes vMap : 
 
 ::
 
     https://corbieres/vmap_rest/vmap/maps
 
 Exemple de requête permettant de voir les informations de la carte ayant
-pour identifiant le nombre 15
+pour identifiant le nombre 15 : 
 
 ::
 
