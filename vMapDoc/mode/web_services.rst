@@ -13,7 +13,7 @@ la base de données, de lire/modifier des fichiers et d'effectuer des
 opérations sur la machine physique du serveur.
 
 Dans vMap et autres produits Veremes ils sont mis en place par une
-API-REST cela signifie qu'on accède aux données selon des règles bien
+API-REST, ce signifie que l'on accède aux données selon des règles bien
 spécifiques.
 
 Exemple de requête permettant de lister les cartes vMap
