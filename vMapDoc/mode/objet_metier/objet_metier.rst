@@ -156,8 +156,7 @@ des formulaires :
 3.2.2.1. La zone d'administration du fichier
 ''''''''''''''''''''''''''''''''''''''''''''
 
-Il s'agit d'une des zones fondamentale car elle permet la sauvegarde et
-l'affichage des fichiers. 
+Il s'agit d'une des zones fondamentales car elle permet la sauvegarde et l'affichage des fichiers. 
 
 Il y a trois types de formulaires : 
 
