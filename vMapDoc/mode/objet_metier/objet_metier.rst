@@ -139,7 +139,7 @@ formulaire par défaut**.
 La fenêtre suivante apparaît et l'utilisateur peut :
 
 -  Sélectionner les arguments à afficher
--  Changer pour chaque champ le nom qui sera affiché dans le formulaire
+-  Changer pour chaque champ, le nom qui sera affiché dans le formulaire
 
 .. figure:: ../../images/formulaire_selection_colonnes.png
    :alt: image
