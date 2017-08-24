@@ -67,11 +67,11 @@ Le token de connexion identifie l'utilisateur de l'application. C'est grâce à 
 
 
 #### 2.1.3. X-HTTP-Method-Override
-Lorsqu'on utilise régulièrement l'API-REST, il est possible que l'on soit confronté à des problèmes des longueur des URL: au bout d un certain nombre de caractères, les navigateurs refuseront d’exécuter la requête et afficheront l'erreur suivante:
+Lorsque l'on utilise régulièrement l'API-REST, il est possible que l'on soit confronté à des problèmes de longueur des URL : au bout d'un certain nombre de caractères, les navigateurs refuseront d’exécuter la requête et afficheront l'erreur suivante :
 ```
 414 URI Too Long
 ``` 
-Pour palier à cela, nous avons mis en place l'en-tête X-HTTP-Method-Override qui sert à envoyer une requête de type POST avec des paramètres figurant dans le body (sans limite de taille) et de les faire interpréter comme des requêtes GET:
+Pour palier à cela, nous avons mis en place l'en-tête X-HTTP-Method-Override qui sert à envoyer une requête de type POST avec des paramètres figurant dans le body (sans limite de taille) et de les faire interpréter comme des requêtes GET :
 ```
 General
     Request Method:POST
@@ -99,7 +99,7 @@ Si le paramètre limit est fourni, alors le tableau retourné se limite à "n" �
 Souvent couplé avec les paramètres "limit" et "order_by", il peut permettre par exemple d'effectuer une pagination sur une liste
 
 #### 2.2.5. attributs
-Définit les attributs qui sont retournés par le client. Pour les renseigner il faut écrire ces attributs en les séparant par le caractère "|".
+Définit les attributs qui sont retournés par le client. Pour les renseigner, il faut écrire ces attributs en les séparant par le caractère "|".
 
 #### 2.2.6. distinct
 True/false permet de distinguer les valeurs résultantes.
@@ -109,7 +109,7 @@ Donne la possibilité à l’utilisateur de filtrer les données. Pour cela il f
 
 ##### 2.2.7.1. Relations
 
-Les relations définissent le type de condition à utiliser selon la structure JSON suivante:
+Les relations définissent le type de condition à utiliser selon la structure JSON suivante :
 
 ```json
 {
@@ -121,7 +121,7 @@ Les relations définissent le type de condition à utiliser selon la structure J
     }]
 }
 ```
-Ici on demande d'ajouter les filtres définis par les opérateurs selon la relation "AND". On aurait pu également utiliser une relation "OR".
+Ici, on demande d'ajouter les filtres définis par les opérateurs selon la relation "AND". On aurait pu également utiliser une relation "OR".
 
 Il est également possible de faire dans une même requête du AND et du OR en incorporant une relation comme ci c'était un opérateur :
 ```json
@@ -140,18 +140,18 @@ Il est également possible de faire dans une même requête du AND et du OR en i
 }
 
 ```
-Ainsi on obtiendra une requête constituée de AND et de OR (voir l'exemple ci-après).
+Ainsi, on obtiendra une requête constituée de AND et de OR (voir l'exemple ci-après).
 
 ##### 2.2.7.2. Opérateurs
 
 Les opérateurs sont plus simples à comprendre, ils se composent de trois ou quatre arguments :
 
-- **column**: nom de la colonne sur laquelle appliquer le filtre
-- **value**: valeur sur laquelle opérer le  filtre
-- **compare_operator**: type de comparaison ("=", "!=", "<>", ">=", "<=", ">", "<", "IN", "NOT IN", "IS NULL", "IS NOT NULL", "LIKE", "INTERSECT")
-- **compare_operator_options (optionnel)**: ajoute des options suivant le type de compare_operator.
+- **column** : nom de la colonne sur laquelle appliquer le filtre
+- **value** : valeur sur laquelle opérer le  filtre
+- **compare_operator** : type de comparaison ("=", "!=", "<>", ">=", "<=", ">", "<", "IN", "NOT IN", "IS NULL", "IS NOT NULL", "LIKE", "INTERSECT")
+- **compare_operator_options (optionnel)** : ajoute des options suivant le type de compare_operator.
 
-La structure est la suivante:
+La structure est la suivante :
 ```json
 {
     "column": "...",
@@ -170,7 +170,7 @@ Pour être plus parlant, voici quelques exemples avec leur équivalent sous form
 
 
 
-En utilisant une relation AND on peut filtrer sur plusieurs opérateurs:
+En utilisant une relation AND on peut filtrer sur plusieurs opérateurs :
 ```json
 {
     "relation": "AND",
@@ -265,7 +265,7 @@ auteur='laurent' AND (allume='true' OR route_id IN (5, 10))
 ```
 ___
 
-Il est possible d'utiliser "compare_operator" = "LIKE" avec des valeurs suivies ou précédées du caractère "%":
+Il est possible d'utiliser "compare_operator" = "LIKE" avec des valeurs suivies ou précédées du caractère "%" :
 
 ```json
 {
@@ -357,18 +357,18 @@ Dans cet exemple, nous allons créer un web service "customWS" dans lequel nous 
 ### 3.1. Création du dossier et des fichiers indispensables
 Parmi les fichiers indispensables, nous retrouvons les fichiers suivants :
 
-- **overview.phtml**: Permet d'afficher la ressource dans la page d'aide au développement
-- **CustomWS.class.inc**: Classe mère du projet
-- **CustomWS.class.sql.inc**: Fichier contenant les requêtes SQL du projet, doit contenir au moins les requêtes "Définition des requêtes de l'api Vitis"
+- **overview.phtml** : Permet d'afficher la ressource dans la page d'aide au développement
+- **CustomWS.class.inc** : Classe mère du projet
+- **CustomWS.class.sql.inc** : Fichier contenant les requêtes SQL du projet, doit contenir au moins les requêtes "Définition des requêtes de l'api Vitis"
 
 
 ### 3.2. Création de la première ressource
 Dans cet exemple nous cherchons à créer la ressource "villes" qui permettra de lister les villes contenues dans la table "f_villes_l93" installée par défaut avec vMap.
 
-Chaque ressource est définie par deux fichiers PHP: l'un pour la définition unitaire d'un objet (ici Ville.class.inc) et l'autre pour agir sur une liste complète d'objets (ici Villes.class.inc). Vous remarquerez le "s" (obligatoire) qui permet de faire la différencie entre la liste et l'unitaire.
+Chaque ressource est définie par deux fichiers PHP : l'un pour la définition unitaire d'un objet (ici Ville.class.inc) et l'autre, pour agir sur une liste complète d'objets (ici Villes.class.inc). Vous remarquerez le "s" (obligatoire) qui permet de faire la différencie entre la liste et l'unitaire.
 
 #### 3.2.1 La ressource unitaire (Ville.class.inc)
-Il s'agit d'une classe PHP qui devra au moins contenir les éléments suivants:
+Il s'agit d'une classe PHP qui devra au moins contenir les éléments suivants :
 
 ##### 3.2.1.1 Inclusions des fichiers
 
@@ -385,7 +385,7 @@ class Ville extends CustomWS {
     ...
 }
 ```
-Définition de la classe Ville
+Définition de la classe Ville. 
 
 ##### 3.2.1.3 Constructeur
 
@@ -406,7 +406,7 @@ function __construct($aPath, $aValues, $properties, $oConnection) {
 }
 ```
 
-Constructeur de la classe, vous remarquerez la variable **$this->aSelectedFields** qui définit attributs à afficher lors des requêtes.
+Constructeur de la classe, vous remarquerez la variable **$this->aSelectedFields** qui définit les attributs à afficher lors des requêtes.
 
 ##### 3.2.1.4 Fontion GET
 
@@ -449,17 +449,17 @@ function GET() {
 }
 ```
 
-Vous remarquerez qu'il y a deux commentaires au dessus de cette fonction, le premier sera utilisé par [swagger] pour générer la documentation en ligne interactive et le second est le commentaire de la fonction utilisée pour décrire aux développeurs ce que fait la fonction.
+Vous remarquerez deux commentaires au dessus de cette fonction. Le premier est utilisé par [swagger] pour générer la documentation en ligne interactive et le second est le commentaire de la fonction utilisée pour décrire aux développeurs ce que fait la fonction.
 
-Les paramètres décrits dans les commentaires swagger passés dans le chemin l'URL par la relation in="path"(comme ici "*code*") seront disponibles via la variable **$this->aPath**.
+Les paramètres décrits dans les commentaires swagger passés dans le chemin l'URL par la relation in="path"(comme ici "*code*") sont disponibles via la variable **$this->aPath**.
 
-Les paramètres décrits dans les commentaires swagger passés dans l'URL par la relation in="query" (comme ici "*token*") seront disponibles via la variable **$this->aValues**.
+Les paramètres décrits dans les commentaires swagger passés dans l'URL par la relation in="query" (comme ici "*token*") sont disponibles via la variable **$this->aValues**.
 
 La ligne **require $this->sRessourcesFile** permet de récupérer le contenu du fichier *CustomWS.class.sql.inc*.
 
-La fonction **$this->getFields** permet de récupérer en base de données les informations la ville en question en utilisant le paramètre "*code*" passé dans l'URL.
+La fonction **$this->getFields** permet de récupérer en base de données les informations de la ville en question en utilisant le paramètre "*code*" passé dans l'URL.
 
-Le résultat stocké dans **$this->aFields** sera retourné lors de la requête http.
+Le résultat stocké dans **$this->aFields** est retourné lors de la requête http.
 
 
 #### 3.2.2 La ressource multiple (Villes.class.inc)
@@ -589,7 +589,7 @@ function GET() {
 ```
 Tous les paramètres génériques sont listés dans les commentaires swagger, et sont disponibles sur les variables ** $this->aPath ** et ** $this->aValues **.
 
-Ici c'est la fonction **genericGet()** qui est utilisée et la fonction retourne du texte.
+Ici c'est la fonction **genericGet()** qui est utilisée. Elle retourne du texte.
 
 
 ### 3.3. Ressource complexe avec executeWithParams()
@@ -621,25 +621,25 @@ function GET() {
 }
 ```
 
-Ci dessus la fonction **executeWithParams()** permet d’exécuter une requête SQL, le résultat est alors rajouté dans $this->aFields['monuments'].
+Ci dessus la fonction **executeWithParams()** permet d’exécuter une requête SQL. Le résultat est ajouté dans $this->aFields['monuments'].
 
 
 ## 4. Fonction executeWithParams()
 
-Pour effectuer des requêtes SQL en PHP est est impératif d'utiliser la fonction executeWithParams() qui va exécuter une requête avec un tableau de paramètres passé en option.
+Pour effectuer des requêtes SQL en PHP, il est impératif d'utiliser la fonction executeWithParams() qui va exécuter une requête avec un tableau de paramètres passé en option.
 
 **Il ne faut surtout pas concaténer des variables à une requête SQL au risque d'exposer l'application à une faille de type** [SQLi]
 
 Il faut écrire dans la requête une balise contenant le nom de la variable, et fournir un tableau de variables à executeWithParams().
 
-Les différents formats sont:
+Les différents formats sont :
 
-- **number**, **string**: pour les valeurs de variables à passer entre simple quotes
-- **geometry**: pour les géométries à passer entre simple quotes
-- **quoted_string**: comme string mais pour intégrer des caractères spéciaux
+- **number**, **string** : pour les valeurs de variables à passer entre simple quotes
+- **geometry** : pour les géométries à passer entre simple quotes
+- **quoted_string** : comme string mais pour intégrer des caractères spéciaux
     ex: 'ma lampe%'
-- **column_name**, **schema_name**, **table_name**: pour les noms de colonnes, tables, schémas. Attention car pour ces types de paramètre executeWithParams() ne s'occupera pas des quotes, il faut donc les mettre à l'avance
-    ex: SELECT "[column_name]" FROM [schema_name].[table_name] WHERE table='[table_name]'
+- **column_name**, **schema_name**, **table_name** : pour les noms de colonnes, tables, schémas. Attention car pour ces types de paramètre, executeWithParams() ne s'occupera pas des quotes, il faut donc les mettre à l'avance
+    ex : SELECT "[column_name]" FROM [schema_name].[table_name] WHERE table='[table_name]'
 
 
 ### Exemples
