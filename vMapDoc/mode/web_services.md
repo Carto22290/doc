@@ -63,7 +63,7 @@ Le format application/x-vm-json diffère en donnant comme nom du tableau "data".
 #### 2.1.2. Token
 Le token de connexion identifie l'utilisateur de l'application. C'est grâce à lui que la ressource sait si le demandeur possède les droits suffisants pour avoir un résultat, et c'est par son intermédiaire que se font les connexions à la base de données.
 
-**Pour des raisons de sécurité il est strictement interdit de passer le token en tant que paramètre dans l'URL** et il faut donc le passer dans l'en-tête: si une personne malveillante a accès au réseau (man in the middle), elle pourrait alors voir ce token et donc usurper l'identité d'un autre utilisateur.
+**Pour des raisons de sécurité il est strictement interdit de passer le token en tant que paramètre dans l'URL** et il faut donc le passer dans l'en-tête : si une personne malveillante accède au réseau (man in the middle), elle pourrait voir ce token et donc usurper l'identité d'un autre utilisateur.
 
 
 #### 2.1.3. X-HTTP-Method-Override
