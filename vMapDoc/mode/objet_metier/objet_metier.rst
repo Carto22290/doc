@@ -136,7 +136,7 @@ formulaire par défaut**.
 .. figure:: ../../images/formulaire_reset_default_button.png
    :alt: image
 
-La fenêtre fenêtre suivante apparaît et l'utilisateur peut :
+La fenêtre suivante apparaît et l'utilisateur peut :
 
 -  Sélectionner les arguments à afficher
 -  Changer pour chaque champ le nom qui sera affiché dans le formulaire
