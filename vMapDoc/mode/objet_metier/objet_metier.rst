@@ -162,7 +162,7 @@ Il y a trois types de formulaires :
 
 - le **formulaire par défaut** qui est le formulaire généré automatiquement. Le développeur peut choisir de conserver en l'etat ce formulaire ou de le personnaliser. 
 
-- le **formulaire publié** qui est le formulaire en cours d'utilisationdans l'application
+- le **formulaire publié** qui est le formulaire en cours d'utilisation dans l'application
 
 - le **formulaire personnalisé** qui est le formulaire en cours d'édition.
 
