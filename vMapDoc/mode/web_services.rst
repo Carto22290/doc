@@ -58,7 +58,7 @@ les informations demandées:
 2. Utilisation
 --------------
 
-2.1. Entêtes
+2.1. En-têtes
 ~~~~~~~~~~~~
 
 Il y a diverses entêtes essentielles à l'utilisation des ressources
@@ -76,7 +76,7 @@ Valeurs possibles:
 Définition
 ''''''''''
 
-Cette entête détermine le format de réponse demandé par le client. Les
+Cette en-tête détermine le format de réponse demandé par le client. Les
 formats application/json et application/xml retourneront un objet
 possédant un tableau qui porte le nom de la ressource (dans le cas de
 l'exemple ci-dessus il s'agit de "maps"). Le format
