@@ -50,7 +50,7 @@ Renseigner les champs suivants :
    :alt: image
 
 -  SQL List : requête SQL pour définir les champs à afficher dans la
-   liste des objets sélectionnés d’un requêteur :
+   liste des objets sélectionnés du requêteur :
 
 .. figure:: ../../liste_requeteur.png
    :alt: image
