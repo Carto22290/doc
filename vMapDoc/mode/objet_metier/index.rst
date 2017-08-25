@@ -9,7 +9,7 @@ Mode objet métier
 
 .. toctree::
    :caption: Sommaire
-   :maxdepth: 3
+   :maxdepth: 4
   
  objet_metier
  rapports_vmap
