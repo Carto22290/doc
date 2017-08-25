@@ -227,11 +227,12 @@ car les utilisateurs finaux pourraient avoir accès à cette information.
 .. figure:: ../../images/exemple_studio_datasource_8.png
    :alt: image
 
-Insertion d'un attribut de type carte  : affichage d'une carte personnalisé
+Insertion d'un attribut de type carte  : affichage d'une carte personnalisée
 --------------------------------------------------------------------
 
-Il est possible dans un formulaire d'afficher une carte permettant à
-l'utilisateur de voir ou saisir de la donnée géométrique.
+Le studio permet d'exploiter les services web OSM, Bong Maps ou Vitis vMap pour personnaliser un formulaire en exploitant leurs ressources cartographiques. 
+
+L'utilisateur final peut de la sorte visualiset et saisir de la géométrie en exploitant la carte comme support de saisie.
 
 .. figure:: ../../images/exemple_studio_carte_1.png
    :alt: image
@@ -245,7 +246,7 @@ Trois types de cartes sont disponibles:
    définie par un fichier JSON téléchargeable depuis **Mode vMap >
    Cartes > Gestion des cartes > Ma carte > Télécharger**
 
-Une fois la carte décidée, l'administrateur peut définir l'emprise de la
+Une fois la carte sélectionnée, l'administrateur peut définir l'emprise de la
 carte en navigant simplement dessus ou en renseignant les champs
 "*Long*" pour la longitude, "*Lat*" pour la latitude et "*1:*" pour
 l'échelle ou alors "*XMin*", "*YMin*", "*XMax*", "*YMax*" si le mode de
