@@ -96,6 +96,18 @@ modifier le texte à afficher ainsi que l'onglet cible.
 
 Utilisation du gestionnaire de source de données : insertion d'une liste déroulante avec source de données
 ------------------------------------------------------------------------------------------------------------
+Le gestionnaire de sources de données permet la création, l'édition et la suppression de sources de données à associer à des attributs de type : 
+- liste
+- liste déroulante
+
+Le gestionnaire de sources de données permet d'exploiter des données : 
+- Texte : valeurs saisies directement dans le gestionnaire
+- Valeur de table locale : valeurs issues d'une table de base de données installée sur le même serveur que vMap
+- Base de données externe : valeurs importées d'une table d'une base de données externe
+- Service web Vitis : permet d'exploiter un service web pour en récupérer les ressources
+- Objet métier : permet d'exploiter un objet métier déjà configuré
+
+
 
 Il est possible dans un formulaire d'afficher une liste déroulante avec
 un contenu récupéré en base de données.
