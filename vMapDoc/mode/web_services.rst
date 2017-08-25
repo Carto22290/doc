@@ -468,34 +468,32 @@ de dossiers dans le répertoire vmap/vas/rest/ws. Dans ces dossiers se
 trouvent les fichiers indispensables ainsi que les ressources des web
 services.
 
-Dans cet exemple nous allons créer un web service "customWS" dans lequel
-nous allons créer une ressource "villes"
+Dans cet exemple, nous allons créer un web service "customWS" dans lequel
+créer une ressource "villes". 
 
 3.1. Création du dossier et des fichiers indispensables
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Parmi les fichiers indispensables, nous retrouvons les fichiers
-suivants:
+Parmi les fichiers indispensables, se trouvent les fichiers
+suivants :
 
--  **overview.phtml**: Permet d'afficher la ressource dans la page
+-  **overview.phtml** :permet d'afficher la ressource dans la page
    d'aide au développement
--  **CustomWS.class.inc**: Classe mère du projet
--  **CustomWS.class.sql.inc**: Fichier contenant les requêtes SQL du
-   projet, doit contenir au moins les requêtes "Définition des requêtes
-   de l'api Vitis"
+-  **CustomWS.class.inc** : classe mère du projet
+-  **CustomWS.class.sql.inc** : fichier contenant les requêtes SQL du
+   projet. Il doit contenir au moins les requêtes "Définition des requêtes
+   de l'api Vitis". 
 
 3.2. Création de la première ressource
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Dans cet exemple nous cherchons à créer la ressource "villes" qui
+Dans cet exemple, nous cherchons à créer la ressource "villes" qui
 permettra de lister les villes contenues dans la table "f\_villes\_l93"
 installée par défaut avec vMap.
 
-Chaque ressource est définie par deux fichiers PHP: l'un pour la
-définition unitaire d'un objet (ici Ville.class.inc) et l'autre pour
-agir sur une liste complète d'objets (ici Villes.class.inc). Vous
-remarquerez le "s" (obligatoire) qui permet de faire la différencie
-entre la liste et l'unitaire.
+Chaque ressource est définie par deux fichiers PHP: 
+- l'un pour la définition unitaire d'un objet (ici Ville.class.inc) 
+- l'autre pour agir sur une liste complète d'objets (ici Villes.class.inc). Le "s" (obligatoire) qui permet de faire la différencie entre la liste et l'unitaire.
 
 3.2.1 La ressource unitaire (Ville.class.inc)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
