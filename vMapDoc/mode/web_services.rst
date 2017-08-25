@@ -61,13 +61,14 @@ les informations demandées :
 2.1. En-têtes
 ~~~~~~~~~~~~
 
-Il y a diverses en-têtes essentielles à l'utilisation des ressources
+Il y a diverses en-têtes essentielles à l'utilisation des ressources.
 
 2.1.1. Accept
 ^^^^^^^^^^^^^
 
-Valeurs possibles:
+Valeurs possibles :
 ''''''''''''''''''
+
 
 -  application/json
 -  application/xml
