@@ -29,8 +29,8 @@ pour identifiant le nombre 15 :
 
     https://corbieres/vmap_rest/vmap/maps/{15}
 
-Ainsi l'API-REST retournera au client un résultat JSON où XML contenant
-les informations demandées:
+L''API-REST retourne au client un résultat JSON où XML contenant
+les informations demandées :
 
 .. code:: json
 
@@ -61,7 +61,7 @@ les informations demandées:
 2.1. En-têtes
 ~~~~~~~~~~~~
 
-Il y a diverses entêtes essentielles à l'utilisation des ressources
+Il y a diverses en-têtes essentielles à l'utilisation des ressources
 
 2.1.1. Accept
 ^^^^^^^^^^^^^
@@ -77,24 +77,23 @@ Définition
 ''''''''''
 
 Cette en-tête détermine le format de réponse demandé par le client. Les
-formats application/json et application/xml retourneront un objet
-possédant un tableau qui porte le nom de la ressource (dans le cas de
-l'exemple ci-dessus il s'agit de "maps"). Le format
+formats application/json et application/xml retournent un objet
+possédant un tableau qui porte le nom de la ressource (dans
+l'exemple ci-dessus, il s'agit de "maps"). Le format
 application/x-vm-json diffère en donnant comme nom du tableau "data",
-cela permettant de faire des requêtes génériques par le client
+permettant de faire des requêtes génériques par le client. 
 
 2.1.2. Token
 ^^^^^^^^^^^^
 
 Le token de connexion identifie l'utilisateur de l'application, c'est
-grâce à lui que la ressource saura si le demandeur possède les droits
+grâce à lui que la ressource identifie si le demandeur possède les droits
 suffisants pour avoir un résultat, et c'est par son intermédiaire que se
-feront les connexions à la base de données.
+font les connexions à la base de données.
 
 **Pour des raisons de sécurité il est strictement interdit de passer le
-token en tant que paramètre dans l'URL** et il faut donc le passer dans
-l'entête: si une personne malveillante a accès au réseau (man in the
-middle) elle pourra alors voir ce token et donc usurper l'identité d'un
+token en tant que paramètre dans l'URL**. Il faut donc le passer en-tête: si une personne malveillante a accès au réseau (man in the
+middle), elle pourrait alors voir ce token et donc usurper l'identité d'un
 autre utilisateur.
 
 2.1.3. X-HTTP-Method-Override
