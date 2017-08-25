@@ -240,8 +240,9 @@ Exemple:
 Ci-dessous un exemple complet actuellement visible sur
 https://demo.veremes.net/vmap/?map\_id=29.  Dans cet exemple, un projet d'éclairage public contient deux entités : 
 
--les routes
--les lampes. 
+
+- les routes
+- les lampes 
 
 Chaque lampe est associée à une route 
 
