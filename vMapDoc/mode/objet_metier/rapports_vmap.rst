@@ -9,7 +9,7 @@ Rapports objets métiers
 1. Définition
 -------------
 
-Un rapport sur objet métier permet de générer des
+Un rapport sur un objet métier permet de générer des
 fichiers au format .pdf ou .doc sur des informations d'un objet sélectionné dans
 le panier.
 
