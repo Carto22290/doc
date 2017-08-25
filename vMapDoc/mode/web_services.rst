@@ -77,7 +77,7 @@ Valeurs possibles :
 Définition
 ''''''''''
 
-Cette en-tête détermine le format de réponse demandé par le client. Les
+L'en-tête détermine le format de réponse demandé par le client. Les
 formats application/json et application/xml retournent un objet
 possédant un tableau qui porte le nom de la ressource (dans
 l'exemple ci-dessus, il s'agit de "maps"). Le format
@@ -100,19 +100,18 @@ autre utilisateur.
 2.1.3. X-HTTP-Method-Override
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Lorsqu'on utilise régulièrement l'API-REST il est possible que l'on soit
-confronté à des problèmes des longueur des URL: au bout d un certain
-nombre de caractères, les navigateurs refuseront d’exécuter la requête
-et afficheront l'erreur suivante:
+Lorsque l'on utilise régulièrement l'API-REST, il est possible que l'on soit
+confronté à des problèmes ds longueur d' URL : à partir d'un certain 
+nombre de caractères, les navigateurs refusent d’exécuter la requête
+et affichent l'erreur suivante :
 
 ::
 
     414 URI Too Long
 
-Pour palier à cela, nous avons mis en place l'entête
-X-HTTP-Method-Override qui sert à envoyer une requête de type POST avec
-des paramètres figurant dans le body (sans limite de taille) et de les
-faire interpréter comme des requêtes GET:
+Pour palier à cette contrainte, nous avons mis en place l'en-ête
+X-HTTP-Method-Override pour envoyer une requête de type POST avec
+des paramètres figurant dans le body (sans limite de taille) et interprétables comme des requêtes GET :
 
 ::
 
@@ -128,14 +127,14 @@ faire interpréter comme des requêtes GET:
 2.2.1. order\_by
 ^^^^^^^^^^^^^^^^
 
-Permet de définir l'ordre d'affichage en cas ou il y ait plusieurs
-données, par défaut il vaudra l'identifiant de la ressource
+Permet de définir l'ordre d'affichage lorsqu'il y a plusieurs
+données. Par défaut il vaut l'identifiant de la ressource. 
 
 2.2.2. sort\_order
 ^^^^^^^^^^^^^^^^^^
 
-Couplé au paramètre "order\_by" il permet de définir l'ordre avec les
-valeurs suivantes:
+Couplé au paramètre "order\_by", il permet de définir l'ordre avec les
+valeurs suivantes :
 
 -  asc: ordre ascendant
 -  desc: ordre descendant
@@ -143,39 +142,38 @@ valeurs suivantes:
 2.2.3. limit
 ^^^^^^^^^^^^
 
-Si le paramètre limit est fourni, alors le tableau retourné se limitera
-à "n" éléments
+Si le paramètre limit est fourni, alors le tableau retourné se limite
+à "n" éléments.
 
 2.2.4. offset
 ^^^^^^^^^^^^^
 
 Souvent couplé avec les paramètres "limit" et "order\_by", il peut
-permettre par exemple d'effectuer une pagination sur une liste
+permettre, par exemple, d'effectuer une pagination sur une liste. 
 
 2.2.5. attributs
 ^^^^^^^^^^^^^^^^
 
-Définit les attributs qui seront retournés par le client, pour les
-renseigner il faudra écrire ces attributs en les séparant par le
-caractère "\|"
+Définit les attributs qui seront retournés par le client. Pour les
+renseigner, il faut écrire ces attributs en les séparant par le
+caractère "\|".
 
 2.2.6. distinct
 ^^^^^^^^^^^^^^^
 
-True/false permet de distinguer les valeurs résultantes
+True/false permet de distinguer les valeurs résultantes.
 
 2.2.7. filter
 ^^^^^^^^^^^^^
 
-Donne la possibilité à l’utilisateur de filtrer les données, pour cela
-il faudra écrire un objet JSON composé de **relations** et
+Donne la possibilité à l’utilisateur de filtrer les données. Il faut écrire un objet JSON composé de **relations** et
 d'\ **opérateurs**.
 
 2.2.7.1. Relations
 ''''''''''''''''''
 
 Les relations définissent le type de condition à utiliser selon la
-structure JSON suivante:
+structure JSON suivante :
 
 .. code:: json
 
@@ -188,11 +186,11 @@ structure JSON suivante:
         }]
     }
 
-Ici on demande d'ajouter les filtres définis par les opérateurs selon
-la relation "AND", on aurait pu également utiliser une relation "OR".
+Dans cet exemple, on demande d'ajouter les filtres définis par les opérateurs selon
+la relation "AND". On peut également utiliser une relation "OR".
 
-Il est également possible de faire dans une même requête du AND et du OR
-en incorporant une relation comme ci c'était un opérateur:
+Il est aussi possible de faire dans une même requête du AND et du OR
+en incorporant une relation comme ci c'était un opérateur :
 
 .. code:: json
 
@@ -210,14 +208,14 @@ en incorporant une relation comme ci c'était un opérateur:
         }]
     }
 
-Ainsi on obtiendra une requête constituée de AND et de OR (voir
+Ainsi, on obtient une requête constituée de AND et de OR (voir
 l'exemple ci-après).
 
 2.2.7.2. Opérateurs
 '''''''''''''''''''
 
-Les opérateurs sont plus simples à comprendre, ils se composent de trois
-ou quatre arguments:
+Plus simples à comprendre,  les opérateursse composent de trois
+ou quatre arguments :
 
 -  **column**: nom de la colonne sur laquelle appliquer le filtre
 -  **value**: valeur sur laquelle il faudra filtrer
@@ -227,7 +225,7 @@ ou quatre arguments:
 -  **compare\_operator\_options (optionnel)**: ajoute des options
    suivant le type de compare\_operator.
 
-La structure est la suivante:
+La structure est la suivante :
 
 .. code:: json
 
