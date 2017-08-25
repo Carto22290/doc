@@ -142,11 +142,11 @@ Dans cet exemple, on veut sélectionner une route à associer à la lampe en
 .. figure:: ../../images/exemple_studio_datasource_9.png
    :alt: image
 
-Type texte
+Source de données de type texte
 ~~~~~~~~~~
 
 Le type texte permet de renseigner soi-même le contenu de la source de
-données, pour cela une règle d'écriture s'impose:
+données.
 
 ::
 
@@ -154,15 +154,15 @@ données, pour cela une règle d'écriture s'impose:
     libellé 2|clé 2
     libellé 3|clé 3
 
-Chaque entité est composée d'une **clé** qui sera la valeur retenue et
-d'un **libellé** qui sera le contenu affiché, les deux seront séparées
-(sans espace) par le caractère "\|" et on pourra répéter l'opération
+Chaque entité est composée d'une **clé** qui est la valeur retenue et
+d'un **libellé** qui esy le contenu affiché. Les deux seront séparées
+(sans espace) par le caractère "\|" et on peut répéter l'opération
 autant de fois que l'on veut en allant à la ligne pour chaque élément.
 
 .. figure:: ../../images/exemple_studio_datasource_4.png
    :alt: image
 
-Type valeurs d'une table locale
+Source de données de type valeurs d'une table locale
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Type utilisé lors de l'exemple précédent, il permet d'aller directement
@@ -170,7 +170,7 @@ chercher en base de données (sur le serveur en cours) le contenu d'une
 table.
 
 On peut également ajouter une ou plusieurs conditions à l'aide de
-filtres, pour cela il suffit de renseigner une "*Valeur Clé*" qui sera
+filtre.  Pour cela il suffit de renseigner une "*Valeur Clé*" qui sera
 un nom de colonne sur la table en question, un "*Opérateur*" dans le
 liste fournie et une "*Valeur*" qui sera la valeur à utiliser pour la
 condition. Le bouton "*+*" permettra d'ajouter des conditions et on
@@ -185,12 +185,12 @@ formulaire aient des droits en consultation sur la table en question.**
 .. figure:: ../../images/exemple_studio_datasource_5.png
    :alt: image
 
-Type service web
+Source de données de Type service web
 ~~~~~~~~~~~~~~~~
 
 Parfois le type "*Valeurs d'une table locale*" ne suffit pas car on veut
-utiliser une ressource d'un service web précédemment crée affin
-d'effectuer des requêtes complexes ou alors on souhaite simplement se
+utiliser une ressource d'un service web précédemment crée afin
+d'effectuer des requêtes complexes ou alors, on souhaite simplement se
 servir d'un de ceux de l'application.
 
 Pour cela il faudra utiliser le type "*Service web*" qui va effectuer
@@ -199,7 +199,7 @@ une requête de type "*GET*" à la ressource en question.
 .. figure:: ../../images/exemple_studio_datasource_6.png
    :alt: image
 
-Type objet métier
+Source de données de type objet métier
 ~~~~~~~~~~~~~~~~~
 
 Il est également possible d'interroger directement un objet métier
@@ -214,10 +214,10 @@ selon une des trois solutions suivantes:
 .. figure:: ../../images/exemple_studio_datasource_7.png
    :alt: image
 
-Type base de données externe
+Source de données de type base de données externe
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Plus complexe mais plus puissant, il permet d'interroger des bases de
+Plus complexe mais plus puissant, permet d'interroger des bases de
 données situées à l’extérieur du serveur selon un login et un mot de
 passe fourni.
 
