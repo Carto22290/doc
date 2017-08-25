@@ -191,7 +191,7 @@ direct le formulaire en cours.
 .. figure:: ../../images/formulaire_zone_previsualisation.png
    :alt: image
 
-Il y a également un menu déroulant **Prévisualisation** qui permet
+Le menu déroulant **Prévisualisation** permet
 l'affichage et la modification de la définition du formulaire au format
 JSON ainsi que l'ajout de JavaScript au formulaire.
 
