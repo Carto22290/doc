@@ -218,7 +218,7 @@ Plus simples à comprendre,  les opérateursse composent de trois
 ou quatre arguments :
 
 -  **column**: nom de la colonne sur laquelle appliquer le filtre
--  **value**: valeur sur laquelle il faudra filtrer
+-  **value**: valeur du filtre
 -  **compare\_operator**: type de comparaison ("=", "!=", "<>", ">=",
    "<=", ">", "<", "IN", "NOT IN", "IS NULL", "IS NOT NULL", "LIKE",
    "INTERSECT")
@@ -273,7 +273,7 @@ En utilisant une relation AND on peut filtrer sur plusieurs opérateurs:
 
 --------------
 
-Si un seul opérateur est utilisé, alors pas la peine de renseigner de
+Si un seul opérateur est utilisé, alors il n'est pas nécessaire de renseigner de
 relation:
 
 .. code:: json
@@ -292,7 +292,7 @@ relation:
 
 --------------
 
-En utilisant des relations imbriquées on peut effectuer des filtres
+En utilisant des relations imbriquées, on peut effectuer des filtres
 complexes:
 
 .. code:: json
@@ -326,7 +326,7 @@ complexes:
 --------------
 
 On peut utiliser "compare\_operator" = "IN" en utilisant des valeurs
-situées dans un tableau:
+situées dans un tableau :
 
 .. code:: json
 
@@ -378,7 +378,7 @@ suivies ou précédées du caractère "%":
 --------------
 
 En utilisant "compare\_operator\_options.case\_insensitive" sur un type
-"LIKE" on peut rendre le filtre insensible à la casse:
+"LIKE", on peut rendre le filtre insensible à la casse :
 
 .. code:: json
 
@@ -416,7 +416,7 @@ Utilisation de "IS NOT NULL"
 
 --------------
 
-On peut effectuer des intersections géométriques utilisant PostGIS:
+On peut effectuer des intersections géométriques utilisant PostGIS :
 
 .. code:: json
 
@@ -445,7 +445,7 @@ conseillée si on connaît le système de projection de la table:
 --------------
 
 On peut utiliser un buffer lors de l'intersection, et même spécifier sur
-quelle type de géométrie s'appliquera le buffer:
+quel type de géométrie s'applique le buffer :
 
 .. code:: json
 
