@@ -101,6 +101,7 @@ Le gestionnaire de sources de données permet la création, l'édition et la sup
 - liste déroulante
 
 Le gestionnaire de sources de données permet d'exploiter des données : 
+
 - Texte : valeurs saisies directement dans le gestionnaire
 - Valeur de table locale : valeurs issues d'une table de base de données installée sur le même serveur que vMap
 - Base de données externe : valeurs importées d'une table d'une base de données externe
