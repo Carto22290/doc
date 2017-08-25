@@ -274,7 +274,7 @@ En utilisant une relation AND on peut filtrer sur plusieurs opérateurs:
 --------------
 
 Si un seul opérateur est utilisé, alors il n'est pas nécessaire de renseigner de
-relation:
+relation :
 
 .. code:: json
 
@@ -293,7 +293,7 @@ relation:
 --------------
 
 En utilisant des relations imbriquées, on peut effectuer des filtres
-complexes:
+complexes :
 
 .. code:: json
 
@@ -500,7 +500,7 @@ Chaque ressource est définie par deux fichiers PHP :
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Il s'agit d'une classe PHP qui devra au moins contenir les éléments
-suivants:
+suivants :
 
 3.2.1.1 Inclusions des fichiers
 '''''''''''''''''''''''''''''''
@@ -769,13 +769,13 @@ requête en base de données (cette fois définie dans
 *CustomWS.class.sql.inc*) pour aller chercher les monuments associés à
 la ville.
 
-*CustomWS.class.sql.inc*:
+*CustomWS.class.sql.inc* :
 
 .. code:: php
 
     $aSql['getVilleMonuments'] = "SELECT * FROM sig.f_monuments WHERE \"code\"=[sCode]";
 
-*Ville.class.inc*:
+*Ville.class.inc* :
 
 .. code:: php
 
@@ -813,7 +813,7 @@ risque d'exposer l'application à une faille de type**
 Il faut écrire dans la requête une balise contenant le nom de la
 variable, et fournir un tableau de variables à executeWithParams().
 
-Les différents formats sont:
+Les différents formats sont :
 
 -  **string**, **number**, **integer**: pour les valeurs de variables à passer entre
    simple quotes.
