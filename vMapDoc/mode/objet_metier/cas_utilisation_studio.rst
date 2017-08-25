@@ -15,7 +15,11 @@ attributs de type textuels sont issus de base de données et l'onglet
    :alt: image
 
 
+
 Le *gestionnaire d'onglets* est accessible via le  bouton **Édition > Gestion des onglets** dans la zone d'administration des formulaires.
+
+.. figure:: ../../gestionnaire_image.png
+   :alt: image
 
 
 Une fois l'outil affiché, il est possible le cocher ou décocher les
@@ -24,6 +28,7 @@ dans la zone de prévisualisation.
 
 .. figure:: ../../images/exemple_studio_onglets_3.png
    :alt: image
+   
 
 Le bouton *Ajouter un onglet* permet l'insertion de nouveaux onglet et
 on peut également effectuer des opérations comme renommer, supprimer ou
