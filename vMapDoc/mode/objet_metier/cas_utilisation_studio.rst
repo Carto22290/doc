@@ -1,10 +1,10 @@
-Cas concrets d'utilisation dans vMap
+Cas concrets d'utilisation du studio dans vMap
 ==============================================
 
 Ce document décrit des exemples d'utilisation du studio utiles pour comprendre son fonctionnement ainsi que l'intégralité de l'application. 
 
-Affichage d'onglets dans un formulaire
---------------------------------------
+Personnalisation d'un formulaire : Répartition d'attributs sur plusieurs onglets
+--------------------------------------------------------------------------------
 
 Dans cet exemple, nous avons mis en place deux onglets dans un
 formulaire: l’onglet *Attributs* dans lequel nous avons mis les
