@@ -107,7 +107,7 @@ permet à l'utilisateur de créer un objet et de renseigner ses attributs.
 3.2 Studio
 ~~~~~~~~~~
 
-Afin d'administrer ces formulaires pouvant être très complexes, un studio a été developpé permettant à l'administrateur de gérer
+Afin d'administrer ces formulaires pouvant être très complexes, un studio a été developpé pour gérer
 graphiquement les différents formulaires des objets métier.
 
 Le studio est accessible via la section Formulaire après avoir édité un objet métier. 
