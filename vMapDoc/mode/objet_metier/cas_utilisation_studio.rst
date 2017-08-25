@@ -11,6 +11,7 @@ formulaire : l’onglet *Attributs* dans lequel  les
 attributs de type textuels sont issus de base de données et l'onglet
 *Documents* qui contient les attributs de type document.
 
+
 .. figure:: ../../images/exemple_studio_onglets.png
    :alt: image
 
@@ -35,7 +36,7 @@ Le bouton *Ajouter un onglet* permet l'insertion de nouveaux onglet et
 on peut également effectuer des opérations comme renommer, supprimer ou
 déplacer des onglets en cliquant sur le nom de l'onglet.
 
-**Remarque: un attribut peut se situer sur plusieurs onglets à la fois,
+**Remarque : un attribut peut se situer sur plusieurs onglets à la fois,
 ceci est utile pour afficher un label par exemple**
 
 Lien personnalisé vers un service externe
