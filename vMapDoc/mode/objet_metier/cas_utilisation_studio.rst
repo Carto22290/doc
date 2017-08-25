@@ -6,7 +6,7 @@ Ce document décrit des exemples d'utilisation du studio utiles pour comprendre 
 Personnalisation d'un formulaire : répartition d'attributs sur plusieurs onglets
 --------------------------------------------------------------------------------
 
-L'exemple ci-dessous illsutre l'agencement d'un formulaire en deux onglets : 
+L'exemple ci-dessous illustre l'agencement d'un formulaire en deux onglets : 
 
 - l’onglet *Attributs* dans lequel  les attributs de type textuels sont issus de base de données 
 - l'onglet *Documents* qui contient les attributs de type document.
@@ -39,8 +39,8 @@ déplacer des onglets en cliquant sur le nom de l'onglet.
 **Remarque : un attribut peut se situer sur plusieurs onglets à la fois,
 ceci est utile pour afficher un label par exemple**
 
-Insertion de lien personnalisé vers un service externe
------------------------------------------
+Insertion d'un attribut de type lien personnalisé vers un service externe
+---------------------------------------------------------------------
 
 Il est souvent utile lors de l'utilisation d'un objet métier de mettre en place des liens vers d'autres plateformes.
 
@@ -94,8 +94,8 @@ attribut de type *"Lien"* et en utilisant les fonction *"concat"* et
 En utilisant les champs *"Texte"* et *"Cible"* on peut également
 modifier le texte à afficher ainsi que l'onglet cible.
 
-Gestionnaire de source de données : Liste déroulante avec source de données
----------------------------------------
+Utilisation du gestionnaire de source de données : insertion d'une liste déroulante avec source de données
+------------------------------------------------------------------------------------------------------------
 
 Il est possible dans un formulaire d'afficher une liste déroulante avec
 un contenu récupéré en base de données.
