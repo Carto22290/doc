@@ -87,7 +87,7 @@ attribut de type *"Lien"* et en utilisant les fonction *"concat"* et
 En utilisant les champs *"Texte"* et *"Cible"* on peut également
 modifier le texte à afficher ainsi que l'onglet cible.
 
-Liste déroulante avec source de données
+Gestionnaire de source de données : Liste déroulante avec source de données
 ---------------------------------------
 
 Il est possible dans un formulaire d'afficher une liste déroulante avec
