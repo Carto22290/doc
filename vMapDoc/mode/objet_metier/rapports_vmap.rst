@@ -29,10 +29,10 @@ informations de chacun des éléments est généré.
 2. Utilisation
 --------------
 
-Pour générer un rapport sur objet métier, il suffit de sélectionner un
-objet sur la carte en cliquant dessus, de l'ajouter au panier, puis
-sélectionner les objets qui vous intéressent dans le panier et enfin à
-l'aide du bouton "Rapports" générer le rapport voulu.
+Pour générer un rapport sur objet métier, sélectionner un
+objet sur la carte en cliquant dessus, l'ajouter au panier, puis
+sélectionner les objets dans le panier et enfin à
+l'aide du bouton "Rapports", générer le rapport voulu.
 
 .. figure:: ../../images/creation_rapport_vmap.png
    :alt: Création d'un rapport vMap
