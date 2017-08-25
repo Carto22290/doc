@@ -46,8 +46,8 @@ suivants :
 -  Nom : nom  affiché dans l'interface
 -  Format d'impression : A4/A3
 -  Orientation : portrait/paysage
--  Format de sortie: pdf/doc
--  Objet métier: objet métier sur lequel le rapport est disponible
+-  Format de sortie : pdf/doc
+-  Objet métier : objet métier sur lequel le rapport est disponible
 -  Rapport sur plusieurs éléments : pour générer un ou plusieurs
    documents lors de multiple sélections
 -  Définition HTML : permet de configurer la mise en page
@@ -59,36 +59,35 @@ suivants :
 3.1. Configuration de la définition HTML
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Dans cette partie vous allez configurer la mise en page de votre
-rapport, pour cela il est conseillé d'avoir trois parties:
+Le bloc de défintion HTML permet de configurer la mise en page du
+rapport. Il est recommandé  d'avoir trois parties :
 
--  le style: une balise style qui contiendra la définition CSS à
+-  le style : balise style qui contiend la définition CSS à
    utiliser.
--  le corps: des balises HTML permettant de faire la mise en page.
--  le script: une balise script qui lancera du JavaScript lors de la
-   génération (cela permettra de gérer les sauts de page par exemple).
+-  le corps :  balises HTML de mise en page.
+-  le script : balise script qui lance du JavaScript lors de la
+   génération (cela permet de gérer les sauts de page par exemple). 
 
 3.1.1. Utilisation des variables
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Dans le corps vous aurez accès à la librairie AngularJS, c'est à dire
-que vous pouvez utiliser la syntaxe suivante pour afficher le contenu
-d'une variable:
+Dans le corps, la librairie AngularJS est accessible, c'est à dire
+que l'on peut utiliser la syntaxe suivante pour afficher le contenu
+d'une variable :
 
 .. code:: html
 
     <label class="fichelabel">Nom: {{BO.nom}}</label>
 
-Sur l'exemple ci-dessus vous aurez peut être constaté la présence de la
-variable BO, celle-ci est présente par défaut et contient les attributs
+Dans l'exemple ci-dessus,  la variable BOest présente par défaut et contient les attributs
 de l'objet résultant (notez que pour un rapport à plusieurs éléments
-elle se composera d'un tableau contenant les divers objets retournés).
+elle se composed'un tableau contenant les divers objets retournés).
 
-Avec la librairie AngularJS vous pouvez facilement effectuer des
+Avec la librairie AngularJS, on peut facilement effectuer des
 boucles, des conditions, des changements de style etc..
 
-Voici un exemple permettant de faire une boucle et lister les lampes
-d'une route
+Ci après,  un exemple permettant de faire une boucle et lister les lampes
+d'une route : 
 
 .. code:: html
 
@@ -103,9 +102,8 @@ d'une route
 3.1.2. Affichage de la carte
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Si vous voulez afficher une ou plusieurs cartes dans votre rapport, vous
-devrez dans une première partie créer une balise image avec un "id" de
-votre choix (il est conseillé d'utiliser un fond transparent au cas où
+Si on veut afficher une ou plusieurs cartes dans un rapport, créer dans une première partie, une balise image avec un "id" de
+son choix (il est conseillé d'utiliser un fond transparent au cas où
 les tuiles ne se chargent pas lors de l'impression):
 
 .. code:: html
@@ -113,19 +111,16 @@ les tuiles ne se chargent pas lors de l'impression):
     <img id="map_image" src="images/transparent.png">
 
 La seconde partie de la manipulation consiste à paramétrer un objet JSON
-pour dire à vMap quelle carte il doit utiliser et de quelle façon, pour
-cela veuillez vous référer à la partie `3.2.1. Configuration des cartes
+pour indiquer à vMap la carte à utiliser et la façon dont l'utiliser. Se référer à la partie `3.2.1. Configuration des cartes
 à utiliser dans le template
 HTML <#3.2.1-configuration-des-cartes-a-utiliser-dans-le-template-html>`__
 
 3.2. Configuration des objets JSON
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Pour bien configurer son rapport il est utile de configurer la partie
+Pour bien configurer un rapport, il est utile de configurer la partie
 Objets JSON. Le but est de pouvoir ajouter des cartes au rapport,
-interroger des webservices ou afficher des images. Pour cela il faudra
-créer en JSON un tableau contenant les différentes configurations, et
-chacune de ces configurations sera typée avec l'argument "type".
+interroger des webservices ou afficher des images. Pour cela,  créer en JSON un tableau contenant les différentes configurations. Chacune d'elle est  typée avec l'argument "type".
 
 Exemple:
 
@@ -157,14 +152,14 @@ Exemple:
 3.2.1 Configuration des cartes à utiliser dans le template HTML
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Vous pouvez inclure des cartes dans vos formulaires en utilisant des
-objets de type "map" avec les paramètres suivants:
+On peut inclure des cartes dans les formulaires en utilisant des
+objets de type "map" avec les paramètres suivants :
 
--  target: cible sur laquelle doit se poser la carte ("#" +
+-  target : cible sur laquelle doit se poser la carte ("#" +
    l'identifiant de votre balise image)
--  map\_id: l'identifiant de la carte à utiliser
--  resolution\_coeff: coefficient de résolution
--  scale\_target: nom de la variable qui contiendra l'échelle de la
+-  map\_id : identifiant de la carte à utiliser
+-  resolution\_coeff : coefficient de résolution
+-  scale\_target : nom de la variable qui contiend l'échelle de la
    carte dans le template HTML
 
 Exemple:
@@ -186,17 +181,17 @@ balise image "#map\_image" tout en mettant son échelle dans la variable
 3.2.2. Configuration des webservices
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Vous pouvez demander à effectuer des requêtes vers des webservices vMap
+On peut demander à effectuer des requêtes vers des webservices vMap
 (PHP) pour afficher le résultat dans la vue HTML au travers de variables
-que vous nommerez. Pour cela il faudra utiliser le type "webservice" et
-utiliser les paramètres suivants:
+nommées. Il faut pour cela  utiliser le type "webservice" et
+utiliser les paramètres suivants :
 
--  ressource: la ressource à interroger
--  params: les paramètres à utiliser lors de l'interrogation
--  target: ne nom de la variable créée qui contiendra les informations
+-  ressource : ressource à interroger
+-  params : paramètres à utiliser lors de l'interrogation
+-  target : nom de la variable créée qui contiend les informations
    retournées
 
-Important: vous pouvez tout comme dans la Définition HTML utiliser des
+Important : tout comme dans la Définition HTML, on peut utiliser des
 doubles accolades pour utiliser une variable BO.
 
 Exemple:
@@ -214,16 +209,16 @@ Exemple:
         "target": "aLampes"
     }
 
-Ici on fait une requête au webservice vitis/genericquerys qui permet
+Dans cet exemple, une requête au webservice vitis/genericquerys permet
 d'interroger de façon générique des tables. Avec cet appel et en
-utilisant les doubles accolades {{BO.route\_id}}, je peux afficher
-l'ensemble des lampes contenues dans ma route.
+utilisant les doubles accolades {{BO.route\_id}}, 
+l'ensemble des lampes contenues dans la route sont affichées.
 
 3.2.2. Configuration des images
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Vous pouvez afficher des images pré-définies en utilisant le type image
-et les paramètres suivants:
+On peut afficher des images pré-définies en utilisant le type image
+et les paramètres suivants :
 
 -  imageUrl: URL de l'image (peut être une définition base-64)
 -  target: cible sur laquelle doit se poser l'image ("#" + l'identifiant
@@ -243,9 +238,12 @@ Exemple:
 ------------------
 
 Ci-dessous un exemple complet actuellement visible sur
-https://demo.veremes.net/vmap/?map\_id=29 Dans cet exemple on se situe
-dans un projet d'éclairage public, on y trouve deux entités: les routes
-et le lampes. Chaque lampe est associée à une route
+https://demo.veremes.net/vmap/?map\_id=29.  Dans cet exemple, un projet d'éclairage public contient deux entités : 
+
+-les routes
+-les lampes. 
+
+Chaque lampe est associée à une route 
 
 Définition HTML
 ~~~~~~~~~~~~~~~
