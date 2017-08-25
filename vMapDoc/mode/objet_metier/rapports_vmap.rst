@@ -9,17 +9,19 @@ Rapports objets métiers
 1. Définition
 -------------
 
-Un rapport sur objet métier permettra à l'utilisateur de générer des
-fichiers .pdf ou .doc sur des informations d'un objet sélectionné dans
-le panier. Il y a différents types de rapports:
+Un rapport sur objet métier permet de générer des
+fichiers au format .pdf ou .doc sur des informations d'un objet sélectionné dans
+le panier.
+
+Deux types de rapports sont à distinguer :
 
 -  Les rapports sur un élément |logo rapport simple|
 -  Les rapports sur plusieurs éléments |logo rapport multi|
 
 Si un utilisateur sélectionne plusieurs entités et lance un rapport sur
-un élément, alors plusieurs fichiers seront générés, à contrario si il
+un élément, alors plusieurs fichiers sont générés. Inversément, si il
 lance un rapport sur plusieurs éléments, un seul fichier contenant les
-informations de chacun des éléments sera généré.
+informations de chacun des éléments est généré.
 
 .. figure:: ../../images/exemple_rapport_pdf.png
    :alt: Exemple de rapport vMap en pdf
@@ -41,15 +43,15 @@ l'aide du bouton "Rapports" générer le rapport voulu.
 Dans l'interface d'administration nous distinguons les éléments
 suivants:
 
--  Nom: le nom qui sera affiché dans l'interface
--  Format d'impression: A4/A3
--  Orientation: portrait/paysage
+-  Nom : nom  affiché dans l'interface
+-  Format d'impression : A4/A3
+-  Orientation : portrait/paysage
 -  Format de sortie: pdf/doc
 -  Objet métier: objet métier sur lequel le rapport est disponible
--  Rapport sur plusieurs éléments: pour générer un ou plusieurs
-   documents en cas de multiple sélection
--  Définition HTML: permet de configurer la mise en page
--  Objets JSON: permet une configuration plus avancée
+-  Rapport sur plusieurs éléments : pour générer un ou plusieurs
+   documents lors de multiple sélections
+-  Définition HTML : permet de configurer la mise en page
+-  Objets JSON : permet une configuration plus avancée
 
 .. figure:: ../../images/administration_rapports.png
    :alt: Administration d'un rapport vMap
