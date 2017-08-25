@@ -178,9 +178,7 @@ Le menu déroulant **Fichier** permet de gérer les
 versions des formulaires (publier le formulaire personnalisé, régénérer
 le formulaire par défaut etc..)
 
-Le menu déroulant **Édition** permet d'opérer des actions
-d'administration dont notamment la **gestion des
-onglets** du formulaire.
+Le menu déroulant **Édition> Gestion des onglets** permet d'agencer le  formulaire en répartissant les attributs sur plusieurs onglets. 
 
 3.2.2.2. La zone de prévisualisation
 ''''''''''''''''''''''''''''''''''''
@@ -201,15 +199,13 @@ l'utilisation réelle du formulaire**.
 3.2.2.3. La zone de gestion de mise en page
 '''''''''''''''''''''''''''''''''''''''''''
 
-Dans cette zone l'administrateur peut modifier l'ordre d'affichage des
+Dans cette zone, l'administrateur peut modifier l'ordre d'affichage des
 attributs, et via la case "Voir / modifier les lignes", il peut regrouper plusieurs éléments sur une même ligne.
 
 .. figure:: ../../images/formulaire_zone_attributs.png
    :alt: image
 
-Le bouton **Sources de données** en bas de zone,  permet d'administrer celles-ci. Ces dernières permettront
-de remplir les éléments de type liste en allant chercher les données en
-base par exemple.
+Le bouton **Sources de données** en bas de zone,  permet la configuration des attributs de type liste. En savoir plus sur le gestionnaire de source de données. 
 
 3.2.2.4. La zone de définition de l'attribut sélectionné
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''
