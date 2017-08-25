@@ -593,8 +593,7 @@ requêtes.
 Deux commentaires se trouvent au dessus de cette
 fonction : 
 
-- le premier est utilisé par `swagger <https://swagger.io/>`__
-pour générer la documentation en ligne interactive 
+- le premier est utilisé par `swagger <https://swagger.io/>`__ pour générer la documentation en ligne interactive 
 - le second est le commentaire de la fonction utilisée pour décrire aux développeurs ce que
 fait la fonction.
 
@@ -632,7 +631,7 @@ requête http.
 Require de la classe mère du web service ainsi que la classe unitaire et
 les fichiers permettant l'utilisation de la base de données.
 
-3.2.1.2 Classe
+3.2.2.2 Classe
 ''''''''''''''
 
 .. code:: php
@@ -664,7 +663,7 @@ Définition de la classe Villes
 
 Contrairement à la ressource unitaire, la connexion est instanciée.
 
-3.2.1.4 Fontion GET
+3.2.2.4 Fontion GET
 '''''''''''''''''''
 
 .. code:: php
