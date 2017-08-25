@@ -39,7 +39,7 @@ déplacer des onglets en cliquant sur le nom de l'onglet.
 **Remarque : un attribut peut se situer sur plusieurs onglets à la fois,
 ceci est utile pour afficher un label par exemple**
 
-Inertion de lien personnalisé vers un service externe
+Insertion de lien personnalisé vers un service externe
 -----------------------------------------
 
 Il est souvent utile lors de l'utilisation d'un objet métier de mettre en place des liens vers d'autres plateformes.
@@ -83,7 +83,7 @@ Dans le formulaire
 .. figure:: ../../images/exemple_studio_lien_2.png
    :alt: image
 
-On peut effectuer la même opération dans le formulaire en utilisant un
+On peut effectuer la même opération en personnalisant le formulaire en insétant un
 attribut de type *"Lien"* et en utilisant les fonction *"concat"* et
 *"getFormValue"* dans le champ *"Valeur"*.
 
