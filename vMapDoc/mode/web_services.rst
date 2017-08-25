@@ -214,15 +214,15 @@ l'exemple ci-après).
 2.2.7.2. Opérateurs
 '''''''''''''''''''
 
-Plus simples à comprendre,  les opérateursse composent de trois
+Plus simples à comprendre,  les opérateurs se composent de trois
 ou quatre arguments :
 
--  **column**: nom de la colonne sur laquelle appliquer le filtre
--  **value**: valeur du filtre
--  **compare\_operator**: type de comparaison ("=", "!=", "<>", ">=",
+-  **column** : nom de la colonne sur laquelle appliquer le filtre
+-  **value** : valeur du filtre
+-  **compare\_operator** : type de comparaison ("=", "!=", "<>", ">=",
    "<=", ">", "<", "IN", "NOT IN", "IS NULL", "IS NOT NULL", "LIKE",
    "INTERSECT")
--  **compare\_operator\_options (optionnel)**: ajoute des options
+-  **compare\_operator\_options (optionnel)** : ajoute des options
    suivant le type de compare\_operator.
 
 La structure est la suivante :
