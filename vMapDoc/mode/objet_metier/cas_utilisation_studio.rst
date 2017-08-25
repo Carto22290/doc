@@ -14,7 +14,9 @@ attributs de type textuels sont issus de base de données et l'onglet
 .. figure:: ../../images/exemple_studio_onglets.png
    :alt: image
 
+
 Le *gestionnaire d'onglets* est accessible via le  bouton **Édition > Gestion des onglets** dans la zone d'administration des formulaires.
+
 
 Une fois l'outil affiché, il est possible le cocher ou décocher les
 attributs à afficher sur les différents onglets tout en ayant un aperçu
