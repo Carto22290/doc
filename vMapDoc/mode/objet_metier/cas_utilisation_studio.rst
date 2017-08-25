@@ -114,7 +114,7 @@ Le gestionnaire de sources de données permet d'exploiter des données :
 .. figure:: ../../images/exemple_studio_datasource_1.png
    :alt: image
 
-Le bouton  **Sources de données**, un bouton en
+Le bouton  **Sources de données**, en 
 bas à droite du studio permet d'ouvrir le gestionnaire de source de données. 
 
 Dans notre exemple il s'agit d'afficher l'ensemble des routes contenues dans la
