@@ -111,21 +111,13 @@ Le gestionnaire de sources de données permet d'exploiter des données :
 
 
 
-Il est possible dans un formulaire d'afficher une liste déroulante avec
-un contenu récupéré en base de données.
-
 .. figure:: ../../images/exemple_studio_datasource_1.png
    :alt: image
 
-Pour cela il faut s'intéresser aux **Sources de données**, un bouton en
-bas à droite du studio permettra d'afficher le gestionnaire à partir du
-quel les administrateurs pourront créer, modifier, supprimer des sources
-de données.
+Le bouton  **Sources de données**, un bouton en
+bas à droite du studio permet d'ouvrir le gestionnaire de source de données. 
 
-Il y a plusieurs types de sources de données qui permettront à
-l'administrateur d'aller chercher des donnés: texte, valeurs d'une table
-locale, service web, objet métier, base de données externe. Dans notre
-exemple il s'agit d'afficher l'ensemble des routes contenues dans la
+Dans notre exemple il s'agit d'afficher l'ensemble des routes contenues dans la
 table *"route"* et dont l'auteur est *"laurent"*.
 
 On peut utiliser le bouton *"+"* pour ajouter des nouveaux filtres et le
@@ -134,17 +126,17 @@ bouton *"Test"* pour tester la source de données.
 .. figure:: ../../images/exemple_studio_datasource_3.png
    :alt: image
 
-Une fois la source de données renseignée, on pourra créer un attribut de
-type "*Liste déroulante*" (ou autre type de liste d'ailleurs) et choisir
-la source de données que l'on a mis en place précédemment.
+Une fois la source de données renseignée, on peut créer un attribut de
+type "*Liste déroulante*" (ou autre type de liste) et choisir
+la source de données mise en place précédemment.
 
 Une liste est définie par une "*Clé*" qui est la valeur retournée
 lorsqu'on sélectionne un élément de la liste et d'un "*Libellé*" qui est
 ce que l'utilisateur voit dans la liste.
 
-Dans cet exemple on veut sélectionner une route à associer à la lampe en
-édition, chaque route est définie par un identifiant numérique
-(route\_id) et elle possède un nom textuel (nom), on sélectionnera donc
+Dans cet exemple, on veut sélectionner une route à associer à la lampe en
+édition. Chaque route est définie par un identifiant numérique
+(route\_id) et elle possède un nom textuel (nom) :  on sélectionne donc
 "*nom*" en tant que libellé et "*route\_id*" en tant que clé.
 
 .. figure:: ../../images/exemple_studio_datasource_9.png
