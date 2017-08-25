@@ -3,7 +3,7 @@ Cas concrets d'utilisation du studio dans vMap
 
 Ce document décrit des exemples d'utilisation du studio utiles pour comprendre son fonctionnement ainsi que l'intégralité de l'application. 
 
-Personnalisation d'un formulaire : Répartition d'attributs sur plusieurs onglets
+Personnalisation d'un formulaire : répartition d'attributs sur plusieurs onglets
 --------------------------------------------------------------------------------
 
 L'exemple ci-dessous illsutre l'agencement d'un formulaire en deux onglets : 
