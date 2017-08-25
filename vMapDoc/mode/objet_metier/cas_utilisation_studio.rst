@@ -19,6 +19,7 @@ L'exemple ci-dessous illsutre l'agencement d'un formulaire en deux onglets :
 
 
 Le *gestionnaire d'onglets* est accessible via le  bouton **Édition > Gestion des onglets** dans la zone d'administration des formulaires : 
+
 .. figure:: ../../gestionnaire_onglets.png
    :alt: Studio - Gestionnaire d'onglets
 
