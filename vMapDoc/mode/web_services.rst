@@ -491,10 +491,10 @@ Dans cet exemple, nous cherchons à créer la ressource "villes" qui
 permettra de lister les villes contenues dans la table "f\_villes\_l93"
 installée par défaut avec vMap.
 
-Chaque ressource est définie par deux fichiers PHP: 
+Chaque ressource est définie par deux fichiers PHP : 
 
 -  l'un pour la définition unitaire d'un objet (ici Ville.class.inc) 
--  l'autre pour agir sur une liste complète d'objets (ici Villes.class.inc). Le "s" (obligatoire) qui permet de faire la différencie entre la liste et l'unitaire.
+-  l'autre pour agir sur une liste complète d'objets (ici Villes.class.inc). Le "s" (obligatoire) permet de faire la différencie entre la liste et l'unitaire. 
 
 3.2.1 La ressource unitaire (Ville.class.inc)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -522,7 +522,7 @@ permettant d'effectuer des connexions à la base de données.
         ...
     }
 
-Définition de la classe Ville
+Définition de la classe Ville.
 
 3.2.1.3 Constructeur
 ''''''''''''''''''''
@@ -544,8 +544,8 @@ Définition de la classe Ville
         $this->aSelectedFields = Array(...);
     }
 
-Constructeur de la classe, vous remarquerez la variable
-**$this->aSelectedFields** qui définit attributs à afficher lors des
+Constructeur de la classe,. La variable
+**$this->aSelectedFields** définit attributs à afficher lors des
 requêtes.
 
 3.2.1.4 Fontion GET
@@ -590,28 +590,30 @@ requêtes.
         $this->aFields = $this->getFields('sig', 'f_villes_l93', 'code');
     }
 
-Vous remarquerez qu'il y a deux commentaires au dessus de cette
-fonction, le premier sera utilisé par `swagger <https://swagger.io/>`__
-pour générer la documentation en ligne interactive et le second est le
-commentaire de la fonction utilisée pour décrire aux développeurs ce que
+Deux commentaires se trouvent au dessus de cette
+fonction : 
+
+- le premier est utilisé par `swagger <https://swagger.io/>`__
+pour générer la documentation en ligne interactive 
+- le second est le commentaire de la fonction utilisée pour décrire aux développeurs ce que
 fait la fonction.
 
 Les paramètres décrits dans les commentaires swagger passés dans le
-chemin l'URL par la relation in="path"(comme ici "*code*") seront
+chemin l'URL par la relation in="path"(comme ici "*code*") sont
 disponibles via la variable **$this->aPath**.
 
 Les paramètres décrits dans les commentaires swagger passés dans l'URL
-par la relation in="query" (comme ici "*token*") seront disponibles via
+par la relation in="query" (comme ici "*token*") sont disponibles via
 la variable **$this->aValues**.
 
 La ligne **require $this->sRessourcesFile** permet de récupérer le
 contenu du fichier *CustomWS.class.sql.inc*.
 
-La fonction **$this->getFields** permet de récupérer en base de données
+La fonction **$this->getFields** permet de récupérer en base de données,
 les informations la ville en question en utilisant le paramètre "*code*"
 passé dans l'URL.
 
-Le résultat stocké dans **$this->aFields** sera retourné lors de la
+Le résultat stocké dans **$this->aFields** est retourné lors de la
 requête http.
 
 3.2.2 La ressource multiple (Villes.class.inc)
@@ -660,8 +662,7 @@ Définition de la classe Villes
         $this->aSelectedFields = Array(...);
     }
 
-Contrairement à la ressource unitaire, la connexion est cette fois
-instanciée.
+Contrairement à la ressource unitaire, la connexion est instanciée.
 
 3.2.1.4 Fontion GET
 '''''''''''''''''''
@@ -794,15 +795,15 @@ la ville.
         }
     }
 
-Ci dessus la fonction **executeWithParams()** permet d’exécuter une
-requête SQL, le résultat est alors rajouté dans
+Ci-dessus, la fonction **executeWithParams()** permet d’exécuter une
+requête SQL. Le résultat est alors rajouté dans
 $this->aFields['monuments'].
 
 4. Fonction executeWithParams()
 -------------------------------
 
-Pour effectuer des requêtes SQL en PHP est est impératif d'utiliser la
-fonction executeWithParams() qui va exécuter une requête avec un tableau
+Pour effectuer des requêtes SQL en PHP, il est impératif d'utiliser la
+fonction executeWithParams() qui va exécute une requête avec un tableau
 de paramètres passé en option.
 
 **Il ne faut surtout pas concaténer des variables à une requête SQL au
@@ -817,7 +818,7 @@ Les différents formats sont:
 -  **string**, **number**, **integer**: pour les valeurs de variables à passer entre
    simple quotes.
 -  **group**: pour les valeurs à passer entre simple quotes et séparées par des virgules.
--  **geometry**: pour les géométries à passer entre simple quotes
+-  **geometry**: pour les géométries à passer entre simple quotes.
 -  **quoted\_string**: comme string mais pour intégrer des caractères
    spéciaux ex: 'ma lampe%'.
 -  **column\_name**, **schema\_name**, **table\_name**: pour les noms de
