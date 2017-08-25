@@ -492,8 +492,9 @@ permettra de lister les villes contenues dans la table "f\_villes\_l93"
 installée par défaut avec vMap.
 
 Chaque ressource est définie par deux fichiers PHP: 
-- l'un pour la définition unitaire d'un objet (ici Ville.class.inc) 
-- l'autre pour agir sur une liste complète d'objets (ici Villes.class.inc). Le "s" (obligatoire) qui permet de faire la différencie entre la liste et l'unitaire.
+
+-  l'un pour la définition unitaire d'un objet (ici Ville.class.inc) 
+-  l'autre pour agir sur une liste complète d'objets (ici Villes.class.inc). Le "s" (obligatoire) qui permet de faire la différencie entre la liste et l'unitaire.
 
 3.2.1 La ressource unitaire (Ville.class.inc)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
