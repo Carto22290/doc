@@ -7,15 +7,14 @@ Personnalisation d'un formulaire : Répartition d'attributs sur plusieurs onglet
 --------------------------------------------------------------------------------
 
 Dans cet exemple, nous avons mis en place deux onglets dans un
-formulaire: l’onglet *Attributs* dans lequel nous avons mis les
-attributs de type textuels dans la base de données et l'onglet
+formulaire : l’onglet *Attributs* dans lequel  les
+attributs de type textuels sont issus de base de données et l'onglet
 *Documents* qui contient les attributs de type document.
 
 .. figure:: ../../images/exemple_studio_onglets.png
    :alt: image
 
-Ceci est facile à faire grâce au studio avec l'outil *Gestion des
-onglets* utilisable en cliquant sur **Édition > Gestion des onglets**.
+Le *gestionnaire d'onglets * est accessible via le  bouton **Édition > Gestion des onglets** dans la zone d'administration des formulaires.
 
 Une fois l'outil affiché, il est possible le cocher ou décocher les
 attributs à afficher sur les différents onglets tout en ayant un aperçu
