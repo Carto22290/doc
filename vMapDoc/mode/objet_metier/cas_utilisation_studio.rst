@@ -39,15 +39,14 @@ déplacer des onglets en cliquant sur le nom de l'onglet.
 **Remarque : un attribut peut se situer sur plusieurs onglets à la fois,
 ceci est utile pour afficher un label par exemple**
 
-Lien personnalisé vers un service externe
+Inertion de lien personnalisé vers un service externe
 -----------------------------------------
 
-Il est souvent utile lors de l'utilisation d'un objet métier de mettre
-en place des liens vers d'autres plateformes.
+Il est souvent utile lors de l'utilisation d'un objet métier de mettre en place des liens vers d'autres plateformes.
 
-Dans vMap ceci est possible à deux endroits:
+Dans vMap ceci est possible à deux endroits distincts :
 
-Dans l'info-bulle
+Dans l'info-bulle d'un objet
 ~~~~~~~~~~~~~~~~~
 
 .. figure:: ../../images/exemple_studio_lien_1.png
