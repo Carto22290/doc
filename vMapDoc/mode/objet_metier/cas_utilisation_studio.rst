@@ -14,12 +14,11 @@ L'exemple ci-dessous illsutre l'agencement d'un formulaire en deux onglets :
 
 .. figure:: ../../images/exemple_studio_onglets.png
    :alt: image
+   
 
 
 
-Le *gestionnaire d'onglets* est accessible via le  bouton **Édition > Gestion des onglets** dans la zone d'administration des formulaires.
-
-
+Le *gestionnaire d'onglets* est accessible via le  bouton **Édition > Gestion des onglets** dans la zone d'administration des formulaires : 
 .. figure:: ../../gestionnaire_onglets.png
    :alt: Studio - Gestionnaire d'onglets
 
