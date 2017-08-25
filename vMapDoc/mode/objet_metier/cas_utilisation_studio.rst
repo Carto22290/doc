@@ -227,8 +227,8 @@ car les utilisateurs finaux pourraient avoir accès à cette information.
 .. figure:: ../../images/exemple_studio_datasource_8.png
    :alt: image
 
-Affichage d'une carte personnalisé
-----------------------------------
+Insertion d'un attribut de type carte  : affichage d'une carte personnalisé
+--------------------------------------------------------------------
 
 Il est possible dans un formulaire d'afficher une carte permettant à
 l'utilisateur de voir ou saisir de la donnée géométrique.
