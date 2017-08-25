@@ -40,8 +40,8 @@ l'aide du bouton "Rapports", générer le rapport voulu.
 3. Administration
 -----------------
 
-Dans l'interface d'administration nous distinguons les éléments
-suivants:
+Dans l'interface d'administration renseigner les éléments
+suivants :
 
 -  Nom : nom  affiché dans l'interface
 -  Format d'impression : A4/A3
