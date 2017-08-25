@@ -6,10 +6,9 @@ Ce document décrit des exemples d'utilisation du studio utiles pour comprendre 
 Personnalisation d'un formulaire : Répartition d'attributs sur plusieurs onglets
 --------------------------------------------------------------------------------
 
-Dans cet exemple, nous avons mis en place deux onglets dans un
-formulaire : l’onglet *Attributs* dans lequel  les
-attributs de type textuels sont issus de base de données et l'onglet
-*Documents* qui contient les attributs de type document.
+L'exemple ci-dessous illsutre l'agencement d'un formulaire en deux onglets : 
+* l’onglet *Attributs* dans lequel  les attributs de type textuels sont issus de base de données 
+* l'onglet *Documents* qui contient les attributs de type document.
 
 
 .. figure:: ../../images/exemple_studio_onglets.png
