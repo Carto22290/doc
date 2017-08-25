@@ -230,9 +230,9 @@ car les utilisateurs finaux pourraient avoir accès à cette information.
 Insertion d'un attribut de type carte  : affichage d'une carte personnalisée
 --------------------------------------------------------------------
 
-Le studio permet d'exploiter les services web OSM, Bong Maps ou Vitis vMap pour personnaliser un formulaire en exploitant leurs ressources cartographiques. 
+Le studio permet d'exploiter les services web OSM, Bing Maps ou Vitis vMap pour personnaliser un formulaire en exploitant leurs ressources cartographiques. 
 
-L'utilisateur final peut de la sorte visualiset et saisir de la géométrie en exploitant la carte comme support de saisie.
+L'utilisateur final peut de la sorte visualiser et saisir de la géométrie en exploitant la carte comme support de saisie.
 
 .. figure:: ../../images/exemple_studio_carte_1.png
    :alt: image
