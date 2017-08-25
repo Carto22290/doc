@@ -23,13 +23,13 @@ Exemple de requête permettant de lister les cartes vMap :
     https://corbieres/vmap_rest/vmap/maps
 
 Exemple de requête permettant de voir les informations de la carte ayant
-pour identifiant le nombre 15 : 
+pour identifiant '15' : 
 
 ::
 
     https://corbieres/vmap_rest/vmap/maps/{15}
 
-L''API-REST retourne au client un résultat JSON où XML contenant
+L''API-REST retourne au client, un résultat JSON ou XML contenant
 les informations demandées :
 
 .. code:: json
