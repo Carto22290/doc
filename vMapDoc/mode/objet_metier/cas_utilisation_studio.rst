@@ -552,30 +552,29 @@ De cette façon,  écrire le code complet :
         };
     };
 
-Bouton avec événement JavaScript
+Insertion d'une fonction appelée depuis un Bouton - événement JavaScript
 --------------------------------
 
-Nous avons vu dans l'exemple précédent comment intégrer du code dans un
-formulaire objet métier via "*constructor\_form*". Dans ce nouvel exemple, nous
-allons créer une fonction qui sera appelée depuis un bouton dans
-l'interface.
+L'exemple précédent illustre la façon dont intégrer du code dans un
+formulaire objet métier via "*constructor\_form*". Dans ce nouvel exemple, une fonction appelée depuis un bouton dans
+l'interface est créée. 
 
 Bouton Hello world
 ~~~~~~~~~~~~~~~~~~
 
-Dans une première partie nous allons afficher une popup "Hello world"
-lors du clic sur le bouton, pour cela il faudra ajouter un attribut de
-type "*Interface - Bouton*" auquel nous allons donner en événement la
+Dans une première partie,  une popup "Hello world" est affichée
+lors du clic sur le bouton. Il faut pour cela ajouter un attribut de
+type "*Interface - Bouton*" auquel on donne en événement, la
 fonction **sayHello()**.
 
 .. figure:: ../../images/exemple_studio_button_1.png
    :alt: image
 
 Côté JavaScript, il est important de placer la fonction sur le bon
-objet: il faudra la placer sur **le scope de la Main Directive de
+objet : il faut la placer sur **le scope de la Main Directive de
 Vitis**.
 
-Pour y parvenir il suffit d'appeler
+Pour y parvenir, il suffit d'appeler 
 **angular.element(vitisApp.appMainDrtv).scope()**:
 
 .. code:: javascript
@@ -597,11 +596,11 @@ Pour y parvenir il suffit d'appeler
         alert('Hello world');
     }
 
-**Remarque:** il est important de vérifier via la console du navigateur
-que la fonction n’existe pas déjà car vous pourriez remplacer par erreur
+**Remarque :** il est important de vérifier via la console du navigateur
+que la fonction n’existe déjà pas  car on pourrait remplacer par erreur
 une fonction déjà existante.
 
-Voici le résultat côté client:
+Voici le résultat côté client :
 
 .. figure:: ../../images/exemple_studio_button_2.png
    :alt: image
