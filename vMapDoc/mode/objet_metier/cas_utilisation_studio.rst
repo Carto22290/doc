@@ -287,7 +287,7 @@ seul leur nom est stocké en base :
 plusieurs fichiers doivent être téléversés, il faut créer
 plusieurs attributs ou sinon les compresser dans un fichier .zip
 
-Grille de sous-objets avec possibilité d'ajout, de suppression et d'édition
+Insertion d'une grille de sous-objets avec possibilité d'ajout, de suppression et d'édition
 ---------------------------------------------------------------------------
 
 Il est assez régulier d'avoir plusieurs objets métiers qui dépendent les
@@ -305,8 +305,8 @@ en donnant la possibilité d'ajout, d'édition et de suppression
    :alt: image
 
 Dans le studio, il faut créer
-un élément de type "*Grille - Objet métier*", sélectionner l'objet
-métier qui joue le rôle d'enfant et renseigner le lien qu'il existe
+un élément de type "*Grille - Objet métier*", puis sélectionner l'objet
+métier qui joue le rôle d'enfant et renseigner le lien qui existe
 entre les deux objets.
 
 Dans le champ "*Lien avec l'objet métier*", le premier champ désigne la
