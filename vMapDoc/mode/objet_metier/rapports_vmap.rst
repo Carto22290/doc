@@ -9,8 +9,7 @@ Rapports objets métiers
 1. Définition
 -------------
 
-Un rapport sur un objet métier permet de générer des
-fichiers au format .pdf ou .doc sur des informations d'un objet sélectionné dans
+Un rapport sur un objet métier permet de générer des fichiers au format .pdf ou .doc sur les informations relative à un un objet sélectionné dans
 le panier.
 
 Deux types de rapports sont à distinguer :
@@ -40,16 +39,18 @@ l'aide du bouton "Rapports", générer le rapport voulu.
 3. Administration
 -----------------
 
-Dans l'interface d'administration renseigner les éléments
-suivants :
+L'onglet Rapports du menu Développement permet la création, l'édition et la suppression de rapports. 
+
+
+Dans l'interface d'administration renseigner les éléments suivants :
 
 -  Nom : nom  affiché dans l'interface
 -  Format d'impression : A4/A3
 -  Orientation : portrait/paysage
 -  Format de sortie : pdf/doc
--  Objet métier : objet métier sur lequel le rapport est disponible
+-  Objet métier : objet métier sur lequel le rapport doit être associé
 -  Rapport sur plusieurs éléments : pour générer un ou plusieurs
-   documents lors de multiple sélections
+   documents lors de sélections multiples
 -  Définition HTML : permet de configurer la mise en page
 -  Objets JSON : permet une configuration plus avancée
 
@@ -60,13 +61,13 @@ suivants :
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Le bloc de défintion HTML permet de configurer la mise en page du
-rapport. Il est recommandé  d'avoir trois parties :
+rapport. Il est recommandé  de procéder en trois parties :
 
 -  le style : balise style qui contiend la définition CSS à
    utiliser.
 -  le corps :  balises HTML de mise en page.
 -  le script : balise script qui lance du JavaScript lors de la
-   génération (cela permet de gérer les sauts de page par exemple). 
+   génération (gestion des sauts de page, par exemple). 
 
 3.1.1. Utilisation des variables
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -79,15 +80,13 @@ d'une variable :
 
     <label class="fichelabel">Nom: {{BO.nom}}</label>
 
-Dans l'exemple ci-dessus,  la variable BOest présente par défaut et contient les attributs
-de l'objet résultant (notez que pour un rapport à plusieurs éléments
-elle se composed'un tableau contenant les divers objets retournés).
+Dans l'exemple ci-dessus,  la variable BO est présente par défaut et contient les attributs
+de l'objet résultant (notez que pour un rapport à plusieurs éléments, elle se compose d'un tableau contenant les divers objets retournés).
 
 Avec la librairie AngularJS, on peut facilement effectuer des
 boucles, des conditions, des changements de style etc..
 
-Ci après,  un exemple permettant de faire une boucle et lister les lampes
-d'une route : 
+Ci-après,  un exemple permettant de faire une boucle et lister les lampes d'une route : 
 
 .. code:: html
 
@@ -99,12 +98,11 @@ d'une route :
         <label class="fiche_label">Allumée: {{oLampe.allume ? 'Oui' : 'Non'}}</label>
     </div>
 
-3.1.2. Affichage de la carte
+3.1.2. Affichage de la carte dans un rapport
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Si on veut afficher une ou plusieurs cartes dans un rapport, créer dans une première partie, une balise image avec un "id" de
-son choix (il est conseillé d'utiliser un fond transparent au cas où
-les tuiles ne se chargent pas lors de l'impression):
+Si on veut afficher une ou plusieurs cartes dans un rapport, créer dans une première partie, une balise image avec l'"id" de
+son choix (il est conseillé d'utiliser un fond transparent au cas où les tuiles ne se chargent pas lors de l'impression) :
 
 .. code:: html
 
@@ -120,7 +118,7 @@ HTML <#3.2.1-configuration-des-cartes-a-utiliser-dans-le-template-html>`__
 
 Pour bien configurer un rapport, il est utile de configurer la partie
 Objets JSON. Le but est de pouvoir ajouter des cartes au rapport,
-interroger des webservices ou afficher des images. Pour cela,  créer en JSON un tableau contenant les différentes configurations. Chacune d'elle est  typée avec l'argument "type".
+interroger des webservices ou afficher des images. Pour cela,  créer en JSON,  un tableau contenant les différentes configurations. Chacune d'elle est  typée avec l'argument "type".
 
 Exemple:
 
@@ -183,7 +181,7 @@ balise image "#map\_image" tout en mettant son échelle dans la variable
 
 On peut demander à effectuer des requêtes vers des webservices vMap
 (PHP) pour afficher le résultat dans la vue HTML au travers de variables
-nommées. Il faut pour cela  utiliser le type "webservice" et
+nommées. Il faut, pour cela,  utiliser le type "webservice" et
 utiliser les paramètres suivants :
 
 -  ressource : ressource à interroger
@@ -191,7 +189,7 @@ utiliser les paramètres suivants :
 -  target : nom de la variable créée qui contiend les informations
    retournées
 
-Important : tout comme dans la Définition HTML, on peut utiliser des
+**Important **: tout comme dans la Définition HTML, on peut utiliser des
 doubles accolades pour utiliser une variable BO.
 
 Exemple:
@@ -220,11 +218,11 @@ l'ensemble des lampes contenues dans la route sont affichées.
 On peut afficher des images pré-définies en utilisant le type image
 et les paramètres suivants :
 
--  imageUrl: URL de l'image (peut être une définition base-64)
--  target: cible sur laquelle doit se poser l'image ("#" + l'identifiant
+-  imageUrl : URL de l'image (peut être une définition base-64)
+-  target : cible sur laquelle doit se poser l'image ("#" + l'identifiant
    de votre balise image)
 
-Exemple:
+Exemple :
 
 .. code:: json
 
