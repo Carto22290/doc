@@ -267,8 +267,7 @@ Une boite à cocher "*Uniquement en consultation*" permet de définir si
 l'utilisateur peut visualiser et éditer ce champs ou alors uniquement le
 visualiser.
 
-Si elles existent, les images sont automatiquement affichées à
-l'utilisateur tandis que les documents sont disponibles en
+Si elles existent, les images sont automatiquement affichées tandis que les documents sont disponibles en
 téléchargement.
 
 +-----------+------------+
@@ -293,9 +292,9 @@ Grille de sous-objets avec possibilité d'ajout, de suppression et d'édition
 
 Il est assez régulier d'avoir plusieurs objets métiers qui dépendent les
 uns des autres. Dans ce cas, il est très utile lors de l'édition d'un
-objet parent de visualiser la liste des sous-objets liés à ce dernier.
+objet parent, de visualiser la liste des sous-objets liés à ce dernier.
 
-Dans l'exemple c'est l'objet métier "*Route*" qui joue le rôle du
+Dans l'exemple ci-joint, c'est l'objet métier "*Route*" qui joue le rôle du
 parent. Un enregistrement peut etre constitué de plusieurs "*Lampes*".
 
 Dans vMap, il est possible d'afficher les listes parents/enfants
