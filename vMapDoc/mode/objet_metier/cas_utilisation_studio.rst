@@ -18,7 +18,7 @@ L'exemple ci-dessous illustre l'agencement d'un formulaire en deux onglets :
 
 
 
-Le *gestionnaire d'onglets* est accessible via le  bouton **Édition > Gestion des onglets** dans la zone d'administration des formulaires : 
+Le gestionnaire d'onglets est accessible via le  bouton **Édition > Gestion des onglets** dans la zone d'administration des formulaires : 
 
 .. figure:: ../../gestionnaire_onglets.png
    :alt: Studio - Gestionnaire d'onglets
@@ -37,7 +37,7 @@ on peut également effectuer des opérations comme renommer, supprimer ou
 déplacer des onglets en cliquant sur leur nom.
 
 **Remarque : un attribut peut se situer sur plusieurs onglets à la fois,
-ceci est utile pour afficher un label par exemple.**
+ceci peut être utile pour afficher un label. **
 
 Insertion d'un attribut de type lien personnalisé vers un service externe
 ---------------------------------------------------------------------
