@@ -608,29 +608,26 @@ Voici le résultat côté client :
 Bouton Ajax
 ~~~~~~~~~~~
 
-Dans une deuxième partie nous allons lors du clic sur le bouton
-effectuer une requête Ajax qui permettra de récupérer les routes donc
-l'auteur est "laurent" en base, puis l'on va les écrire dans un champ
-texte.
+Dans une deuxième partie,  une requête Ajax est effectuée lors du clic sur le bouton. Elle permettra de récupérer les routes dont
+l'auteur est "laurent"  puis l'on va les écrire dans un champ de type texte.
 
-Pour cela je crée un bouton "*Charger les routes*" auquel j'associe la
-fonction **loadLaurentRoutes**, et je crée un champ de type "*Texte en
-édition - Multiligne*" que j'appelle **routes\_laurent**.
+Pour cela,  un bouton "*Charger les routes*" est crée. On y associe la
+fonction **loadLaurentRoutes**, et l'on crée un champ de type "*Texte en
+édition - Multiligne*" nommé **routes\_laurent**.
 
 .. figure:: ../../images/exemple_studio_button_3.png
    :alt: image
 
-Pour effectuer la requête Ajax il faut utiliser la fonction
-**ajaxRequest()** de vMap, au moment de la réponse de la requête je vais
-concaténer chacun des résultats dans
-**oFormValues.update.routes\_laurent** afin de voir apparaître le
-résultat sur l'interface.
+Pour effectuer la requête Ajax, il faut utiliser la fonction
+**ajaxRequest()** de vMap. Au moment de la réponse de la requête, on concatène
+ chacun des résultats dans **oFormValues.update.routes\_laurent** afin de voir apparaître le
+résultat dans l'interface.
 
-Pour avoir accès au scope depuis ma fonction **loadLaurentRoutes**, je
-crée une variable globale **oFormRequired** dans laquelle je place mon
+Pour avoir accès au scope depuis la fonction **loadLaurentRoutes**, on
+crée une variable globale **oFormRequired** dans laquelle on place le
 scope depuis **constructor\_form**.
 
-Voici le code final:
+Voici le code final :
 
 .. code:: javascript
 
@@ -689,8 +686,7 @@ Voici le code final:
         });
     };
 
-Désormais quand je clique sur le bouton "*Charger les routes*", cela
-remplit le champ "*Routes de laurent*" |image|
+Désormais,  un clic sur le bouton "*Charger les routes*" remplit le champ "*Routes de laurent*" |image|
 
 .. |image| image:: ../../images/exemple_studio_document_1.png
 .. |image| image:: ../../images/exemple_studio_document_2.png
