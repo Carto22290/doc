@@ -39,7 +39,7 @@ déplacer des onglets en cliquant sur leur nom.
 **Remarque : un attribut peut se situer sur plusieurs onglets à la fois,
 ceci peut être utile pour afficher un label. **
 
-Insertion d'un attribut de type lien personnalisé vers un service externe
+Personnalisation d'un cormulaire : insertion d'un attribut de type lien personnalisé vers un service externe
 ---------------------------------------------------------------------
 
 Il est souvent utile, lors de l'utilisation d'un objet métier, de mettre en place des liens vers d'autres plateformes.
@@ -226,7 +226,7 @@ car les utilisateurs finaux pourraient avoir accès à cette information.
 .. figure:: ../../images/exemple_studio_datasource_8.png
    :alt: image
 
-Insertion d'un attribut de type carte  : affichage d'une carte personnalisée
+Personnailsiation d'un formualire :  insertion d'un attribut de type carte  
 --------------------------------------------------------------------
 
 Le studio permet d'exploiter les services web OSM, Bing Maps ou Vitis vMap pour personnaliser un formulaire en exploitant leurs ressources cartographiques. 
@@ -256,7 +256,7 @@ graphiquement via les boites à cocher de la zone "*Définition*".
 .. figure:: ../../images/exemple_studio_carte_3.png
    :alt: image
 
-Insertion d'un champs de chargement de Document/Image 
+Personnalisation d'un formulaire : insertion d'un champs de chargement de Document/Image 
 ----------------------------------------
 
 Il est possible d'associer des documents ainsi que des images aux
@@ -287,7 +287,7 @@ seul leur nom est stocké en base :
 plusieurs fichiers doivent être téléversés, il faut créer
 plusieurs attributs ou sinon les compresser dans un fichier .zip
 
-Insertion d'une grille de sous-objets avec possibilité d'ajout, de suppression et d'édition
+Personnalisation d'un formulaire : insertion d'une grille de sous-objets 
 ---------------------------------------------------------------------------
 
 Il est assez régulier d'avoir plusieurs objets métiers qui dépendent les
@@ -552,7 +552,7 @@ De cette façon,  écrire le code complet :
         };
     };
 
-Insertion d'une fonction appelée depuis un Bouton - événement JavaScript
+Personnalisation d'un formulaire : insertion d'une fonction appelée depuis un Bouton - événement JavaScript
 --------------------------------
 
 L'exemple précédent illustre la façon dont intégrer du code dans un
