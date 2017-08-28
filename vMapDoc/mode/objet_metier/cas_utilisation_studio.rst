@@ -187,10 +187,10 @@ formulaire aient des droits en consultation sur la table.**
 Source de données de Type service web
 ~~~~~~~~~~~~~~~~
 
-Parfois le type "*Valeurs d'une table locale*" ne suffit pas car on veut
+Parfois, le type "*Valeurs d'une table locale*" ne suffit pas car on veut
 utiliser une ressource d'un service web précédemment créé, afin
-d'effectuer des requêtes complexes ou alors, on souhaite simplement se
-servir d'un de ceux de l'application.
+d'effectuer des requêtes complexes. On peut aussi souhaiter se
+servir d'un services de l'application.
 
 Pour cela,  on utilise le type "*Service web*" qui effectue
 une requête de type "*GET*" à la ressource en question.
@@ -204,11 +204,11 @@ Source de données de type objet métier
 Il est également possible d'interroger directement un objet métier
 selon une des trois solutions suivantes :
 
--  **Form:** renvoie l’ensemble des colonnes de la table associée à
+-  **Form :** renvoie l’ensemble des colonnes de la table associée à
    l'objet métier
--  **SQL Summary:** renvoie de résultat de la requête définie par SQL
+-  **SQL Summary :** renvoie de résultat de la requête définie par SQL
    Summary
--  **SQL List:** renvoie de résultat de la requête définie par SQL List
+-  **SQL List :** renvoie de résultat de la requête définie par SQL List
 
 .. figure:: ../../images/exemple_studio_datasource_7.png
    :alt: image
@@ -216,8 +216,8 @@ selon une des trois solutions suivantes :
 Source de données de type base de données externe
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Plus complexe mais plus puissant, permet d'interroger des bases de
-données situées à l’extérieur du serveur selon un login et un mot de
+Plus complexe mais plus puissant,  ce type de source permet d'interroger des bases de
+données d'un serveur externe selon un login et un mot de
 passe fourni.
 
 **Important : les login et mot de passe renseignés doivent être publics**
@@ -260,7 +260,7 @@ Insertion d'un champs de chargement de Document/Image
 ----------------------------------------
 
 Il est possible d'associer des documents ainsi que des images aux
-enregistrements liés à l'objet métier en utilisant respectivement les
+enregistrements liés à un objet métier en utilisant respectivement les
 types "*Document - Objet métier*" et "*Image - Objet métier*".
 
 Une boite à cocher "*Uniquement en consultation*" permet de définir si
@@ -284,7 +284,7 @@ seul leur nom sera stocké en base :
 
     {dossier vMap}/vas/ws_data/vitis/{nom de l'objet métier}/{identifiant de l'enregistrement}/{nom de l'attribut}/{nom du fichier}
 
-**Remarque: seulement un fichier peut être associé à un attribut**, si
+**Remarque : seulement un fichier peut être associé à un attribut**, si
 plusieurs fichiers doivent être téléversés, il faut créer
 plusieurs attributs ou sinon les compresser dans un fichier .zip
 
@@ -292,10 +292,10 @@ Grille de sous-objets avec possibilité d'ajout, de suppression et d'édition
 ---------------------------------------------------------------------------
 
 Il est assez régulier d'avoir plusieurs objets métiers qui dépendent les
-uns des autres, dans ce cas là il est très utile lors de l'édition d'un
-objet parent de voir la liste des sous-objets liés à ce parent.
+uns des autres. Dans ce cas, il est très utile lors de l'édition d'un
+objet parent de visualiser la liste des sous-objets liés à ce dernier.
 
-Dans notre exemple c'est l'objet métier "*Route*" qui joue le rôle du
+Dans l'exemple c'est l'objet métier "*Route*" qui joue le rôle du
 parent car un enregistrement constituée de plusieurs "*Lampes*".
 
 Il est possible dans les formulaires de vMap de pouvoir afficher cette
