@@ -24,7 +24,7 @@ Le *gestionnaire d'onglets* est accessible via le  bouton **Édition > Gestion d
    :alt: Studio - Gestionnaire d'onglets
 
 
-Une fois l'outil affiché, il est possible le cocher ou décocher les
+Une fois l'outil affiché, il est possible de cocher ou décocher les
 attributs à afficher sur les différents onglets tout en ayant un aperçu
 en zone de prévisualisation.
 
