@@ -42,7 +42,7 @@ ceci peut être utile pour afficher un label. **
 Insertion d'un attribut de type lien personnalisé vers un service externe
 ---------------------------------------------------------------------
 
-Il est souvent utile lors de l'utilisation d'un objet métier de mettre en place des liens vers d'autres plateformes.
+Il est souvent utile, lors de l'utilisation d'un objet métier, de mettre en place des liens vers d'autres plateformes.
 
 Dans vMap ceci est possible à deux endroits distincts :
 
@@ -52,7 +52,7 @@ Dans l'info-bulle d'un objet
 .. figure:: ../../images/exemple_studio_lien_1.png
    :alt: image
 
-Au quel cas il faut modifier l'attribut **SQL Summary** dans la
+Il faut modifier l'attribut **SQL Summary** dans la
 définition de l'objet métier et utiliser des balises *"bo\_link"*.
 
 Exemple :
@@ -154,9 +154,9 @@ données.
     libellé 3|clé 3
 
 Chaque entité est composée d'une **clé** qui est la valeur retenue et
-d'un **libellé** qui est le contenu affiché. Les deux seront séparées
+d'un **libellé** qui est le contenu affiché. Les deux sont séparés
 (sans espace) par le caractère "\|" et on peut répéter l'opération
-autant de fois que l'on veut en allant à la ligne pour chaque élément.
+autant de fois que l'on veut, en allant à la ligne pour chaque élément.
 
 .. figure:: ../../images/exemple_studio_datasource_4.png
    :alt: image
@@ -169,14 +169,14 @@ chercher en base de données (sur le serveur en cours) le contenu d'une
 table.
 
 On peut également ajouter une ou plusieurs conditions à l'aide de
-filtre.  Pour cela il suffit de renseigner une "*Valeur Clé*" qui sera
-un nom de colonne sur la table, un "*Opérateur*" dans le
-liste fournie et une "*Valeur*" qui sera la valeur à utiliser pour la
+filtre.  Pour cela il suffit de renseigner une "*Valeur Clé*" qui est
+un nom de colonne de la table, un "*Opérateur*" dans le
+liste fournie et une "*Valeur*" qui correspond à la valeur à utiliser pour la
 condition. Le bouton "*+*" permettra d'ajouter des conditions et on
 peut également décider si les conditions sont de type "*AND*" ou
 "*OR*" grâce à une liste déroulante.
 
-**Important:** lors de son utilisation, ce genre de source de données
+**Important :** lors de son utilisation, ce genre de source de données
 utilise le token de connexion de l'utilisateur.  Il faut donc faire
 attention à ce que **tous les utilisateurs susceptibles d'utiliser le
 formulaire aient des droits en consultation sur la table.**
@@ -220,7 +220,7 @@ Plus complexe mais plus puissant, permet d'interroger des bases de
 données situées à l’extérieur du serveur selon un login et un mot de
 passe fourni.
 
-**Important: les login et mot de passe renseignés doivent être publics**
+**Important : les login et mot de passe renseignés doivent être publics**
 car les utilisateurs finaux pourraient avoir accès à cette information.
 
 .. figure:: ../../images/exemple_studio_datasource_8.png
@@ -231,7 +231,7 @@ Insertion d'un attribut de type carte  : affichage d'une carte personnalisée
 
 Le studio permet d'exploiter les services web OSM, Bing Maps ou Vitis vMap pour personnaliser un formulaire en exploitant leurs ressources cartographiques. 
 
-L'utilisateur final peut de la sorte, visualiser et saisir de la géométrie en exploitant la carte comme support de saisie.
+L'utilisateur final peut, de la sorte, visualiser et saisir de la géométrie en exploitant la carte comme support de saisie.
 
 .. figure:: ../../images/exemple_studio_carte_1.png
    :alt: image
@@ -264,11 +264,11 @@ enregistrements liés à l'objet métier en utilisant respectivement les
 types "*Document - Objet métier*" et "*Image - Objet métier*".
 
 Une boite à cocher "*Uniquement en consultation*" permet de définir si
-l'utilisateur pourra visualiser et éditer ou alors uniquement
+l'utilisateur peut visualiser et éditer ce champs ou alors uniquement le
 visualiser.
 
-Si elles existent, les images seront automatiquement affichées à
-l'utilisateur tandis que les documents seront disponibles en
+Si elles existent, les images sont automatiquement affichées à
+l'utilisateur tandis que les documents sont disponibles en
 téléchargement.
 
 +-----------+------------+
