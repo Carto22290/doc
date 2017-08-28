@@ -316,25 +316,24 @@ parent.
 .. figure:: ../../images/exemple_studio_grille_2.png
    :alt: image
 
-JavaScript associé au formulaire permettant la conversion rgb/rgba
+Edition de JavaScript associé à un formulaire  : opérer une conversion rgb/rgba
 ------------------------------------------------------------------
 
-vMap est un logiciel personnalisable, pour cela il est parfois utile
-d'associer du code JavaScript aux différents formulaires.
+vMap est un logiciel personnalisable.  Il peut être utilise d'associer du code JavaScript aux différents formulaires.
 
-Le code écrit dans ces formulaires sera lancé lors de l'édition,
-l'insertion et la visualisation d'un objet métier, il peut servir par
-exemple à convertir des données avant et après saisie, faire des
-concaténations, des requêtes de type Ajax et bien d'autres.
+Le code écrit dans ces formulaires est lancé lors de l'édition,
+l'insertion et la visualisation d'un objet métier. Il peut servir par
+exemple, à convertir des données avant et après saisie, faire des
+concaténations, des requêtes de type Ajax...
 
-Pour ce faire, il y a une section "*Édition JavaScript*" dans la partie
-"*Prévisualisation du studio*":
+La section "*Édition JavaScript*" dans la partie
+"*Prévisualisation du studio*" permet d'ouvrir l'éditeur de code :
 
 .. figure:: ../../images/exemple_studio_js_1.png
    :alt: image
 
-Ce script doit être composé d'une fonction **constructor\_form** appelée
-lors du chargement, cette fonction est lancée avec le **scope** du
+Le script doit être composé d'une fonction **constructor\_form** appelée
+lors du chargement. Cette fonction est lancée avec le **scope** du
 formulaire en paramètre.
 
 Testons le code suivant:
@@ -354,7 +353,7 @@ Testons le code suivant:
         console.log('scope:', scope);
     };
 
-Ceci va afficher à l'utilisateur une popup "Hello world" lors de
+Ceci va afficher une popup "Hello world" lors de
 l'affichage du formulaire, et va écrire le contenu de l'objet scope dans
 la console du navigateur (affichable dans les outils de développement).
 
@@ -413,29 +412,27 @@ Analysons le contenu de l'objet **scope**:
     wabState: null
     __proto__: Object
 
-Dans cet objet, trois variables sont essentielles:
+Dans cet objet, trois variables sont essentielles :
 
--  **sFormDefinitionName:** nom du formulaire utilisé (update, display,
+-  **sFormDefinitionName :** nom du formulaire utilisé (update, display,
    insert etc..)
--  **oFormDefinition:** définition JSON du formulaire
--  **oFormValues:** valeurs courantes du formulaire
+-  **oFormDefinition :** définition JSON du formulaire
+-  **oFormValues :** valeurs courantes du formulaire
 
 Dans notre cas nous voulons convertir les couleurs de "*rgba*" vers
 "*rgb*" et vise versa pour avoir un formulaire en "*rgba*" et une base
 de données en "*rgb*".
 
 Ces couleurs sont contenues en base dans les attributs
-"*background\_color*", "*contour\_color*" et "*color\_label*", sur mon
-formulaire j'ai mis ces variables dans des champs cachés et j'ai
-également crée les attributs "*background\_color\_rgba*",
-"*contour\_color\_rgba*" et "*color\_label\_rgba*" qui serviront lors de
+"*background\_color*", "*contour\_color*" et "*color\_label*". Dans le
+formulaire, ces variables sont dans des champs cachés. Les attributs "*background\_color\_rgba*",
+"*contour\_color\_rgba*" et "*color\_label\_rgba*" sont également créés pour être exploités lors de
 l'utilisation.
 
 .. figure:: ../../images/exemple_studio_js_2.png
    :alt: image
 
-Passons à l'édition du JavaScript, j'ai dans une première partie crée
-les fonctions de conversion suivantes:
+Dans le mode Edition du JavaScript, les fonctions de conversion suivantes sont crées créées :
 
 .. code:: javascript
 
@@ -465,8 +462,8 @@ les fonctions de conversion suivantes:
             return false;
     };
 
-Pour convertir de "*rgb*" vers "*rgba*" lors du chargement du formulaire
-j'effectue le code suivant:
+Le code suivant est généré pour convertir de "*rgb*" vers "*rgba*" lors du chargement du formulaire : 
+
 
 .. code:: javascript
 
@@ -474,8 +471,7 @@ j'effectue le code suivant:
     scope['oFormValues']['update']['contour_color_rgba'] = parseColorToRGBA(scope['oFormValues']['update']['contour_color']);
     scope['oFormValues']['update']['color_label_rgba'] = parseColorToRGBA(scope['oFormValues']['update']['color_label']);
 
-Et pour convertir le "*rgba*" vers "*rgb*" je devrais effectuer le code
-suivant:
+Et pour convertir le "*rgba*" vers "*rgb*", le code suivant est implémenté :
 
 .. code:: javascript
 
@@ -487,15 +483,15 @@ Le problème avec ce deuxième code c'est qu'il doit être lancé juste
 avant que le formulaire ne soit soumis par l'utilisateur car sinon les
 changements effectués par ce dernier ne seront pas appliqués.
 
-**Comment effectuer des opérations juste avant l'envoi du formulaire?**
+**Comment effectuer des opérations juste avant l'envoi du formulaire ?**
 
-Dans l'objet "*oFormDefinition*" il est possible de renseigner des
-événements:
+Dans l'objet "*oFormDefinition*",  il est possible de renseigner des
+événements :
 
--  **beforeEvent:** événement appelé avant envoi au serveur
--  **afterEvent:** événement appelé après l'envoi au serveur
+-  **beforeEvent :** événement appelé avant envoi au serveur
+-  **afterEvent :** événement appelé après l'envoi au serveur
 
-De cette façon j'écris le code complet:
+De cette façon,  écrire le code complet :
 
 .. code:: javascript
 
@@ -560,7 +556,7 @@ Bouton avec événement JavaScript
 --------------------------------
 
 Nous avons vu dans l'exemple précédent comment intégrer du code dans un
-formulaire objet métier via "*constructor\_form*", dans cet exemple nous
+formulaire objet métier via "*constructor\_form*". Dans ce nouvel exemple, nous
 allons créer une fonction qui sera appelée depuis un bouton dans
 l'interface.
 
