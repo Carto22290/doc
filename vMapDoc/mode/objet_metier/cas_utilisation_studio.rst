@@ -8,8 +8,8 @@ Personnalisation d'un formulaire : répartition d'attributs sur plusieurs onglet
 
 L'exemple ci-dessous illustre l'agencement d'un formulaire en deux onglets : 
 
-- l’onglet *Attributs* dans lequel  les attributs de type textuels sont issus de base de données 
-- l'onglet *Documents* qui contient les attributs de type document.
+- l’onglet *Attributs* dans lequel  les attributs de type textuel sont issus de base de données 
+- l'onglet *Documents* qui contient les attributs de type document
 
 
 .. figure:: ../../images/exemple_studio_onglets.png
@@ -26,18 +26,18 @@ Le *gestionnaire d'onglets* est accessible via le  bouton **Édition > Gestion d
 
 Une fois l'outil affiché, il est possible le cocher ou décocher les
 attributs à afficher sur les différents onglets tout en ayant un aperçu
-dans la zone de prévisualisation.
+en zone de prévisualisation.
 
 .. figure:: ../../images/exemple_studio_onglets_3.png
    :alt: image
    
 
-Le bouton *Ajouter un onglet* permet l'insertion de nouveaux onglet et
+Le bouton *Ajouter un onglet* permet l'insertion de nouveaux onglets et
 on peut également effectuer des opérations comme renommer, supprimer ou
-déplacer des onglets en cliquant sur le nom de l'onglet.
+déplacer des onglets en cliquant sur leur nom.
 
 **Remarque : un attribut peut se situer sur plusieurs onglets à la fois,
-ceci est utile pour afficher un label par exemple**
+ceci est utile pour afficher un label par exemple.**
 
 Insertion d'un attribut de type lien personnalisé vers un service externe
 ---------------------------------------------------------------------
@@ -61,20 +61,19 @@ Exemple :
 
     select nom as "Nom", '[bo_link href="https://www.google.fr/?gws_rd=cr&ei=h3hvWbHuJIORaPe3ofAG#q='||nom||'" target="_blank"]Lien vers une autre application[/bo_link]' as "Link", route_id as "Route id", auteur as "Auteur", image as "[bo_image]"  from sig.lampe
 
-**Il est possible de concaténer une des valeurs de l'enregistrement avec le lien:** dans l'exemple ci-dessus la valeur "*nom*" est concaténée à
-la fin de l'URL pour effectuer une recherche Google du nom de
+**Il est possible de concaténer une des valeurs de l'enregistrement avec le lien :** dans l'exemple ci-dessus la valeur "*nom*" est concaténée à la fin de l'URL pour effectuer une recherche Google du nom de
 l'enregistrement sélectionné.
 
 **Il est possible de concaténer une propertie avec le lien :** en écrivant **{{getPropertie('[nom de la propertie]')}}**.
-Dans l'exemple ci-dessous la valeur de la propertie "*services_alias*" est affichée dans l'info-bulle.
+Dans l'exemple ci-dessous, la valeur de la propertie "*services_alias*" est affichée dans l'info-bulle.
 
 .. code:: sql
    
    select nom as "Nom", route_id as "Route id", auteur as "Auteur", image as "[bo_image]", '{{getPropertie(''services_alias'')}}' as "service_alias" from sig.lampe
 
 
-On peut également définir l'attribut *target* qui permettra de choisir
-un nouvel onglet à chaque fois si on donne pour valeur "*\_blank*" où
+On peut également définir l'attribut *target* qui permet de choisir
+un nouvel onglet à chaque fois si on donne pour valeur "*\_blank*" ou
 alors de stipuler un nom pour utiliser toujours le même onglet.
 
 Dans le formulaire
@@ -83,7 +82,7 @@ Dans le formulaire
 .. figure:: ../../images/exemple_studio_lien_2.png
    :alt: image
 
-On peut effectuer la même opération en personnalisant le formulaire en insétant un
+On peut effectuer la même opération en personnalisant le formulaire en insérant un
 attribut de type *"Lien"* et en utilisant les fonction *"concat"* et
 *"getFormValue"* dans le champ *"Valeur"*.
 
@@ -134,7 +133,7 @@ Une liste est définie par une "*Clé*" qui est la valeur retournée
 lorsqu'on sélectionne un élément de la liste et d'un "*Libellé*" qui est
 ce que l'utilisateur voit dans la liste.
 
-Dans cet exemple, on veut sélectionner une route à associer à la lampe en
+Dans cet exemple, on souhaite sélectionner une route à associer à la lampe en
 édition. Chaque route est définie par un identifiant numérique
 (route\_id) et elle possède un nom textuel (nom) :  on sélectionne donc
 "*nom*" en tant que libellé et "*route\_id*" en tant que clé.
@@ -155,7 +154,7 @@ données.
     libellé 3|clé 3
 
 Chaque entité est composée d'une **clé** qui est la valeur retenue et
-d'un **libellé** qui esy le contenu affiché. Les deux seront séparées
+d'un **libellé** qui est le contenu affiché. Les deux seront séparées
 (sans espace) par le caractère "\|" et on peut répéter l'opération
 autant de fois que l'on veut en allant à la ligne pour chaque élément.
 
@@ -171,16 +170,16 @@ table.
 
 On peut également ajouter une ou plusieurs conditions à l'aide de
 filtre.  Pour cela il suffit de renseigner une "*Valeur Clé*" qui sera
-un nom de colonne sur la table en question, un "*Opérateur*" dans le
+un nom de colonne sur la table, un "*Opérateur*" dans le
 liste fournie et une "*Valeur*" qui sera la valeur à utiliser pour la
 condition. Le bouton "*+*" permettra d'ajouter des conditions et on
-pourra également décider si les conditions sont de type "*AND*" ou
+peut également décider si les conditions sont de type "*AND*" ou
 "*OR*" grâce à une liste déroulante.
 
 **Important:** lors de son utilisation, ce genre de source de données
-utilisera le token de connexion de l'utilisateur, il faut donc faire
-attention que **tous les utilisateurs susceptibles d'utiliser le
-formulaire aient des droits en consultation sur la table en question.**
+utilise le token de connexion de l'utilisateur.  Il faut donc faire
+attention à ce que **tous les utilisateurs susceptibles d'utiliser le
+formulaire aient des droits en consultation sur la table.**
 
 .. figure:: ../../images/exemple_studio_datasource_5.png
    :alt: image
@@ -189,11 +188,11 @@ Source de données de Type service web
 ~~~~~~~~~~~~~~~~
 
 Parfois le type "*Valeurs d'une table locale*" ne suffit pas car on veut
-utiliser une ressource d'un service web précédemment crée afin
+utiliser une ressource d'un service web précédemment créé, afin
 d'effectuer des requêtes complexes ou alors, on souhaite simplement se
 servir d'un de ceux de l'application.
 
-Pour cela il faudra utiliser le type "*Service web*" qui va effectuer
+Pour cela,  on utilise le type "*Service web*" qui effectue
 une requête de type "*GET*" à la ressource en question.
 
 .. figure:: ../../images/exemple_studio_datasource_6.png
@@ -203,7 +202,7 @@ Source de données de type objet métier
 ~~~~~~~~~~~~~~~~~
 
 Il est également possible d'interroger directement un objet métier
-selon une des trois solutions suivantes:
+selon une des trois solutions suivantes :
 
 -  **Form:** renvoie l’ensemble des colonnes de la table associée à
    l'objet métier
@@ -232,25 +231,24 @@ Insertion d'un attribut de type carte  : affichage d'une carte personnalisée
 
 Le studio permet d'exploiter les services web OSM, Bing Maps ou Vitis vMap pour personnaliser un formulaire en exploitant leurs ressources cartographiques. 
 
-L'utilisateur final peut de la sorte visualiser et saisir de la géométrie en exploitant la carte comme support de saisie.
+L'utilisateur final peut de la sorte, visualiser et saisir de la géométrie en exploitant la carte comme support de saisie.
 
 .. figure:: ../../images/exemple_studio_carte_1.png
    :alt: image
 
-Trois types de cartes sont disponibles:
+Trois types de cartes sont disponibles :
 
--  **Carte OSM:** simple carte contenant une couche OSM
--  **Carte Bing:** simple carte contenant une couche Bing (nécessite une
+-  **Carte OSM :** carte contenant une couche OSM
+-  **Carte Bing :** carte contenant une couche Bing (nécessite une
    clé)
--  **Carte vMap:** carte complexe pouvant contenir plusieurs couches et
+-  **Carte vMap :** carte complexe pouvant contenir plusieurs couches et
    définie par un fichier JSON téléchargeable depuis **Mode vMap >
    Cartes > Gestion des cartes > Ma carte > Télécharger**
 
 Une fois la carte sélectionnée, l'administrateur peut définir l'emprise de la
-carte en navigant simplement dessus ou en renseignant les champs
+carte en naviguant simplement dessus ou en renseignant les champs
 "*Long*" pour la longitude, "*Lat*" pour la latitude et "*1:*" pour
-l'échelle ou alors "*XMin*", "*YMin*", "*XMax*", "*YMax*" si le mode de
-centrage de la carte est défini sur "*Étendue*".
+l'échelle. Si le mode de centrage de la carte est défini sur "*Étendue*",  saisir les valeurs "*XMin*", "*YMin*", "*XMax*", "*YMax*. 
 
 Les outils disponibles lors de l'utilisation sont configurables
 graphiquement via les boites à cocher de la zone "*Définition*".
@@ -258,7 +256,7 @@ graphiquement via les boites à cocher de la zone "*Définition*".
 .. figure:: ../../images/exemple_studio_carte_3.png
    :alt: image
 
-Document/Image propre à l'enregistrement
+Insertion d'un champs de chargement de Document/Image 
 ----------------------------------------
 
 Il est possible d'associer des documents ainsi que des images aux
@@ -280,15 +278,15 @@ téléchargement.
 +-----------+------------+
 
 Les documents résultants seront stockés dans le répertoire suivant et
-seul leur nom sera stocké en base:
+seul leur nom sera stocké en base :
 
 ::
 
     {dossier vMap}/vas/ws_data/vitis/{nom de l'objet métier}/{identifiant de l'enregistrement}/{nom de l'attribut}/{nom du fichier}
 
 **Remarque: seulement un fichier peut être associé à un attribut**, si
-plusieurs fichiers doivent être téléversés il faudra soit créer
-plusieurs attributs soit les compresser dans un fichier .zip
+plusieurs fichiers doivent être téléversés, il faut créer
+plusieurs attributs ou sinon les compresser dans un fichier .zip
 
 Grille de sous-objets avec possibilité d'ajout, de suppression et d'édition
 ---------------------------------------------------------------------------
