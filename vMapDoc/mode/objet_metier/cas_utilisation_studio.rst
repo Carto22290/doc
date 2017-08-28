@@ -296,21 +296,21 @@ uns des autres. Dans ce cas, il est très utile lors de l'édition d'un
 objet parent de visualiser la liste des sous-objets liés à ce dernier.
 
 Dans l'exemple c'est l'objet métier "*Route*" qui joue le rôle du
-parent car un enregistrement constituée de plusieurs "*Lampes*".
+parent. Un enregistrement peut etre constitué de plusieurs "*Lampes*".
 
-Il est possible dans les formulaires de vMap de pouvoir afficher cette
-liste en donnant la possibilité d'ajout, d'édition et de suppression en
-fonction des droits de l'utilisateur sur le sous-objet.
+Dans vMap, il est possible d'afficher les listes parents/enfants
+en donnant la possibilité d'ajout, d'édition et de suppression
+(en fonction des droits de l'utilisateur) sur le sous-objet.
 
 .. figure:: ../../images/exemple_studio_grille_1.png
    :alt: image
 
-Cela est assez simple à mettre en œuvre: dans le studio, il faudra créer
+Dans le studio, il faut créer
 un élément de type "*Grille - Objet métier*", sélectionner l'objet
-métier qui jouera le rôle d'enfant et renseigner le lien qu'il existe
+métier qui joue le rôle d'enfant et renseigner le lien qu'il existe
 entre les deux objets.
 
-Dans le champ "*Lien avec l'objet métier*" le premier champ désigne la
+Dans le champ "*Lien avec l'objet métier*", le premier champ désigne la
 colonne de l'enfant tandis que le deuxième celle de l'enregistrement
 parent.
 
