@@ -93,7 +93,7 @@ suffisants pour avoir un résultat, et c'est par son intermédiaire que se
 font les connexions à la base de données.
 
 **Pour des raisons de sécurité il est strictement interdit de passer le
-token en tant que paramètre dans l'URL**. Il faut donc le passer en-tête: si une personne malveillante a accès au réseau (man in the
+token en tant que paramètre dans l'URL**. Il faut donc le passer en-tête : si une personne malveillante a accès au réseau (man in the
 middle), elle pourrait alors voir ce token et donc usurper l'identité d'un
 autre utilisateur.
 
@@ -101,7 +101,7 @@ autre utilisateur.
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Lorsque l'on utilise régulièrement l'API-REST, il est possible que l'on soit
-confronté à des problèmes ds longueur d' URL : à partir d'un certain 
+confronté à des problèmes de longueur d'URL : à partir d'un certain 
 nombre de caractères, les navigateurs refusent d’exécuter la requête
 et affichent l'erreur suivante :
 
@@ -109,8 +109,8 @@ et affichent l'erreur suivante :
 
     414 URI Too Long
 
-Pour palier à cette contrainte, nous avons mis en place l'en-ête
-X-HTTP-Method-Override pour envoyer une requête de type POST avec
+Pour palier à cette contrainte, une en-ête
+X-HTTP-Method-Override a été mise en place pour envoyer une requête de type POST avec
 des paramètres figurant dans le body (sans limite de taille) et interprétables comme des requêtes GET :
 
 ::
@@ -477,7 +477,7 @@ créer une ressource "villes".
 Parmi les fichiers indispensables, se trouvent les fichiers
 suivants :
 
--  **overview.phtml** :permet d'afficher la ressource dans la page
+-  **overview.phtml** : permet d'afficher la ressource dans la page
    d'aide au développement
 -  **CustomWS.class.inc** : classe mère du projet
 -  **CustomWS.class.sql.inc** : fichier contenant les requêtes SQL du
@@ -544,7 +544,7 @@ Définition de la classe Ville.
         $this->aSelectedFields = Array(...);
     }
 
-Constructeur de la classe,. La variable
+Constructeur de la classe. La variable
 **$this->aSelectedFields** définit attributs à afficher lors des
 requêtes.
 
@@ -594,8 +594,7 @@ Deux commentaires se trouvent au dessus de cette
 fonction : 
 
 - le premier est utilisé par `swagger <https://swagger.io/>`__ pour générer la documentation en ligne interactive 
-- le second est le commentaire de la fonction utilisée pour décrire aux développeurs ce que
-fait la fonction.
+- le second est le commentaire de la fonction utilisée pour décrire aux développeurs ce que fait la fonction.
 
 Les paramètres décrits dans les commentaires swagger passés dans le
 chemin l'URL par la relation in="path"(comme ici "*code*") sont
@@ -814,13 +813,13 @@ variable, et fournir un tableau de variables à executeWithParams().
 
 Les différents formats sont :
 
--  **string**, **number**, **integer**: pour les valeurs de variables à passer entre
+-  **string**, **number**, **integer** : pour les valeurs de variables à passer entre
    simple quotes.
--  **group**: pour les valeurs à passer entre simple quotes et séparées par des virgules.
--  **geometry**: pour les géométries à passer entre simple quotes.
--  **quoted\_string**: comme string mais pour intégrer des caractères
+-  **group** : pour les valeurs à passer entre simple quotes et séparées par des virgules.
+-  **geometry** : pour les géométries à passer entre simple quotes.
+-  **quoted\_string** : comme string mais pour intégrer des caractères
    spéciaux ex: 'ma lampe%'.
--  **column\_name**, **schema\_name**, **table\_name**: pour les noms de
+-  **column\_name**, **schema\_name**, **table\_name** : pour les noms de
    colonnes, tables, schémas. Attention car pour ces types de paramètre
    executeWithParams() ne s'occupera pas des quotes, il faut donc les
    mettre à l'avance ex: SELECT "[column\_name]" FROM
