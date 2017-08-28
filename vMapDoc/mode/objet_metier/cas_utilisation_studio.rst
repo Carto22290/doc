@@ -277,8 +277,8 @@ téléchargement.
 | |image|   | |image|    |
 +-----------+------------+
 
-Les documents résultants seront stockés dans le répertoire suivant et
-seul leur nom sera stocké en base :
+Les documents résultants sont stockés dans le répertoire suivant et
+seul leur nom est stocké en base :
 
 ::
 
