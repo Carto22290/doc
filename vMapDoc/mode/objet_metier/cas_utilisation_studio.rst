@@ -234,7 +234,7 @@ car les utilisateurs finaux pourraient avoir accès à cette information.
 .. figure:: ../../images/exemple_studio_datasource_8.png
    :alt: image
 
-Personnalisation d'un formualaire :  insertion d'un attribut de type carte  
+Personnalisation d'un formulaire :  insertion d'un attribut de type carte  
 --------------------------------------------------------------------
 
 Le studio permet d'exploiter les services web OSM, Bing Maps ou Vitis vMap pour personnaliser un formulaire en exploitant leurs ressources cartographiques. 
