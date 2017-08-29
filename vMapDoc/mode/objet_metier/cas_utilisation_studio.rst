@@ -97,6 +97,8 @@ En utilisant les champs *"Texte"* et *"Cible"* on peut également
 modifier le texte à afficher ainsi que l'onglet cible.
 
 Utilisation du gestionnaire de source de données : insertion d'une liste déroulante ------------------------------------------------------------------------------------
+
+
 Le gestionnaire de sources de données permet la création, l'édition et la suppression de sources de données à associer à des attributs de type : 
 
 - liste
@@ -228,7 +230,7 @@ car les utilisateurs finaux pourraient avoir accès à cette information.
 .. figure:: ../../images/exemple_studio_datasource_8.png
    :alt: image
 
-Personnalisation d'un formualire :  insertion d'un attribut de type carte  
+Personnalisation d'un formualaire :  insertion d'un attribut de type carte  
 --------------------------------------------------------------------
 
 Le studio permet d'exploiter les services web OSM, Bing Maps ou Vitis vMap pour personnaliser un formulaire en exploitant leurs ressources cartographiques. 
