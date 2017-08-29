@@ -39,8 +39,11 @@ déplacer des onglets en cliquant sur leur nom.
 **Remarque**: un attribut peut se situer sur plusieurs onglets à la fois,
 ceci peut être utile pour afficher un label.
 
+
+
 Personnalisation d'un formulaire : insertion d'un attribut de type lien 
 ---------------------------------------------------------------------
+
 
 Il est souvent utile, lors de l'utilisation d'un objet métier, de mettre en place des liens vers d'autres plateformes.
 
