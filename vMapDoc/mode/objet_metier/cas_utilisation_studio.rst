@@ -36,7 +36,7 @@ Le bouton *Ajouter un onglet* permet l'insertion de nouveaux onglets et
 on peut également effectuer des opérations comme renommer, supprimer ou
 déplacer des onglets en cliquant sur leur nom.
 
-**Remarque**: un attribut peut se situer sur plusieurs onglets à la fois,
+**Remarque** : un attribut peut se situer sur plusieurs onglets à la fois,
 ceci peut être utile pour afficher un label.
 
 
