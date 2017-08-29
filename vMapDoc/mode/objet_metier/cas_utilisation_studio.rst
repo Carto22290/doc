@@ -98,7 +98,8 @@ modifier le texte à afficher ainsi que l'onglet cible.
 
 
 
-Utilisation du gestionnaire de source de données : insertion d'une liste déroulante --------------------------------------------------------------------------------
+
+Utilisation du gestionnaire de source de données : insertion d'une liste déroulante -------------------------------------------------------------------------------------
 
 
 
