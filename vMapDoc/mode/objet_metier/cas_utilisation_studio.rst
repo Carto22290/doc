@@ -39,7 +39,7 @@ déplacer des onglets en cliquant sur leur nom.
 **Remarque : un attribut peut se situer sur plusieurs onglets à la fois,
 ceci peut être utile pour afficher un label. **
 
-Personnalisation d'un cormulaire : insertion d'un attribut de type lien personnalisé vers un service externe
+Personnalisation d'un formulaire : insertion d'un attribut de type lien 
 ---------------------------------------------------------------------
 
 Il est souvent utile, lors de l'utilisation d'un objet métier, de mettre en place des liens vers d'autres plateformes.
@@ -93,8 +93,7 @@ attribut de type *"Lien"* et en utilisant les fonction *"concat"* et
 En utilisant les champs *"Texte"* et *"Cible"* on peut également
 modifier le texte à afficher ainsi que l'onglet cible.
 
-Utilisation du gestionnaire de source de données : insertion d'une liste déroulante avec source de données
-------------------------------------------------------------------------------------------------------------
+Utilisation du gestionnaire de source de données : insertion d'une liste déroulante ------------------------------------------------------------------------------------
 Le gestionnaire de sources de données permet la création, l'édition et la suppression de sources de données à associer à des attributs de type : 
 
 - liste
@@ -226,7 +225,7 @@ car les utilisateurs finaux pourraient avoir accès à cette information.
 .. figure:: ../../images/exemple_studio_datasource_8.png
    :alt: image
 
-Personnailsiation d'un formualire :  insertion d'un attribut de type carte  
+Personnalisation d'un formualire :  insertion d'un attribut de type carte  
 --------------------------------------------------------------------
 
 Le studio permet d'exploiter les services web OSM, Bing Maps ou Vitis vMap pour personnaliser un formulaire en exploitant leurs ressources cartographiques. 
@@ -256,7 +255,7 @@ graphiquement via les boites à cocher de la zone "*Définition*".
 .. figure:: ../../images/exemple_studio_carte_3.png
    :alt: image
 
-Personnalisation d'un formulaire : insertion d'un champs de chargement de Document/Image 
+Personnalisation d'un formulaire : insertion d'un champ de chargement de Document/Image 
 ----------------------------------------
 
 Il est possible d'associer des documents ainsi que des images aux
