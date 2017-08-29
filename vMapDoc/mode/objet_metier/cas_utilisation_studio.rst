@@ -99,8 +99,8 @@ modifier le texte à afficher ainsi que l'onglet cible.
 
 
 
-Utilisation du gestionnaire de source de données : insertion d'une liste déroulante -------------------------------------------------------------------------------------
-
+Utilisation du gestionnaire de source de données : insertion d'une liste déroulante 
+------------------------------------
 
 
 Le gestionnaire de sources de données permet la création, l'édition et la suppression de sources de données à associer à des attributs de type : 
