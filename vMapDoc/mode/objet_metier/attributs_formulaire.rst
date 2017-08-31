@@ -21,7 +21,7 @@ Il existe plus d'un vingtaine de types d'attributs paramétrables dans la fenêt
 .. figure:: ../../images/bouton_radio1.png
    :alt: image
 
-Nomme le paramètre et son libellé tel qu'il sera affiché dans le formulaire. Définir la valeur par défaut et déterminer si le bouton radio doit être désactivé ou pas. Définir ensuite les options possibles en entrant le libellé du bouton et la valeur envoyée en base. 
+Nommer l'attribut et son libellé tel qu'il sera affiché dans le formulaire. Définir la valeur par défaut et déterminer si le bouton radio doit être désactivé ou pas. Définir ensuite les options possibles en entrant le libellé du bouton et la valeur envoyée en base. 
 Le bouton "Option" permet l'ajout d'une option supplémentaire. 
 
 .. figure:: ../../images/bouton_radio.png
@@ -30,8 +30,13 @@ Le bouton "Option" permet l'ajout d'une option supplémentaire.
 2.2 Boîte à cocher
 ~~~~~~~~~~~~
 
+.. figure:: ../../images/boite_a_cocher1.png
+   :alt: image
 
+Nommer l'attribut et son libellé tel qu'il sera affiché dans le formulaire. Définir si la boîte doit être cochée par défaut ou pas. 
 
+.. figure:: ../../images/boite_a_cocher.png
+   :alt: image
 
 
 2.3 Carte Bing
