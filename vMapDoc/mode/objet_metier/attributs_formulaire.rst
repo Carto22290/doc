@@ -18,7 +18,7 @@ Il existe plus d'un vingtaine de types d'attributs paramétrables dans la fenêt
 2.1 Bouton radio 
 ~~~~~~~~~~~~
 
-.. figure:: ../../bouton_radio1.png
+.. figure:: ../../images/bouton_radio1.png
    :alt: image
 
 
