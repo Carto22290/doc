@@ -4,12 +4,12 @@ Attributs de formulaire
 1 Définition
 -------------
 
+Les attributs d'un formulaire peuvent être créés, édités et supprimés dans le studio. Certains attributs exploitent des valeurs issues de base de données ou de services web, d'autres sont des composants de mise en page destinés à personnaliser l'interface  du formulaire, et d'autres sont des attributs classiques directement configurables dans vMap. 
 
+Il existe plus d'un vingtaine de types d'attributs paramétrables dans la fenêtre de définition du studio. 
 
-
-
-
-
+   **Un nom d'attribut ne peut pas contenir d'espace.** 
+ 
 
 2 Edition des attributs 
 ------------------------------
