@@ -6,7 +6,7 @@ Attributs de formulaire
 
 Les attributs d'un formulaire peuvent être créés, édités et supprimés dans le studio. Certains attributs exploitent des valeurs issues de base de données ou de services web, d'autres sont des composants de mise en page destinés à personnaliser l'interface  du formulaire, et d'autres sont des attributs classiques directement configurables dans vMap. 
 
-Il existe plus d'un vingtaine de types d'attributs paramétrables dans la fenêtre de définition du studio. 
+Il existe plus d'un vingtaine de types d'attributs paramétrables dans la fenêtre de définition en bas à gauche du studio. 
 
    **Un nom d'attribut ne peut pas contenir d'espace.** 
  
@@ -21,7 +21,8 @@ Il existe plus d'un vingtaine de types d'attributs paramétrables dans la fenêt
 .. figure:: ../../images/bouton_radio1.png
    :alt: image
 
-
+Nomme le paramètre et son libellé tel qu'il sera affiché dans le formulaire.Définirla valeur par défaut et déterminer si le bouton radio doit être désactivé ou pas. Définir ensuite les options possibles en entrant le libellé du bouton et la valeur envoyée en base. 
+Le bouton  permet de rajouter une option supplémentaire. 
 
 
 
