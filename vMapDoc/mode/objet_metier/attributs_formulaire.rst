@@ -22,14 +22,14 @@ Il existe plus d'un vingtaine de types d'attributs paramétrables dans la fenêt
    :alt: image
 
 Nomme le paramètre et son libellé tel qu'il sera affiché dans le formulaire. Définir la valeur par défaut et déterminer si le bouton radio doit être désactivé ou pas. Définir ensuite les options possibles en entrant le libellé du bouton et la valeur envoyée en base. 
-Le bouton 
+Le bouton |option| permet de rajouter une option supplémentaire. 
 
 
-.. image:: ../../images/option.png
-   :alt: image
+..|option| .. figure:: ../../images/option.png
+                :alt: image
   
   
-permet de rajouter une option supplémentaire. 
+
 
 
 
