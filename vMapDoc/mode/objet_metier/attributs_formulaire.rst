@@ -39,13 +39,15 @@ Nommer l'attribut et son libellé tel qu'il sera affiché dans le formulaire. D�
    :alt: image
 
 
-2.3 Carte Bing
+2.3 Paramètres de type Carte 
 ~~~~~~~~~~~~~~~~
 
-2.4 Carte OSM 
-~~~~~~~~~~~~~~
+2.3.1 Carte Bing
++++++++++
 
-2.5 Carte vMap
+
+
+
 ~~~~~~~~~~~~~~
 
 2.6 Champ caché 
