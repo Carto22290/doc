@@ -30,6 +30,10 @@ Le bouton "Option" permet l'ajout d'une option supplémentaire.
 2.2 Boîte à cocher
 ~~~~~~~~~~~~
 
+
+
+
+
 2.3 Carte Bing
 ~~~~~~~~~~~~~~~~
 
