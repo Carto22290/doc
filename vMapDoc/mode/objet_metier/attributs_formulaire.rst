@@ -39,24 +39,67 @@ Nommer l'attribut et son libellé tel qu'il sera affiché dans le formulaire. D�
    :alt: image
 
 
-2.3 Paramètres de type Carte 
+2.3 Paramètres de type Carte Bing, OSM, vMap
 ~~~~~~~~~~~~~~~~
+vMap permet d'exploiter les services web OSM, Bing Maps ou Vitis vMap pour personnaliser un formulaire en exploitant leurs ressources cartographiques. 
 
-2.3.1 Carte Bing
-+++++++++
 
-2.3.2 Carte OSM
+
+2.3.1 Carte OSM
 ++++++++
+
+Le développeur qui insère un élément (ou qui modifie un paramètre existant) de type carte, nomme le paramètre, et définit le libellé qui sera affiché dans le formulaire de demande. Il définit la hauteur et la largeur de la carte et indique si ce paramètre est obligatoire ou pas en cochant la case Requis. 
+
+Il définit ensuite les options spécifiques aux éléments de type carte :  
+
+
+    * La projection de la carte : WGS84 ou Lambert 93. En Lambert 93, l’étendue par défaut correspond à l'ensemble de la France métropolitaine.
+    * Méthode de centrage de la carte : l'auteur choisit si le centre de la carte est défini par un point défini via des coordonnées X/Y et une échelle d'affichage, ou si le centre de la carte est paramétrée par son étendue définie par les coordonnées X et Y Min et Max.
+
+ 
+
+Il choisit ensuite les éléments de dessin et de navigation qui seront affichés sur la carte du formulaire de demande :
+
+    * Position de la souris : affichage dynamique des coordonnées de la souris selon la projection définie.
+    * Boutons de zoom : affichage des boutons de navigation classique zoom avant, zoom arrière et retour à l'étendue par défaut.
+    * Echelle : affichage de l'échelle.
+    * Projection de la carte : affichage de la projection Lambert 93 ou WGS 84.
+    * Multiples géométries : possibilité ou pas de saisir des géométries de type différent (point, ligne et polygone).
+    * Plein écran : permet d'afficher la carte en mode plein écran.
+    * Suppression générale : Suppression de toutes les géométries saisies sur la carte.
+    * Edition : modification de la géométrie sélectionnée.
+    * Dessiner un point.
+    * Dessiner une ligne.
+    * Dessiner un polygone.
+
+ 
+
+Le champ Valeur permet à l'auteur de définir une géométrie qui sera affichée par défaut dans le formulaire. Cette géométrie est décrite via une chaîne WKT. 
+
+
+
+
+
+2.3.2 Carte Bing
++++++++++
+Tous les paramètres de personnalisation d'une carte Bing Maps sont identiques à ceux des cartes OSM. Il faut fournir en plus, une clé d'accès pour pouvoir exploiter ce service web cartographique.
+
+ 
+
+Générer une clé Bing Maps sur le site .. _Bing: https://www.bingmapsportal.com/
+
+Une fois obtenue, entrer la clé dans le champs Clé et sélectionner la carte à afficher dans le formulaire de demande :
+
+    * Aerial
+    * Aerial WithLabels
+    * Road
+
 
 
 2.3.3 carte vMap
 ++++++++++++
+Pour pouvoir exploiter une carte vMap, Il faut au préalable, dans vMap, exporter la définition de la carte . L'export d'une carte vMap génère un fichier map.json que l'auteur du formulaire doit télécharger (champ Fichier local) pour pouvoir l'intégrer dans un formulaire. Il procède ensuite de la même façon qu'avec les autres ressources de type carte, en nommant le paramètre et son libellé, puis en paramétrant l'affichage des outils propres aux cartes. 
 
-
-
-
-
-~~~~~~~~~~~~~~
 
 2.6 Champ caché 
 ~~~~~~~~~~~~
