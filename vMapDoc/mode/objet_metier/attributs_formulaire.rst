@@ -45,6 +45,14 @@ Nommer l'attribut et son libellé tel qu'il sera affiché dans le formulaire. D�
 2.3.1 Carte Bing
 +++++++++
 
+2.3.2 Carte OSM
+++++++++
+
+
+2.3.3 carte vMap
+++++++++++++
+
+
 
 
 
