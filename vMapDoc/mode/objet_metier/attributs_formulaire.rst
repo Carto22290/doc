@@ -86,7 +86,7 @@ Tous les paramètres de personnalisation d'une carte Bing Maps sont identiques �
 
  
 
-Générer une clé Bing Maps sur le site .. _Bing: https://www.bingmapsportal.com/
+Générer une clé Bing Maps sur le site .. : https://www.bingmapsportal.com/
 
 Une fois obtenue, entrer la clé dans le champs Clé et sélectionner la carte à afficher dans le formulaire de demande :
 
