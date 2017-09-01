@@ -108,7 +108,7 @@ Nommer le paramètre et définir la valeur à exploiter.
 
 2.7 Couleur 
 ~~~~~~~~~~~~
-
+Un attribut de tye Choix de la couleur insère un sélecteur de couleurs. Nommer le paramètre et le libellé à afficher dans le formulaire, et définir la couleur par défaut.
 
 2.8 Curseur 
 ~~~~~~~~~~~~
