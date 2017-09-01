@@ -206,7 +206,7 @@ attributs, et via la case "Voir / modifier les lignes", il peut regrouper plusie
    :alt: image
 
 Le bouton **Sources de données** en bas de zone,  permet la configuration des attributs de type liste. 
-En savoir plus sur le  `Gestionnaire de source de données dans 
+En savoir plus sur le  ` 
 Gestionnaire de source de données <cas_utilisation_studio.html>`__
 
 
