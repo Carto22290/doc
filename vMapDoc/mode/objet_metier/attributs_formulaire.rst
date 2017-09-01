@@ -72,6 +72,8 @@ Il choisit ensuite les éléments de dessin et de navigation qui seront affiché
     * Dessiner un polygone.
    * Le champ Valeur permet à l'auteur de définir une géométrie qui sera affichée par défaut dans le formulaire. Cette géométrie est décrite via une chaîne WKT. 
    
+.. figure:: ../../images/carte_valeur_par_dafaut.png
+   :alt: image
 
 
 
