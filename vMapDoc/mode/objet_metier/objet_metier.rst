@@ -205,7 +205,9 @@ attributs, et via la case "Voir / modifier les lignes", il peut regrouper plusie
 .. figure:: ../../images/formulaire_zone_attributs.png
    :alt: image
 
-Le bouton **Sources de données** en bas de zone,  permet la configuration des attributs de type liste. En savoir plus sur le gestionnaire de source de données. 
+Le bouton **Sources de données** en bas de zone,  permet la configuration des attributs de type liste. 
+En savoir plus sur le 'gestionnaire de source de données. <cas_utilisation_studio.html#utilisation-du-gestionnaire-de-source-de-donnees-insertion-d-une-liste-deroulante>'__
+
 
 3.2.2.4. La zone de définition de l'attribut sélectionné
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''
