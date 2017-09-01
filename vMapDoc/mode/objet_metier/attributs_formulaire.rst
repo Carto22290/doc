@@ -102,6 +102,10 @@ Pour pouvoir exploiter une carte vMap, Il faut au préalable, dans vMap, exporte
 2.6 Champ caché 
 ~~~~~~~~~~~~
 
+Un attribut de type Champ caché permet de masquer un attribut. Il est exploité dans le formulaire mais n'est pas apparent. 
+Nommer le paramètre et définir la valeur à exploiter. 
+
+
 2.7 Couleur 
 ~~~~~~~~~~~~
 
