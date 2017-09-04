@@ -138,8 +138,6 @@ Nommer le paramètre et définir la valeur à exploiter.
 2.7 Couleur 
 ~~~~~~~~~~~~
 
-++++++++++++
-
 .. image:: ../../images/selecteur_couleur.png
    :height: 100
    :width: 200
