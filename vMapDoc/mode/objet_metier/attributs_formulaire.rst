@@ -47,9 +47,13 @@ vMap permet d'exploiter les services web OSM, Bing Maps ou Vitis vMap pour perso
 2.3.1 Carte OSM
 ++++++++
 
-L'auteur d'un formulaire qui insère un élément de type carte, nomme le paramètre et définit le libellé qui sera affiché dans le formulaire de demande. Il définit la hauteur et la largeur de la carte et indique si ce paramètre est obligatoire ou pas en cochant la case Requis. 
+.. figure:: ../../images/carte_osm.png
+   :alt: image
+   
+Nommer le paramètre et définir le libellé qui sera affiché dans le formulaire de demande. 
+Définir la hauteur et la largeur de la carte et indique si ce paramètre est obligatoire ou pas en cochant la case Requis. 
 
-Il définit ensuite les options spécifiques aux éléments de type carte :  
+Paramétrer ensuite les options spécifiques aux éléments de type carte :  
 
 
     * La projection de la carte : WGS84 ou Lambert 93. En Lambert 93, l’étendue par défaut correspond à l'ensemble de la France métropolitaine.
