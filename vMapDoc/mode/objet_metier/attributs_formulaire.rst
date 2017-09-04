@@ -160,15 +160,19 @@ Un attribut de tye curseur insère un curseur dans le formulaire. Nommer le para
  
    
    
-2.9 Date 
+2.9 Paramètres de type Date 
 ~~~~~~~~~~
 
 
-2.10 Date et heure
-~~~~~~~~
+2.9.1  Date
+++++++++++++
 
 
-2.11 Document - objet métier 
+2.9.2  Date/heure
+++++++++++++
+
+
+2.10 Document - objet métier 
 ~~~~~~~~
 
 2.12 Décimal
