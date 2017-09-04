@@ -94,6 +94,13 @@ Choisir ensuite les éléments de dessin et de navigation qui seront affichés s
 
 2.3.2 Carte Bing
 +++++++++
+
+.. image:: ../../images/c_formulaire_carte_bing.png
+   :height: 100
+   :width: 200
+   :scale: 50
+   :caption: Carte Bing
+   
 Tous les paramètres de personnalisation d'une carte Bing Maps sont identiques à ceux des cartes OSM. Il faut fournir en plus, une clé d'accès pour pouvoir exploiter ce service web cartographique.
 
  
