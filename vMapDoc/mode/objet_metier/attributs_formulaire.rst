@@ -166,9 +166,12 @@ Un attribut de tye curseur insère un curseur dans le formulaire. Nommer le para
 2.9.1  Date
 ++++++++++++
 
-Un attribut de type Date insère une date sous la forme jj/mm/aaaa dans le formulaire. Un calendrier s'affiche dans le fomrlulaire pour faciliter la date à entrer. Nommer le paramètre et le libellé à afficher et définir la valeur par défaut. 
+Un attribut de type Date insère une date sous la forme jj/mm/aaaa. Un calendrier s'affiche dans le formlulaire pour faciliter la date à entrer. 
 
+Nommer le paramètre et le libellé à afficher et définir la valeur par défaut. 
 
+.. image:: ../../images/date.png
+   :alt: Attribut de type curseur
 
 
 2.9.2  Date/heure
