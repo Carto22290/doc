@@ -232,8 +232,8 @@ Nommer le paramètre et le libellé à afficher.
 
 Définir ensuite les paramètres du lien : 
 
-* Texte : Texte à afficher 
-* Cible : Si laissé vide, la page s'ouvre dans un nouvel onglet. 
+* Texte : texte à afficher 
+* Cible : si laissé vide, la page s'ouvre dans un nouvel onglet. 
 * Valeur : adresse du lien 
 
 
