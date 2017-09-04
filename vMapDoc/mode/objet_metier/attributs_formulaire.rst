@@ -137,6 +137,15 @@ Nommer le paramètre et définir la valeur à exploiter.
 
 2.7 Couleur 
 ~~~~~~~~~~~~
+
+++++++++++++
+
+.. image:: ../../images/selecteur_couleur.png
+   :height: 100
+   :width: 200
+   :scale: 50
+   :alt: Attribut de type sélecteur de couleur
+   
 Un attribut de tye Choix de la couleur insère un sélecteur de couleurs. Nommer le paramètre et le libellé à afficher dans le formulaire, et définir la couleur par défaut.
 
 2.8 Curseur 
