@@ -86,8 +86,10 @@ Choisir ensuite les éléments de dessin et de navigation qui seront affichés s
    
 .. figure:: ../../images/carte_valeur_par_dafaut.png
    :alt: image
+   
 
-
+.. figure:: ../../images/c_formulaire_carteOSM.png
+   :alt: image
 
 
 2.3.2 Carte Bing
