@@ -61,7 +61,7 @@ Paramétrer ensuite les options spécifiques aux éléments de type carte :
 
  
 
-Il choisit ensuite les éléments de dessin et de navigation qui seront affichés sur la carte du formulaire de demande :
+Choisir ensuite les éléments de dessin et de navigation qui seront affichés sur la carte du formulaire de demande :
 
     * Position de la souris : affichage dynamique des coordonnées de la souris selon la projection définie.
     * Boutons de zoom : affichage des boutons de navigation classique zoom avant, zoom arrière et retour à l'étendue par défaut.
