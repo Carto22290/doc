@@ -231,6 +231,7 @@ Un attribut de type Lien permet d'insérer des liens vers d'autres plateformes.
 Nommer le paramètre et le libellé à afficher.
 
 Définir ensuite les paramètres du lien : 
+
 * Texte : Texte à afficher 
 * Cible : Si laissé vide, la page s'ouvre dans un nouvel onglet. 
 * Valeur : adresse du lien 
