@@ -149,11 +149,13 @@ Un attribut de tye Choix de la couleur insère un sélecteur de couleurs. Nommer
 2.8 Curseur 
 ~~~~~~~~~~~~
 
+
 .. image:: ../../images/curseur.png
    :height: 100
    :width: 200
    :scale: 50
    :alt: Attribut de type curseur
+   
    
  Un attribut de tye Curseur insère un curseur dans le formulaire. Nommer le paramètre et le libellé à afficher, et définir les valeurs minimales et maximales de la palge de données ainsi que la valeur par défaut. 
  
