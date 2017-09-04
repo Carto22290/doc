@@ -151,8 +151,11 @@ Un attribut de tye Choix de la couleur insère un sélecteur de couleurs. Nommer
 2.8 Curseur 
 ~~~~~~~~~~~~
 
-
-
+.. image:: ../../images/curseur.png
+   :height: 100
+   :width: 200
+   :scale: 50
+   :alt: Attribut de type curseur
 2.9 Date 
 ~~~~~~~~~~
 
