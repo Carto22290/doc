@@ -149,6 +149,7 @@ Un attribut de tye Choix de la couleur insère un sélecteur de couleurs. Nommer
 2.8 Curseur 
 ~~~~~~~~~~~~
 
+Un attribut de tye Choix de la couleur insère un sélecteur de couleurs. Nommer le paramètre et le libellé à afficher dans le formulaire, et définir la couleur par défaut.
 
 .. image:: ../../images/curseur.png
    :height: 100
