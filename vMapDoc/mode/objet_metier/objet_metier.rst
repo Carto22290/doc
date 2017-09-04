@@ -195,8 +195,7 @@ JSON ainsi que l'ajout de JavaScript au formulaire.
 
 .. note::
 
-    Les onglets ne sont volontairement pas affichés dans cette zone. Ils sont affichés lors de
-l'utilisation réelle du formulaire. 
+    Les onglets ne sont volontairement pas affichés dans cette zone. Ils sont affichés lors de l'utilisation réelle du formulaire. 
 
 3.2.2.3. La zone de gestion de mise en page
 '''''''''''''''''''''''''''''''''''''''''''
