@@ -8,9 +8,11 @@ Les attributs d'un formulaire peuvent être créés, édités et supprimés dans
 
 Il existe plus d'un vingtaine de types d'attributs paramétrables dans la fenêtre de définition en bas à gauche du studio. 
 
-   **Un nom d'attribut ne peut pas contenir d'espace.** 
- 
+   
+.. note::
 
+    **Un nom d'attribut ne peut pas contenir d'espace.**  
+    
 2 Edition des attributs 
 ------------------------------
 
