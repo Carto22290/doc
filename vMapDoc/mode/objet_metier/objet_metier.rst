@@ -193,8 +193,10 @@ Le menu déroulant **Prévisualisation** permet
 l'affichage et la modification de la définition du formulaire au format
 JSON ainsi que l'ajout de JavaScript au formulaire.
 
-**Attention :  les onglets ne sont volontairement pas affichés dans cette zone, ils seront affichés lors de
-l'utilisation réelle du formulaire**.
+.. note::
+
+    Les onglets ne sont volontairement pas affichés dans cette zone. Ils sont affichés lors de
+l'utilisation réelle du formulaire. 
 
 3.2.2.3. La zone de gestion de mise en page
 '''''''''''''''''''''''''''''''''''''''''''
