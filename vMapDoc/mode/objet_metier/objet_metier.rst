@@ -8,9 +8,11 @@ Objets métiers
 -------------
 
 Un objet métier est une entité qui associe à un calque, les attributs
-d’une table de base de données. De la sorte, les attributs associés au
+d’une table ou vue de base de données. De la sorte, les attributs associés au
 calque sont affichables et éditables, dans le requêteur et dans le
-formulaire de création d’objet, accessibles dans le mode Carte.
+formulaire de création d’objet, accessibles dans le mode Carte. 
+
+Un objet métier permet donc de gérer des données vectorielles stockées en base. 
 
 Le mode Développement permet l’ajout, l’édition et la suppression
 d’objets métier.
