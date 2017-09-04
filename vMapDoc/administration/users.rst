@@ -125,7 +125,7 @@ Une fois la connexion effectuée, l’administrateur peut soit naviguer dans l�
 
 Les privilèges préfixés par "vitis_" correspondent aux droits propres au socle de développement Vitis :
 
-* Le privilège vitis_user permet l'accès au mode Utilisateur, offrant la possibilité d'éditer le compte et le mot de passe de l'utilisateur courant.
+* Le privilège vitis_user permet de se connecter à l'application. Il donne accès au mode Utilisateur, offrant la possibilité d'éditer le compte et le mot de passe de l'utilisateur courant.
 * Le privilège vitis_admin permet l'accès aux modes Utilisateurs, Configuration, Logs. Il a en charge la gestion des paramètres système et de la configuration de GTF. Il accède également dans le mode Aide à la documentation relative à l'API Vitis.
  
 4 profils d'utilisateurs propres à vMap sont disponibles, chacun ayant des privilèges spécifiques. L'accès aux modes dépend des privilèges attribués à l'utilisateur.
