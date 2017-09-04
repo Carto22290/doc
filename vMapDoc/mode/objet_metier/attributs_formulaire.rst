@@ -149,7 +149,7 @@ Un attribut de tye Choix de la couleur insère un sélecteur de couleurs. Nommer
 2.8 Curseur 
 ~~~~~~~~~~~~
 
-Un attribut de tye curseur insère un curseur dans le formulaire. Nommer le paramètre et le libellé à afficher  et définir les valeurs minimales et maximales de la plage de données ainsi que la valeur par défaut. 
+Un attribut de tye curseur insère un curseur dans le formulaire. Nommer le paramètre et le libellé à afficher et définir les valeurs minimales et maximales de la plage de données ainsi que la valeur par défaut. 
 
 .. image:: ../../images/curseur.png
    :height: 100
@@ -163,9 +163,12 @@ Un attribut de tye curseur insère un curseur dans le formulaire. Nommer le para
 2.9 Paramètres de type Date 
 ~~~~~~~~~~
 
-
 2.9.1  Date
 ++++++++++++
+
+Un attribut de type Date insère une date sous la forme jj/mm/aaaa dans le formulaire. Un calendrier s'affiche dans le fomrlulaire pour faciliter la date à entrer. Nommer le paramètre et le libellé à afficher et définir la valeur par défaut. 
+
+
 
 
 2.9.2  Date/heure
