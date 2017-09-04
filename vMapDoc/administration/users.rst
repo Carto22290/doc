@@ -119,10 +119,21 @@ Une fois la connexion effectuée, l’administrateur peut soit naviguer dans l�
 
 
 
+3 Gestion des privilèges
+************************************************************
 
 
+Les privilèges préfixés par "vitis_" correspondent aux droits propres au socle de développement Vitis :
 
-
+* Le privilège vitis_user permet l'accès au mode Utilisateur, offrant la possibilité d'éditer le compte et le mot de passe de l'utilisateur courant.
+* Le privilège vitis_admin permet l'accès aux modes Utilisateurs, Configuration, Logs. Il a en charge la gestion des paramètres système et de la configuration de GTF. Il accède également dans le mode Aide à la documentation relative à l'API Vitis.
+ 
+3 profils d'utilisateurs propres à GTF sont disponibles, chacun ayant des privilèges spécifiques. L'accès aux modes dépend des privilèges attribués à l'utilisateur.
+ 
+* gtf_user = utilisateur de GTF ayant accès aux modes Mon travail, Utilisateurs et Aide. Un utilisateur ayant ce privilège exécute un projet FME mais n'en publie pas.
+* gtf_author = un utilisateur avec ce privilège est responsable de la publication de projets FME et à ce titre a accès aux modes Publication, Statistiques et Supervision. Il supervise l'intégralité des projets (ceux qu'il a publiés mais également les autres).
+* gtf_admin = l'administrateur de l'application a tous les droits. En plus des privilèges vitis_admin, il accède au mode Moteurs dans lequel il configure les moteurs FME et GTF. Il a en charge la gestion des utilisateurs de GTF  et de la base de données.
+ 
 
 
 
