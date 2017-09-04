@@ -194,7 +194,6 @@ Nommer le paramètre et le libellé à afficher et définir la valeur par défau
 
 
 
-
 2.14 Entier
 ~~~~~~~~
 
@@ -219,12 +218,24 @@ Nommer le paramètre et le libellé à afficher et définir la valeur par défau
 ~~~~~~
 
 
-
 2.21 Label 
 ~~~~
 
 2.22 Lien 
 ~~~~
+
+
+Un attribut de type Lien permet d'insérer des liens vers d'autres plateformes. 
+Nommer le paramètre et le libellé à afficher.
+Définir ensuite les paramètres du lien : 
+- Texte : Texte à afficher 
+- Cible : Si laissé vide, le lien s'ouvre dans un nouvel onglet. 
+- Valeur : adresse du lien 
+
+
+
+
+
 
 2.23 Liste 
 ~~~~~~
