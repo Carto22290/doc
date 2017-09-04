@@ -10,8 +10,7 @@ Il existe plus d'un vingtaine de types d'attributs paramétrables dans la fenêt
 
    
 .. note::
-
-    **Un nom d'attribut ne peut pas contenir d'espace.**  
+   Un nom d'attribut ne peut pas contenir d'espace.  
     
 2 Edition des attributs 
 ------------------------------
