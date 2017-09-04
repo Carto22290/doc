@@ -46,9 +46,12 @@ vMap permet d'exploiter les services web OSM, Bing Maps ou Vitis vMap pour perso
 
 2.3.1 Carte OSM
 ++++++++
-
-.. figure:: ../../images/carte_osm.png
-   :alt: image
+   
+.. image:: ../../images/carte_osm.png
+   :height: 100
+   :width: 200
+   :scale: 50
+   :alt: Carte OSM
    
 Nommer le paramètre et définir le libellé qui sera affiché dans le formulaire de demande. 
 Définir la hauteur et la largeur de la carte et indique si ce paramètre est obligatoire ou pas en cochant la case Requis. 
