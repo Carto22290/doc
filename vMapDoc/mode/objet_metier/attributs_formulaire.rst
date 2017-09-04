@@ -96,7 +96,7 @@ Choisir ensuite les éléments de dessin et de navigation qui seront affichés s
 +++++++++
 
 .. image:: ../../images/c_formulaire_carte_bing.png
-   :caption: Carte Bing
+
    
 Tous les paramètres de personnalisation d'une carte Bing Maps sont identiques à ceux des cartes OSM. Il faut fournir en plus, une clé d'accès pour pouvoir exploiter ce service web cartographique.
 
@@ -114,7 +114,18 @@ Une fois obtenue, entrer la clé dans le champs Clé et sélectionner la carte �
 
 2.3.3 carte vMap
 ++++++++++++
-Pour pouvoir exploiter une carte vMap, Il faut au préalable, dans vMap, exporter la définition de la carte. L'export d'une carte vMap génère un fichier map.json que l'auteur du formulaire doit télécharger (champ Fichier local) pour pouvoir l'intégrer dans un formulaire. Il procède ensuite de la même façon qu'avec les autres ressources de type carte, en nommant le paramètre et son libellé, puis en paramétrant l'affichage des outils propres aux cartes. 
+
+.. image:: ../../images/carte_vmap.png
+   :height: 100
+   :width: 200
+   :scale: 50
+   :alt: Carte vMap
+
+Pour pouvoir exploiter une carte vMap, il faut au préalable, dans vMap, exporter la définition de la carte. 
+
+L'export d'une carte vMap génère un fichier map.json que l'auteur du formulaire doit télécharger (champ Fichier local) pour pouvoir l'intégrer dans un formulaire. 
+
+Procéder ensuite de la même façon qu'avec les autres ressources de type carte, en nommant le paramètre et son libellé, puis en paramétrant l'affichage des outils propres aux cartes. 
 
 
 2.6 Champ caché 
