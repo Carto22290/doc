@@ -53,9 +53,6 @@ vMap permet d'exploiter les services web OSM, Bing Maps ou Vitis vMap pour perso
 ++++++++
    
 .. image:: ../../images/carte_osm.png
-   :height: 100
-   :width: 200
-   :scale: 50
    :alt: Carte OSM
    
 Nommer le paramètre et définir le libellé qui sera affiché dans le formulaire de demande. 
@@ -116,9 +113,6 @@ Une fois obtenue, entrer la clé dans le champs Clé et sélectionner la carte �
 ++++++++++++
 
 .. image:: ../../images/carte_vmap.png
-   :height: 100
-   :width: 200
-   :scale: 50
    :alt: Carte vMap
 
 Pour pouvoir exploiter une carte vMap, il faut au préalable, dans vMap, exporter la définition de la carte. 
