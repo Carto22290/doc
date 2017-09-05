@@ -18,7 +18,7 @@ Le mode visualisation cartographique, accessible aux utilisateurs en ayant droit
 
 On retrouve dans le volet "Carte" l'ensemble des fonctionnalités classiques d'un web SIG mais aussi plusieurs fonctionnalités propres à vMap : 
 
-* La barre de zoom sur le côté gauche (le zoom pouvant aussi être effectué avec la souris)
+* La barre de zoom sur le côté gauche (le zoom peut aussi être effectué avec la souris)
 * L'échelle et l'overview en bas à gauche
 * Les coordonnées de la souris en bas à droite
 * Les listes des outils de contrôle en haut à droite. Les outils de contrôles peuvent être activés ou désactivés à la volée par l'utilisateur
