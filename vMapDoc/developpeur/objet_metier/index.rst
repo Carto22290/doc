@@ -9,5 +9,5 @@ Objet métiers
 
  objet_metier
  rapports_vmap
- cas_utilisation_studio
+ cas_utilisation
  attributs_formulaire
