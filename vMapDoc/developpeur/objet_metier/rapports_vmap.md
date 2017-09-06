@@ -1,55 +1,87 @@
 # Rapports objets métiers
 
-![Liste des rapports](images/liste_rapports_objets_metier.png)
+![](../../images/liste_rapports_objets_metier.png)
 
 ## 1. Définition
-Un rapport sur objet métier permettra à l'utilisateur de générer des fichiers .pdf ou .doc sur des informations d'un objet sélectionné dans le panier.
-Il y a différents types de rapports: 
 
- - Les rapports sur un élément ![logo rapport simple](images/logo_rapport_simple.png)
- - Les rapports sur plusieurs éléments ![logo rapport multi](images/logo_rapport_multi.png)
+Un rapport sur un objet métier permet de générer des fichiers au format
+.pdf ou .doc sur les informations relative à un un objet sélectionné
+dans le panier.
 
-Si un utilisateur sélectionne plusieurs entités et lance un rapport sur un élément, alors plusieurs fichiers seront générés, à contrario si il lance un rapport sur plusieurs éléments, un seul fichier contenant les informations de chacun des éléments sera généré.
+Deux types de rapports sont à distinguer :
 
-![Exemple de rapport vMap en pdf](images/exemple_rapport_pdf.png)
+-   Les rapports sur un élément ![logo rapport
+    simple](../../images/logo_rapport_simple.png)
+-   Les rapports sur plusieurs éléments ![logo rapport
+    multi](../../images/logo_rapport_multi.png)
+
+Si un utilisateur sélectionne plusieurs entités et lance un rapport sur
+un élément, alors plusieurs fichiers sont générés. Inversément, si il
+lance un rapport sur plusieurs éléments, un seul fichier contenant les
+informations de chacun des éléments est généré.
+
+![](../../images/exemple_rapport_pdf.png)
 
 ## 2. Utilisation
-Pour générer un rapport sur objet métier, il suffit de sélectionner un objet sur la carte en cliquant dessus, de l'ajouter au panier, puis sélectionner les objets qui vous intéressent dans le panier et enfin à l'aide du bouton "Rapports" générer le rapport voulu.
 
-![Création d'un rapport vMap](images/creation_rapport_vmap.png)
+Pour générer un rapport sur objet métier, sélectionner un objet sur la
+carte en cliquant dessus, l'ajouter au panier, puis sélectionner les
+objets dans le panier et enfin à l'aide du bouton "Rapports", générer le
+rapport voulu.
+
+![](../../images/creation_rapport_vmap.png)
 
 ## 3. Administration
-Dans l'interface d'administration nous distinguons les éléments suivants:
 
- - Nom: le nom qui sera affiché dans l'interface
- - Format d'impression: A4/A3
- - Orientation: portrait/paysage
- - Format de sortie: pdf/doc
- - Objet métier: objet métier sur lequel le rapport est disponible
- - Rapport sur plusieurs éléments: pour générer un ou plusieurs documents en cas de multiple sélection
- - Définition HTML: permet de configurer la mise en page
- - Objets JSON: permet une configuration plus avancée
+L'onglet Rapports du menu Développement permet la création, l'édition et
+la suppression de rapports.
 
-![Administration d'un rapport vMap](images/administration_rapports.png)
+Dans l'interface d'administration renseigner les éléments suivants :
+
+-   Nom : nom affiché dans l'interface
+-   Format d'impression : A4/A3
+-   Orientation : portrait/paysage
+-   Format de sortie : pdf/doc
+-   Objet métier : objet métier sur lequel le rapport doit être associé
+-   Rapport sur plusieurs éléments : pour générer un ou plusieurs
+    documents lors de sélections multiples
+-   Définition HTML : permet de configurer la mise en page
+-   Objets JSON : permet une configuration plus avancée
+
+![](../../images/administration_rapports.png)
 
 ### 3.1. Configuration de la définition HTML
-Dans cette partie vous allez configurer la mise en page de votre rapport, pour cela il est conseillé d'avoir trois parties:
 
- - le style: une balise style qui contiendra la définition CSS à utiliser.
- - le corps: des balises HTML permettant de faire la mise en page.
- - le script: une balise script qui lancera du JavaScript lors de la génération (cela permettra de gérer les sauts de page par exemple).
+Le bloc de défintion HTML permet de configurer la mise en page du
+rapport. Il est recommandé de procéder en trois parties :
+
+-   le style : balise style qui contiend la définition CSS à utiliser.
+-   le corps : balises HTML de mise en page.
+-   le script : balise script qui lance du JavaScript lors de la
+    génération (gestion des sauts de page, par exemple).
 
 #### 3.1.1. Utilisation des variables
-Dans le corps vous aurez accès à la librairie AngularJS, c'est à dire que vous pouvez utiliser la syntaxe suivante pour afficher le contenu d'une variable:
-```html
+
+Dans le corps, la librairie AngularJS est accessible, c'est à dire que
+l'on peut utiliser la syntaxe suivante pour afficher le contenu d'une
+variable :
+
+``` html
 <label class="fichelabel">Nom: {{BO.nom}}</label>
 ```
-Sur l'exemple ci-dessus vous aurez peut être constaté la présence de la variable BO, celle-ci est présente par défaut et contient les attributs de l'objet résultant (notez que pour un rapport à plusieurs éléments elle se composera d'un tableau contenant les divers objets retournés).
 
-Avec la librairie AngularJS vous pouvez facilement effectuer des boucles, des conditions, des changements de style etc.. 
+Dans l'exemple ci-dessus, la variable BO est présente par défaut et
+contient les attributs de l'objet résultant (notez que pour un rapport à
+plusieurs éléments, elle se compose d'un tableau contenant les divers
+objets retournés).
 
-Voici un exemple permettant de faire une boucle et lister les lampes d'une route
-```html
+Avec la librairie AngularJS, on peut facilement effectuer des boucles,
+des conditions, des changements de style etc..
+
+Ci-après, un exemple permettant de faire une boucle et lister les lampes
+d'une route :
+
+``` html
 <!--Description des lampes de la route-->
 <div ng-repeat="oLampe in aLampes" ng-if="oLampe.lampe_id!=undefined" class="description_box border_container">
     <label class="fiche_label">Lampe: {{oLampe.nom}}</label>
@@ -59,19 +91,34 @@ Voici un exemple permettant de faire une boucle et lister les lampes d'une route
 </div>
 ```
 
-#### 3.1.2. Affichage de la carte
-Si vous voulez afficher une ou plusieurs cartes dans votre rapport, vous devrez dans une première partie créer une balise image avec un "id" de votre choix (il est conseillé d'utiliser un fond transparent au cas où les tuiles ne se chargent pas lors de l'impression):
-```html
+#### 3.1.2. Affichage de la carte dans un rapport
+
+Si on veut afficher une ou plusieurs cartes dans un rapport, créer dans
+une première partie, une balise image avec l'"id" de son choix (il est
+conseillé d'utiliser un fond transparent au cas où les tuiles ne se
+chargent pas lors de l'impression) :
+
+``` html
 <img id="map_image" src="images/transparent.png">
 ```
-La seconde partie de la manipulation consiste à paramétrer un objet JSON pour dire à vMap quelle carte il doit utiliser et de quelle façon, pour cela veuillez vous référer à la partie [3.2.1. Configuration des cartes à utiliser dans le template HTML](#3.2.1-configuration-des-cartes-a-utiliser-dans-le-template-html)
+
+La seconde partie de la manipulation consiste à paramétrer un objet JSON
+pour indiquer à vMap la carte à utiliser et la façon dont l'utiliser. Se
+référer à la partie [3.2.1. Configuration des cartes à utiliser dans le
+template
+HTML](#3.2.1-configuration-des-cartes-a-utiliser-dans-le-template-html)
 
 ### 3.2. Configuration des objets JSON
-Pour bien configurer son rapport il est utile de configurer la partie Objets JSON. Le but est de pouvoir ajouter des cartes au rapport, interroger des webservices ou afficher des images.
-Pour cela il faudra créer en JSON un tableau contenant les différentes configurations, et chacune de ces configurations sera typée avec l'argument "type".
+
+Pour bien configurer un rapport, il est utile de configurer la partie
+Objets JSON. Le but est de pouvoir ajouter des cartes au rapport,
+interroger des webservices ou afficher des images. Pour cela, créer en
+JSON, un tableau contenant les différentes configurations. Chacune
+d'elle est typée avec l'argument "type".
 
 Exemple:
-```json
+
+``` json
 [{
     "type":"map",
     "target":"#map_image",
@@ -97,15 +144,20 @@ Exemple:
 ```
 
 #### 3.2.1 Configuration des cartes à utiliser dans le template HTML
-Vous pouvez inclure des cartes dans vos formulaires en utilisant des objets de type "map" avec les paramètres suivants:
 
- - target: cible sur laquelle doit se poser la carte ("#" + l'identifiant de votre balise image)
- - map_id: l'identifiant de la carte à utiliser
- - resolution_coeff: coefficient de résolution
- - scale_target: nom de la variable qui contiendra l'échelle de la carte dans le template HTML
+On peut inclure des cartes dans les formulaires en utilisant des objets
+de type "map" avec les paramètres suivants :
 
-Exemple: 
-```json
+-   target : cible sur laquelle doit se poser la carte ("\#" +
+    l'identifiant de votre balise image)
+-   map_id : identifiant de la carte à utiliser
+-   resolution_coeff : coefficient de résolution
+-   scale_target : nom de la variable qui contiend l'échelle de la
+    carte dans le template HTML
+
+Exemple:
+
+``` json
 {
     "type":"map",
     "target":"#map_image",
@@ -114,20 +166,29 @@ Exemple:
     "scale_target":"map_scale"
 }
 ```
-Ici on vient afficher le(s) objets métier sur la carte 120 dans la balise image "#map_image" tout en mettant son échelle dans la variable "map_scale".
 
-#### 3.2.2. Configuration des webservices 
-Vous pouvez demander à effectuer des requêtes vers des webservices vMap (PHP) pour afficher le résultat dans la vue HTML au travers de variables que vous nommerez.
-Pour cela il faudra utiliser le type "webservice" et utiliser les paramètres suivants:
+Ici on vient afficher le(s) objets métier sur la carte 120 dans la
+balise image "\#map_image" tout en mettant son échelle dans la variable
+"map_scale".
 
- - ressource: la ressource à interroger
- - params: les paramètres à utiliser lors de l'interrogation
- - target: ne nom de la variable créée qui contiendra les informations retournées
+#### 3.2.2. Configuration des webservices
 
-Important: vous pouvez tout comme dans la Définition HTML utiliser des doubles accolades pour utiliser une variable BO.
+On peut demander à effectuer des requêtes vers des webservices vMap
+(PHP) pour afficher le résultat dans la vue HTML au travers de variables
+nommées. Il faut, pour cela, utiliser le type "webservice" et utiliser
+les paramètres suivants :
 
-Exemple: 
-```json
+-   ressource : ressource à interroger
+-   params : paramètres à utiliser lors de l'interrogation
+-   target : nom de la variable créée qui contiend les informations
+    retournées
+
+**Important**: tout comme dans la Définition HTML, on peut utiliser des
+doubles accolades pour utiliser une variable BO.
+
+Exemple:
+
+``` json
 {
     "type":"webservice",
     "ressource":"vitis/genericquerys",
@@ -139,17 +200,24 @@ Exemple:
     "target": "aLampes"
 }
 ```
-Ici on fait une requête au webservice vitis/genericquerys qui permet d'interroger de façon générique des tables. 
-Avec cet appel et en utilisant les doubles accolades {{BO.route_id}}, je peux afficher l'ensemble des lampes contenues dans ma route.
+
+Dans cet exemple, une requête au webservice vitis/genericquerys permet
+d'interroger de façon générique des tables. Avec cet appel et en
+utilisant les doubles accolades {{BO.route_id}}, l'ensemble des lampes
+contenues dans la route sont affichées.
 
 #### 3.2.2. Configuration des images
-Vous pouvez afficher des images pré-définies en utilisant le type image et les paramètres suivants:
 
- - imageUrl: URL de l'image (peut être une définition base-64)
- - target: cible sur laquelle doit se poser l'image ("#" + l'identifiant de votre balise image)
+On peut afficher des images pré-définies en utilisant le type image et
+les paramètres suivants :
 
-Exemple: 
-```json
+-   imageUrl : URL de l'image (peut être une définition base-64)
+-   target : cible sur laquelle doit se poser l'image ("\#" +
+    l'identifiant de votre balise image)
+
+Exemple :
+
+``` json
 {
     "type":"image",
     "imageUrl":"data:image/png;base64,iVBORw0KGgoAAAANSUh...",
@@ -157,19 +225,26 @@ Exemple:
 }
 ```
 
-
 ## 4. Exemple complet
-Ci-dessous un exemple complet actuellement visible sur https://demo.veremes.net/vmap/?map_id=29
-Dans cet exemple on se situe dans un projet d'éclairage public, on y trouve deux entités: les routes et le lampes. Chaque lampe est associée à une route
 
-### Définition HTML
-```html
+Ci-dessous un exemple complet actuellement visible sur
+[https://demo.veremes.net/vmap/?map_id=29](https://demo.veremes.net/vmap/?map_id=29).
+Dans cet exemple, un projet d'éclairage public contient deux entités :
+
+-   les routes
+-   les lampes
+
+Chaque lampe est associée à une route
+
+### 4.1 Définition HTML
+
+``` html
 <!--Style-->
 <style>
-    #A4_landscape_template {
-        text-align: center;
-        width: 29.7cm;
-        padding: 40px;
+    .A4_landscape_page {
+      width: 29.7cm;
+      height: 21cm;
+      padding: 40px;
     }
     #map_legend{
         margin-left: 25px;
@@ -208,22 +283,26 @@ Dans cet exemple on se situe dans un projet d'éclairage public, on y trouve deu
         margin-top: 10px;
         margin-bottom: -10px;
     }
-    .infos_column{
-        height:100%; 
+    .main_infos_column{
+        height:100%;
         width:100%;
         position: relative;
         min-height: 1px;
         padding-right: 15px;
         padding-left: 15px;
     }
+    .infos_column {
+      height: 100%;
+      border: 1px solid black;
+    }
 </style>
 
 <!-- A4 print Template -->
-<div id="A4_landscape_template">
+<div id="A4_landscape_template" class="A4_landscape_page" style="text-align: center">
 
     <div class="row" style="padding-left: 10px;">
         <div class="col-xs-4">
-            <div class="border_container infos_column">
+            <div class="border_container main_infos_column infos_column">
                 <img id="img1" src="images/transparent.png">
                 <hr>
                 <h4>Fiche Route</h4>
@@ -235,7 +314,7 @@ Dans cet exemple on se situe dans un projet d'éclairage public, on y trouve deu
                     <label class="fiche_urb_label">Id: {{BO.route_id}}</label>
                     <label class="fiche_urb_label">Auteur: {{BO.auteur}}</label>
                     <label class="fiche_urb_label">Date d'édition: {{BO.date_maj}}</label>
-                    <label class="fiche_urb_label">Échelle: {{map_scale}}</label>
+                    <label class="fiche_urb_label">Echelle: {{map_scale}}</label>
                 </div>
 
                 <br>
@@ -258,46 +337,92 @@ Dans cet exemple on se situe dans un projet d'éclairage public, on y trouve deu
 </div>
 
 <script>
-  setTimeout(function () {
+setTimeout(function () {
 
-    // Pagination: si un .child_description_box est scindé, alors il passe sur la deuxième page
-    var parent2 = null;
-        $('.child_description_box').each(function(){
-          var iTop = $(this).position().top;
-          var iHeight = $(this).height();
-          var iBottom = iTop + iHeight;
-          var pageHeight = 793.69;
-          var pageTolerance = 700;
+  var aElems = $('.child_description_box');
+  var aPages = [$('#A4_landscape_template')];
+  var currentPage = 0;
+  var aBottom = [];
+  var iTotalHeight = 0;
 
-          if(iBottom > pageTolerance){
-
-            var parentCreated = false;
-            var child = this;
-            var parent = $(child).parent();
-            var parentParent = parent.parent();
-
-            if (parent2 === null) {
-                parent2 = parent.clone().empty();
-                parentCreated = true
-            }
-
-            parent2.appendTo(parentParent);
-
-            if (parentCreated) {
-                html = "<div style='height: "+ (pageHeight - iTop) +"px'></div>";
-                $(html).insertBefore(parent2);
-                parent2.append('<br>');
-            }
-            parent2.append(child);
-        }
+  var createPage = function() {
+    // Page
+    var newPage = document.createElement("div");
+    $(newPage).addClass('A4_landscape_page');
+    // Zone d'informations
+    var newInfosColumn = document.createElement("div");
+    $(newInfosColumn).addClass('infos_column');
+    $(newInfosColumn).css({
+      "padding": "15px"
     });
+    // Ajout des éléments
+    $(newPage).append(newInfosColumn);
+    $('#A4_landscape_template').parent().append(newPage);
+    // Sauvegarde de la page
+    aPages.push($(newPage));
+    currentPage++;
+    // Mise à jour de iTotalHeight
+    iTotalHeight = getPagesHeight();
+    return newPage;
+  }
+
+  var getBottomPositions = function(aElems) {
+    var aBottoms = [];
+    for (var i = 0; i < aElems.length; i++) {
+      var iTop = $(aElems[i]).position().top;
+      var iHeight = $(aElems[i]).height();
+      var iBottom = iTop + iHeight;
+      aBottoms.push(iBottom);
+    }
+    return aBottoms;
+  }
+
+  var getPagesHeight = function() {
+    var aPagesBotomPositions = getBottomPositions(aPages);
+    return aPagesBotomPositions[aPagesBotomPositions.length -1];
+  }
+
+  var moveElements = function(aElemsToMove, iPage) {
+    for (var i = 0; i < aElemsToMove.length; i++) {
+      $(aElemsToMove[i]).appendTo($(aPages[iPage]).find('.infos_column'));
+    }
+  }
+
+  var pagineChilds = function(){
+
+    aBottom = getBottomPositions(aElems);
+    iTotalHeight = getPagesHeight();
+
+    for (var i = 0; i < aElems.length; i++) {
+
+      // Quand un élément est plus bas que la dernière page
+      if (aBottom[i] > iTotalHeight - 20) {
+
+        // Crée une nouvelle page
+        var newPage = createPage();
+
+        // Déplace les éléments qui suivent sur la nouvelle page
+        var aElemsToMove = [];
+        for (var ii = i; ii < aElems.length; ii++) {
+          aElemsToMove.push(aElems[ii]);
+        }
+        moveElements(aElemsToMove, aPages.length - 1);
+
+        // Relance la fonction
+        pagineChilds();
+        return 0;
+      }
+    }
+  }
+
+  pagineChilds();
 });
-    $('.infos_column').parent().height($('.infos_column').parent().parent().height());
 </script>
 ```
 
-### Objets JSON
-```json
+### 4.2. Objets JSON
+
+``` json
 [{
     "type":"map",
     "target":"#map_image",

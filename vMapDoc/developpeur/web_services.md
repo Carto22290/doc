@@ -1,25 +1,31 @@
 # Services web
-![API REST vMap](images/api_rest.png)
 
+![](../images/api_rest.png)
 
 ## 1. Définition
-Les web services sont la partie back-end de l'application, ils se composent de plusieurs ressources qui permettent au client d'interroger la base de données, de lire/modifier des fichiers et d'effectuer des opérations sur la machine physique du serveur. 
 
-Dans vMap et autres produits Veremes, ils sont mis en place par une API-REST ce qui signifie que l'on accède aux données selon des règles bien spécifiques.
+Les web services sont la partie back-end de l'application, ils se
+composent de plusieurs ressources qui permettent au client d'interroger
+la base de données, de lire/modifier des fichiers et d'effectuer des
+opérations sur la machine physique du serveur.
 
-Exemple de requête permettant de lister les cartes vMap : 
-```
-https://corbieres/vmap_rest/vmap/maps
-```
+Dans vMap et autres produits Veremes, ils sont mis en place par une
+API-REST, ce qui signifie que l'on accède aux données selon des règles
+bien spécifiques.
 
-Exemple de requête permettant de voir les informations de la carte ayant pour identifiant le nombre 15 : 
-```
-https://corbieres/vmap_rest/vmap/maps/{15}
-```
+Exemple de requête permettant de lister les cartes vMap :
 
-Ainsi l'API-REST retournera au client un résultat JSON où XML contenant les informations demandées:
+    https://corbieres/vmap_rest/vmap/maps
 
-```json
+Exemple de requête permettant de voir les informations de la carte ayant
+pour identifiant '15' :
+
+    https://corbieres/vmap_rest/vmap/maps/{15}
+
+L''API-REST retourne au client, un résultat JSON ou XML contenant les
+informations demandées :
+
+``` json
 {
   "maps": [
     {
@@ -45,73 +51,105 @@ Ainsi l'API-REST retournera au client un résultat JSON où XML contenant les in
 ## 2. Utilisation
 
 ### 2.1. En-têtes
+
 Il y a diverses en-têtes essentielles à l'utilisation des ressources.
 
 #### 2.1.1. Accept
 
-##### Valeurs possibles: 
-- application/json
-- application/xml
-- application/x-vm-json
+##### Valeurs possibles :
+
+-   application/json
+-   application/xml
+-   application/x-vm-json
 
 ##### Définition
-Cette en-tête détermine le format de réponse demandé par le client. 
-Les formats application/json et application/xml retournent un objet possédant un tableau portant le nom de la ressource (dans le cas de l'exemple ci-dessus,  il s'agit de "maps").
-Le format application/x-vm-json diffère en donnant comme nom du tableau "data". Cela permet de faire des requêtes génériques par le client. 
 
+L'en-tête détermine le format de réponse demandé par le client. Les
+formats application/json et application/xml retournent un objet
+possédant un tableau qui porte le nom de la ressource (dans l'exemple
+ci-dessus, il s'agit de "maps"). Le format application/x-vm-json diffère
+en donnant comme nom du tableau "data", permettant de faire des requêtes
+génériques par le client.
 
 #### 2.1.2. Token
-Le token de connexion identifie l'utilisateur de l'application. C'est grâce à lui que la ressource sait si le demandeur possède les droits suffisants pour avoir un résultat, et c'est par son intermédiaire que se font les connexions à la base de données.
 
-**Pour des raisons de sécurité il est strictement interdit de passer le token en tant que paramètre dans l'URL** et il faut donc le passer dans l'en-tête : si une personne malveillante accède au réseau (man in the middle), elle pourrait voir ce token et donc usurper l'identité d'un autre utilisateur.
+Le token de connexion identifie l'utilisateur de l'application, c'est
+grâce à lui que la ressource identifie si le demandeur possède les
+droits suffisants pour avoir un résultat, et c'est par son intermédiaire
+que se font les connexions à la base de données.
 
+**Pour des raisons de sécurité il est strictement interdit de passer le
+token en tant que paramètre dans l'URL**. Il faut donc le passer en-tête
+: si une personne malveillante a accès au réseau (man in the middle),
+elle pourrait alors voir ce token et donc usurper l'identité d'un autre
+utilisateur.
 
 #### 2.1.3. X-HTTP-Method-Override
-Lorsque l'on utilise régulièrement l'API-REST, il est possible que l'on soit confronté à des problèmes de longueur des URL : au bout d'un certain nombre de caractères, les navigateurs refuseront d’exécuter la requête et afficheront l'erreur suivante :
-```
-414 URI Too Long
-``` 
-Pour palier à cela, nous avons mis en place l'en-tête X-HTTP-Method-Override qui sert à envoyer une requête de type POST avec des paramètres figurant dans le body (sans limite de taille) et de les faire interpréter comme des requêtes GET :
-```
-General
-    Request Method:POST
 
-Request Headers
-    X-HTTP-Method-Override: GET
-```
+Lorsque l'on utilise régulièrement l'API-REST, il est possible que l'on
+soit confronté à des problèmes de longueur d'URL : à partir d'un certain
+nombre de caractères, les navigateurs refusent d’exécuter la requête et
+affichent l'erreur suivante :
 
+    414 URI Too Long
+
+Pour palier à cette contrainte, une en-ête X-HTTP-Method-Override a été
+mise en place pour envoyer une requête de type POST avec des paramètres
+figurant dans le body (sans limite de taille) et interprétables comme
+des requêtes GET :
+
+    General
+        Request Method:POST
+
+    Request Headers
+        X-HTTP-Method-Override: GET
 
 ### 2.2. Paramètres génériques
 
 #### 2.2.1. order_by
-Permet de définir l'ordre d'affichage en cas ou il y ait plusieurs données. Il vaut, par défaut, l'identifiant de la ressource
+
+Permet de définir l'ordre d'affichage lorsqu'il y a plusieurs données.
+Par défaut il vaut l'identifiant de la ressource.
 
 #### 2.2.2. sort_order
-Couplé au paramètre "order_by" il permet de définir l'ordre avec les valeurs suivantes :
 
-- asc: ordre ascendant
-- desc: ordre descendant
+Couplé au paramètre "order_by", il permet de définir l'ordre avec les
+valeurs suivantes :
+
+-   asc: ordre ascendant
+-   desc: ordre descendant
 
 #### 2.2.3. limit
-Si le paramètre limit est fourni, alors le tableau retourné se limite à "n" éléments
+
+Si le paramètre limit est fourni, alors le tableau retourné se limite à
+"n" éléments.
 
 #### 2.2.4. offset
-Souvent couplé avec les paramètres "limit" et "order_by", il peut permettre par exemple d'effectuer une pagination sur une liste
+
+Souvent couplé avec les paramètres "limit" et "order_by", il peut
+permettre, par exemple, d'effectuer une pagination sur une liste.
 
 #### 2.2.5. attributs
-Définit les attributs qui sont retournés par le client. Pour les renseigner, il faut écrire ces attributs en les séparant par le caractère "|".
+
+Définit les attributs qui seront retournés par le client. Pour les
+renseigner, il faut écrire ces attributs en les séparant par le
+caractère "|".
 
 #### 2.2.6. distinct
+
 True/false permet de distinguer les valeurs résultantes.
 
 #### 2.2.7. filter
-Donne la possibilité à l’utilisateur de filtrer les données. Pour cela il faut écrire un objet JSON  composé de **relations** et d'**opérateurs**.
+
+Donne la possibilité à l’utilisateur de filtrer les données. Il faut
+écrire un objet JSON composé de **relations** et d'**opérateurs**.
 
 ##### 2.2.7.1. Relations
 
-Les relations définissent le type de condition à utiliser selon la structure JSON suivante :
+Les relations définissent le type de condition à utiliser selon la
+structure JSON suivante :
 
-```json
+``` json
 {
     "relation": "AND",
     "operators":[{
@@ -121,10 +159,15 @@ Les relations définissent le type de condition à utiliser selon la structure J
     }]
 }
 ```
-Ici, on demande d'ajouter les filtres définis par les opérateurs selon la relation "AND". On aurait pu également utiliser une relation "OR".
 
-Il est également possible de faire dans une même requête du AND et du OR en incorporant une relation comme ci c'était un opérateur :
-```json
+Dans cet exemple, on demande d'ajouter les filtres définis par les
+opérateurs selon la relation "AND". On peut également utiliser une
+relation "OR".
+
+Il est aussi possible de faire dans une même requête du AND et du OR en
+incorporant une relation comme ci c'était un opérateur :
+
+``` json
 {
     "relation": "AND",
     "operators":[{
@@ -138,21 +181,27 @@ Il est également possible de faire dans une même requête du AND et du OR en i
         }]
     }]
 }
-
 ```
-Ainsi, on obtiendra une requête constituée de AND et de OR (voir l'exemple ci-après).
+
+Ainsi, on obtient une requête constituée de AND et de OR (voir l'exemple
+ci-après).
 
 ##### 2.2.7.2. Opérateurs
 
-Les opérateurs sont plus simples à comprendre, ils se composent de trois ou quatre arguments :
+Plus simples à comprendre, les opérateurs se composent de trois ou
+quatre arguments :
 
-- **column** : nom de la colonne sur laquelle appliquer le filtre
-- **value** : valeur sur laquelle opérer le  filtre
-- **compare_operator** : type de comparaison ("=", "!=", "<>", ">=", "<=", ">", "<", "IN", "NOT IN", "IS NULL", "IS NOT NULL", "LIKE", "INTERSECT")
-- **compare_operator_options (optionnel)** : ajoute des options suivant le type de compare_operator.
+-   **column** : nom de la colonne sur laquelle appliquer le filtre
+-   **value** : valeur du filtre
+-   **compare_operator** : type de comparaison ("=", "!=", "<>",
+    ">=", "<=", ">", "<", "IN", "NOT IN", "IS NULL", "IS NOT
+    NULL", "LIKE", "INTERSECT")
+-   **compare_operator_options (optionnel)** : ajoute des options
+    suivant le type de compare_operator.
 
 La structure est la suivante :
-```json
+
+``` json
 {
     "column": "...",
     "compare_operator": "...",
@@ -163,15 +212,14 @@ La structure est la suivante :
 }
 ```
 
-
 ##### 2.2.7.3. Exemples
-Pour être plus parlant, voici quelques exemples avec leur équivalent sous forme SQL.
 
+Pour être plus parlant, voici quelques exemples avec leur équivalent
+sous forme SQL.
 
+En utilisant une relation AND on peut filtrer sur plusieurs opérateurs:
 
-
-En utilisant une relation AND on peut filtrer sur plusieurs opérateurs :
-```json
+``` json
 {
     "relation": "AND",
     "operators":[{
@@ -189,28 +237,38 @@ En utilisant une relation AND on peut filtrer sur plusieurs opérateurs :
     }]
 }
 ```
+
 Équivalent SQL
-```sql
+
+``` sql
 auteur='laurent' AND allume='true' AND route_id=10
 ```
-___
 
-Si un seul opérateur est utilisé, alors il n'est pas nécessaire de renseigner de relation :
-```json
+------------------------------------------------------------------------
+
+Si un seul opérateur est utilisé, alors il n'est pas nécessaire de
+renseigner de relation :
+
+``` json
 {
     "column":"auteur",
     "compare_operator":"=",
     "value":"laurent"
 }
 ```
+
 Équivalent SQL
-```sql
+
+``` sql
 auteur='laurent'
 ```
-___
 
-En utilisant des relations imbriquées, on peut effectuer des filtres complexes :
-```json
+------------------------------------------------------------------------
+
+En utilisant des relations imbriquées, on peut effectuer des filtres
+complexes :
+
+``` json
 {
     "relation": "AND",
     "operators":[{
@@ -231,14 +289,19 @@ En utilisant des relations imbriquées, on peut effectuer des filtres complexes 
     }]
 }
 ```
+
 Équivalent SQL
-```sql
+
+``` sql
 auteur='laurent' AND (allume='true' OR route_id=10)
 ```
-___
 
-On peut utiliser "compare_operator" = "IN" en utilisant des valeurs situées dans un tableau :
-```json
+------------------------------------------------------------------------
+
+On peut utiliser "compare_operator" = "IN" en utilisant des valeurs
+situées dans un tableau :
+
+``` json
 {
     "relation": "AND",
     "operators":[{
@@ -259,29 +322,38 @@ On peut utiliser "compare_operator" = "IN" en utilisant des valeurs situées dan
     }]
 }
 ```
+
 Équivalent SQL
-```sql
+
+``` sql
 auteur='laurent' AND (allume='true' OR route_id IN (5, 10))
 ```
-___
 
-Il est possible d'utiliser "compare_operator" = "LIKE" avec des valeurs suivies ou précédées du caractère "%" :
+------------------------------------------------------------------------
 
-```json
+Il est possible d'utiliser "compare_operator" = "LIKE" avec des valeurs
+suivies ou précédées du caractère "%":
+
+``` json
 {
     "column":"auteur",
     "compare_operator":"LIKE",
     "value":"laur%"
 }
 ```
+
 Équivalent SQL
-```sql
+
+``` sql
 auteur LIKE 'laur'%
 ```
-___
 
-En utilisant "compare_operator_options.case_insensitive" sur un type "LIKE", on peut rendre le filtre insensible à la casse :
-```json
+------------------------------------------------------------------------
+
+En utilisant "compare_operator_options.case_insensitive" sur un type
+"LIKE", on peut rendre le filtre insensible à la casse :
+
+``` json
 {
     "column":"auteur",
     "compare_operator":"LIKE",
@@ -291,37 +363,48 @@ En utilisant "compare_operator_options.case_insensitive" sur un type "LIKE", on 
     "value":"%laur%"
 }
 ```
+
 Équivalent SQL
-```sql
+
+``` sql
 LOWER(auteur) LIKE LOWER('%lAur%')
 ```
-___
+
+------------------------------------------------------------------------
 
 Utilisation de "IS NOT NULL"
-```json
+
+``` json
 {    
     "column": "nom",    
     "compare_operator": "NOT NULL"
 }
 ```
+
 Équivalent SQL
-```sql
+
+``` sql
 nom IS NOT NULL
 ```
-___
+
+------------------------------------------------------------------------
 
 On peut effectuer des intersections géométriques utilisant PostGIS :
-```json
+
+``` json
 {
     "column":"geom",
     "compare_operator":"intersect",
     "value":"SRID=3857;POINT(349627.744690664 5237367.243157785)"
 }
 ```
-___
 
-L'option "source_proj" utilisée ici n'est pas obligatoire mais conseillée si on connaît le système de projection de la table :
-```json
+------------------------------------------------------------------------
+
+L'option "source_proj" utilisée ici n'est pas obligatoire mais
+conseillée si on connaît le système de projection de la table:
+
+``` json
 {
     "column":"geom",
     "compare_operator":"intersect",
@@ -331,10 +414,13 @@ L'option "source_proj" utilisée ici n'est pas obligatoire mais conseillée si o
     "value":"SRID=3857;POINT(349627.744690664 5237367.243157785)"
 }
 ```
-___
 
-On peut utiliser un buffer lors de l'intersection, et même spécifier sur quelle type de géométrie s'appliquera le buffer :
-```json
+------------------------------------------------------------------------
+
+On peut utiliser un buffer lors de l'intersection, et même spécifier sur
+quel type de géométrie s'applique le buffer :
+
+``` json
 {  
     "column":"geom",
     "compare_operator":"intersect",
@@ -347,49 +433,68 @@ On peut utiliser un buffer lors de l'intersection, et même spécifier sur quell
 }
 ```
 
-
 ## 3. Exemple de création d'un web service et de ses ressources
-Dans une installation classique, les web services se trouvent sous forme de dossiers dans le répertoire vmap/vas/rest/ws. Dans ces dossiers se trouvent les fichiers indispensables, ainsi que les ressources des web services.
 
-Dans cet exemple, nous allons créer un web service "customWS" dans lequel nous allons créer une ressource "villes". 
+Dans une installation classique, les web services se trouvent sous forme
+de dossiers dans le répertoire vmap/vas/rest/ws. Dans ces dossiers se
+trouvent les fichiers indispensables ainsi que les ressources des web
+services.
 
+Dans cet exemple, nous allons créer un web service "customWS" dans
+lequel créer une ressource "villes".
 
 ### 3.1. Création du dossier et des fichiers indispensables
-Parmi les fichiers indispensables, nous retrouvons les fichiers suivants :
 
-- **overview.phtml** : Permet d'afficher la ressource dans la page d'aide au développement
-- **CustomWS.class.inc** : Classe mère du projet
-- **CustomWS.class.sql.inc** : Fichier contenant les requêtes SQL du projet, doit contenir au moins les requêtes "Définition des requêtes de l'api Vitis"
+Parmi les fichiers indispensables, se trouvent les fichiers suivants :
 
+-   **overview.phtml** : permet d'afficher la ressource dans la page
+    d'aide au développement
+-   **CustomWS.class.inc** : classe mère du projet
+-   **CustomWS.class.sql.inc** : fichier contenant les requêtes SQL
+    du projet. Il doit contenir au moins les requêtes "Définition des
+    requêtes de l'api Vitis".
 
 ### 3.2. Création de la première ressource
-Dans cet exemple nous cherchons à créer la ressource "villes" qui permettra de lister les villes contenues dans la table "f_villes_l93" installée par défaut avec vMap.
 
-Chaque ressource est définie par deux fichiers PHP : l'un pour la définition unitaire d'un objet (ici Ville.class.inc) et l'autre, pour agir sur une liste complète d'objets (ici Villes.class.inc). Vous remarquerez le "s" (obligatoire) qui permet de faire la différencie entre la liste et l'unitaire.
+Dans cet exemple, nous cherchons à créer la ressource "villes" qui
+permettra de lister les villes contenues dans la table "f_villes_l93"
+installée par défaut avec vMap.
+
+Chaque ressource est définie par deux fichiers PHP :
+
+-   l'un pour la définition unitaire d'un objet (ici Ville.class.inc)
+-   l'autre pour agir sur une liste complète d'objets
+    (ici Villes.class.inc). Le "s" (obligatoire) permet de faire la
+    différencie entre la liste et l'unitaire.
 
 #### 3.2.1 La ressource unitaire (Ville.class.inc)
-Il s'agit d'une classe PHP qui devra au moins contenir les éléments suivants :
+
+Il s'agit d'une classe PHP qui devra au moins contenir les éléments
+suivants :
 
 ##### 3.2.1.1 Inclusions des fichiers
 
-```php
+``` php
 require_once 'CustomWS.class.inc';
 require_once __DIR__ . '/../../class/vitis_lib/Connection.class.inc';
 ```
-Inclusion de la classe mère du web service ainsi que la classe permettant d'effectuer des connexions à la base de données.
+
+Inclusion de la classe mère du web service ainsi que la classe
+permettant d'effectuer des connexions à la base de données.
 
 ##### 3.2.1.2 Classe
 
-```php
+``` php
 class Ville extends CustomWS {
     ...
 }
 ```
-Définition de la classe Ville. 
+
+Définition de la classe Ville.
 
 ##### 3.2.1.3 Constructeur
 
-```php
+``` php
 /**
  * construct
  * @param type $aPath url of the request
@@ -406,13 +511,14 @@ function __construct($aPath, $aValues, $properties, $oConnection) {
 }
 ```
 
-Constructeur de la classe, vous remarquerez la variable **$this->aSelectedFields** qui définit les attributs à afficher lors des requêtes.
+Constructeur de la classe. La variable **$this->aSelectedFields**
+définit attributs à afficher lors des requêtes.
 
 ##### 3.2.1.4 Fontion GET
 
-```php
+``` php
 /**
- * @SWG\Get(path="/villes/{code}", 
+ * @SWG\Get(path="/villes/{code}",
  *   tags={"villes"},
  *   summary="Get Ville",
  *   description="Request to get Ville by id",
@@ -449,44 +555,58 @@ function GET() {
 }
 ```
 
-Vous remarquerez deux commentaires au dessus de cette fonction. Le premier est utilisé par [swagger] pour générer la documentation en ligne interactive et le second est le commentaire de la fonction utilisée pour décrire aux développeurs ce que fait la fonction.
+Deux commentaires se trouvent au dessus de cette fonction :
 
-Les paramètres décrits dans les commentaires swagger passés dans le chemin l'URL par la relation in="path"(comme ici "*code*") sont disponibles via la variable **$this->aPath**.
+-   le premier est utilisé par [swagger](https://swagger.io/) pour
+    générer la documentation en ligne interactive
+-   le second est le commentaire de la fonction utilisée pour décrire
+    aux développeurs ce que fait la fonction.
 
-Les paramètres décrits dans les commentaires swagger passés dans l'URL par la relation in="query" (comme ici "*token*") sont disponibles via la variable **$this->aValues**.
+Les paramètres décrits dans les commentaires swagger passés dans le
+chemin l'URL par la relation in="path"(comme ici "*code*") sont
+disponibles via la variable **$this->aPath**.
 
-La ligne **require $this->sRessourcesFile** permet de récupérer le contenu du fichier *CustomWS.class.sql.inc*.
+Les paramètres décrits dans les commentaires swagger passés dans l'URL
+par la relation in="query" (comme ici "*token*") sont disponibles via la
+variable **$this->aValues**.
 
-La fonction **$this->getFields** permet de récupérer en base de données les informations de la ville en question en utilisant le paramètre "*code*" passé dans l'URL.
+La ligne **require $this->sRessourcesFile** permet de récupérer le
+contenu du fichier *CustomWS.class.sql.inc*.
 
-Le résultat stocké dans **$this->aFields** est retourné lors de la requête http.
+La fonction **$this->getFields** permet de récupérer en base de
+données, les informations la ville en question en utilisant le paramètre
+"*code*" passé dans l'URL.
 
+Le résultat stocké dans **$this->aFields** est retourné lors de la
+requête http.
 
 #### 3.2.2 La ressource multiple (Villes.class.inc)
 
-
 ##### 3.2.2.1 Inclusions des fichiers
 
-```php
+``` php
 require_once 'Vmap.class.inc';
 require_once 'Ville.class.inc';
 require_once __DIR__ . '/../../class/vitis_lib/Connection.class.inc';
 require_once __DIR__ . '/../../class/vmlib/BdDataAccess.inc';
 ```
-Require de la classe mère du web service ainsi que la classe unitaire et les fichiers permettant l'utilisation de la base de données.
 
-##### 3.2.1.2 Classe
+Require de la classe mère du web service ainsi que la classe unitaire et
+les fichiers permettant l'utilisation de la base de données.
 
-```php
+##### 3.2.2.2 Classe
+
+``` php
 class Villes extends CustomWS {
     ...
 }
 ```
+
 Définition de la classe Villes
 
 ##### 3.2.2.3 Constructeur
 
-```php
+``` php
 /**
  * construct
  * @param type $aPath url of the request
@@ -501,11 +621,12 @@ function __construct($aPath, $aValues, $properties) {
     $this->aSelectedFields = Array(...);
 }
 ```
-Contrairement à la ressource unitaire, la connexion est cette fois instanciée.
 
-##### 3.2.1.4 Fontion GET
+Contrairement à la ressource unitaire, la connexion est instanciée.
 
-```php
+##### 3.2.2.4 Fontion GET
+
+``` php
 /**
  * @SWG\Get(path="/villes",
  *   tags={"Villes"},
@@ -587,23 +708,34 @@ function GET() {
     return $aReturn['sMessage'];
 }
 ```
-Tous les paramètres génériques sont listés dans les commentaires swagger, et sont disponibles sur les variables ** $this->aPath ** et ** $this->aValues **.
 
-Ici c'est la fonction **genericGet()** qui est utilisée. Elle retourne du texte.
+Tous les paramètres génériques sont listés dans les commentaires
+swagger, et sont disponibles sur les variables \*\* $this->aPath
+\*\* et \*\* $this->aValues \*\*.
 
+Ici c'est la fonction **genericGet()** qui est utilisée et la fonction
+retourne du texte.
 
 ### 3.3. Ressource complexe avec executeWithParams()
-Nous avons vu ci-dessus comment créer une ressource standard qui permet d'aller chercher en base de données les informations d'une table et de les renvoyer.
 
-Imaginons que l'on veuille dans la classe Ville, faire une deuxième requête en base de données (cette fois définie dans *CustomWS.class.sql.inc*) pour aller chercher les monuments associés à la ville.
+Nous avons vu ci-dessus comment créer une ressource standard qui permet
+d'aller chercher en base de données les informations d'une table et de
+les renvoyer.
 
-*CustomWS.class.sql.inc*:
-```php
+Imaginons que l'on veuille dans la classe Ville, faire une deuxième
+requête en base de données (cette fois définie dans
+*CustomWS.class.sql.inc*) pour aller chercher les monuments associés à
+la ville.
+
+*CustomWS.class.sql.inc* :
+
+``` php
 $aSql['getVilleMonuments'] = "SELECT * FROM sig.f_monuments WHERE \"code\"=[sCode]";
 ```
 
-*Ville.class.inc*:
-```php
+*Ville.class.inc* :
+
+``` php
 function GET() {
     require $this->sRessourcesFile;
     $this->aFields = $this->getFields('sig', 'f_villes_l93', 'code');
@@ -621,29 +753,43 @@ function GET() {
 }
 ```
 
-Ci dessus la fonction **executeWithParams()** permet d’exécuter une requête SQL. Le résultat est ajouté dans $this->aFields['monuments'].
-
+Ci-dessus, la fonction **executeWithParams()** permet d’exécuter une
+requête SQL. Le résultat est alors rajouté dans
+$this->aFields\['monuments'\].
 
 ## 4. Fonction executeWithParams()
 
-Pour effectuer des requêtes SQL en PHP, il est impératif d'utiliser la fonction executeWithParams() qui va exécuter une requête avec un tableau de paramètres passé en option.
+### 4.1 Définition
 
-**Il ne faut surtout pas concaténer des variables à une requête SQL au risque d'exposer l'application à une faille de type** [SQLi]
+Pour effectuer des requêtes SQL en PHP, il est impératif d'utiliser la
+fonction executeWithParams() qui va exécute une requête avec un tableau
+de paramètres passé en option.
 
-Il faut écrire dans la requête une balise contenant le nom de la variable, et fournir un tableau de variables à executeWithParams().
+**Il ne faut surtout pas concaténer des variables à une requête SQL au
+risque d'exposer l'application à une faille de type**
+[SQLi](https://fr.wikipedia.org/wiki/Injection_SQL)
+
+Il faut écrire dans la requête une balise contenant le nom de la
+variable, et fournir un tableau de variables à executeWithParams().
 
 Les différents formats sont :
 
-- **number**, **string** : pour les valeurs de variables à passer entre simple quotes
-- **geometry** : pour les géométries à passer entre simple quotes
-- **quoted_string** : comme string mais pour intégrer des caractères spéciaux
-    ex: 'ma lampe%'
-- **column_name**, **schema_name**, **table_name** : pour les noms de colonnes, tables, schémas. Attention car pour ces types de paramètre, executeWithParams() ne s'occupera pas des quotes, il faut donc les mettre à l'avance
-    ex : SELECT "[column_name]" FROM [schema_name].[table_name] WHERE table='[table_name]'
+-   **string**, **number**, **integer** : pour les valeurs de variables
+    à passer entre simple quotes.
+-   **group** : pour les valeurs à passer entre simple quotes et
+    séparées par des virgules.
+-   **geometry** : pour les géométries à passer entre simple quotes.
+-   **quoted_string** : comme string mais pour intégrer des caractères
+    spéciaux ex: 'ma lampe%'.
+-   **column_name**, **schema_name**, **table_name** : pour les noms
+    de colonnes, tables, schémas. Attention car pour ces types de
+    paramètre executeWithParams() ne s'occupera pas des quotes, il faut
+    donc les mettre à l'avance ex: SELECT "\[column_name\]" FROM
+    \[schema_name\].\[table_name\] WHERE table='\[table_name\]'.
 
+### 4.2 Exemples
 
-### Exemples
-```php
+``` php
 $aSQLParams = array(
     'sSchema' => array('value' => $this->aProperties['schema_vmap'], 'type' => 'column_name'),
     'sGroups' => array('value' => $sGroups, 'type' => 'group')
@@ -652,7 +798,7 @@ $sSql = "SELECT map_id, group_id FROM [sSchema].map_group WHERE \"group_id\" in 
 $oResult = $this->oConnection->oBd->executeWithParams($sSql, $aSQLParams);
 ```
 
-```php
+``` php
 $aSQLParams = array(
     'sSchema' => array('value' => $this->aProperties['schema_vmap'], 'type' => 'column_name'),
     'sMapId' => array('value' => $map_id, 'type' => 'number')
@@ -660,8 +806,3 @@ $aSQLParams = array(
 $sSql = "SELECT * FROM [sSchema].map_layer WHERE \"map_id\" = [sMapId]";
 $oResult = $this->oConnection->oBd->executeWithParams($sSql, $aSQLParams);
 ```
-
-
-
-[swagger]: https://swagger.io/
-[SQLi]: https://fr.wikipedia.org/wiki/Injection_SQL
