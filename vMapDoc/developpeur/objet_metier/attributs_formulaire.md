@@ -11,10 +11,6 @@ sont des attributs classiques directement configurables dans vMap.
 Il existe plus d'un vingtaine de types d'attributs paramétrables dans la
 fenêtre de définition en bas à gauche du studio.
 
-> **note**
->
-> Un nom d'attribut ne peut pas contenir d'espace.
-
 ## 2. Édition des attributs
 
 ### 2.1. Bouton radio

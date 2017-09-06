@@ -1,4 +1,4 @@
-# Cas concrets d'utilisation du studio dans vMap
+# Cas concrets d'utilisation dans vMap
 
 Ce document décrit des exemples d'utilisation du studio utiles pour
 comprendre son fonctionnement ainsi que l'intégralité de l'application.
@@ -530,7 +530,7 @@ formulaire objet métier via "*constructor\_form*". Dans ce nouvel
 exemple, une fonction appelée depuis un bouton dans l'interface est
 créée.
 
-## 8.1. Bouton Hello world
+### 8.1. Bouton Hello world
 
 Dans une première partie, une popup "Hello world" est affichée lors du
 clic sur le bouton. Il faut pour cela ajouter un attribut de type
@@ -572,7 +572,7 @@ Voici le résultat côté client :
 
 ![](../../images/exemple_studio_button_2.png)
 
-## 8.2. Bouton Ajax
+### 8.2. Bouton Ajax
 
 Dans une deuxième partie, une requête Ajax est effectuée lors du clic
 sur le bouton. Elle permettra de récupérer les routes dont l'auteur est
