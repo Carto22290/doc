@@ -4,19 +4,14 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Mode objet métier
+Objet métiers
 ====================================
 
 .. toctree::
    :caption: Sommaire
-   :maxdepth: 4
-  
+   :maxdepth: 2
+
  objet_metier
  rapports_vmap
  cas_utilisation_studio
  attributs_formulaire
- 
- 
- 
-
-
