@@ -1,4 +1,4 @@
-# modèles d'impression
+# Modèles d'impression
 
 ## 1. Définition
 
