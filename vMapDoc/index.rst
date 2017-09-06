@@ -5,42 +5,28 @@
 
 Documentation de vmap Manuel Utilisateur
 ====================================
-vMap est une application de webmaping permettant l'affichage de cartes géographiques sur un navigateur. 
+vMap est une application de webmaping permettant l'affichage de cartes géographiques sur un navigateur.
 
 
 .. toctree::
-   :caption: Sommaire
-   :maxdepth: 4
-   
-   Ce guide est le manuel utilisateur de l'application vMap développé par Veremes. 
-   
+   :maxdepth: 2
+
+   installation/index.rst
 
 
 .. toctree::
-   :maxdepth: 4
-
-   installation/index.rst 
-
-   
-
-.. toctree::
-   :maxdepth: 4
+   :maxdepth: 2
 
    utilisation/index.rst
 
 
 .. toctree::
-   :maxdepth: 4
+   :maxdepth: 2
 
    administration/index.rst
-   
+
 
 .. toctree::
-   :maxdepth: 4
+   :maxdepth: 2
 
-   mode/index.rst
- 
- 
-
-   
-   
+   developpeur/index.rst
