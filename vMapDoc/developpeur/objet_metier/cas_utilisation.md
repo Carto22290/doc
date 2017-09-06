@@ -44,7 +44,7 @@ Dans vMap ceci est possible à deux endroits distincts :
 ![](../../images/exemple_studio_lien_1.png)
 
 Il faut modifier l'attribut **SQL Summary** dans la définition de
-l'objet métier et utiliser des balises *"bo\_link"*.
+l'objet métier et utiliser des balises *"bo_link"*.
 
 Exemple :
 
@@ -59,7 +59,7 @@ l'enregistrement sélectionné.
 
 **Il est possible de concaténer une propertie avec le lien :** en
 écrivant **{{getPropertie('\[nom de la propertie\]')}}**. Dans l'exemple
-ci-dessous, la valeur de la propertie "*services\_alias*" est affichée
+ci-dessous, la valeur de la propertie "*services_alias*" est affichée
 dans l'info-bulle.
 
 ``` sql
@@ -67,7 +67,7 @@ select nom as "Nom", route_id as "Route id", auteur as "Auteur", image as "[bo_i
 ```
 
 On peut également définir l'attribut *target* qui permet de choisir un
-nouvel onglet à chaque fois si on donne pour valeur "*\_blank*" ou alors
+nouvel onglet à chaque fois si on donne pour valeur "*_blank*" ou alors
 de stipuler un nom pour utiliser toujours le même onglet.
 
 ### 2.2. Dans le formulaire
@@ -125,8 +125,8 @@ ce que l'utilisateur voit dans la liste.
 
 Dans cet exemple, on souhaite sélectionner une route à associer à la
 lampe en édition. Chaque route est définie par un identifiant numérique
-(route\_id) et elle possède un nom textuel (nom) : on sélectionne donc
-"*nom*" en tant que libellé et "*route\_id*" en tant que clé.
+(route_id) et elle possède un nom textuel (nom) : on sélectionne donc
+"*nom*" en tant que libellé et "*route_id*" en tant que clé.
 
 ![](../../images/exemple_studio_datasource_9.png)
 
@@ -303,7 +303,7 @@ studio*" permet d'ouvrir l'éditeur de code :
 
 ![](../../images/exemple_studio_js_1.png)
 
-Le script doit être composé d'une fonction **constructor\_form** appelée
+Le script doit être composé d'une fonction **constructor_form** appelée
 lors du chargement. Cette fonction est lancée avec le **scope** du
 formulaire en paramètre.
 
@@ -393,10 +393,10 @@ Dans notre cas nous voulons convertir les couleurs de "*rgba*" vers
 de données en "*rgb*".
 
 Ces couleurs sont contenues en base dans les attributs
-"*background\_color*", "*contour\_color*" et "*color\_label*". Dans le
+"*background_color*", "*contour_color*" et "*color_label*". Dans le
 formulaire, ces variables sont dans des champs cachés. Les attributs
-"*background\_color\_rgba*", "*contour\_color\_rgba*" et
-"*color\_label\_rgba*" sont également créés pour être exploités lors de
+"*background_color_rgba*", "*contour_color_rgba*" et
+"*color_label_rgba*" sont également créés pour être exploités lors de
 l'utilisation.
 
 ![](../../images/exemple_studio_js_2.png)
@@ -526,7 +526,7 @@ De cette façon, écrire le code complet :
 ## 8. Personnalisation d'un formulaire : insertion d'une fonction appelée depuis un Bouton - événement JavaScript
 
 L'exemple précédent illustre la façon dont intégrer du code dans un
-formulaire objet métier via "*constructor\_form*". Dans ce nouvel
+formulaire objet métier via "*constructor_form*". Dans ce nouvel
 exemple, une fonction appelée depuis un bouton dans l'interface est
 créée.
 
@@ -580,19 +580,19 @@ sur le bouton. Elle permettra de récupérer les routes dont l'auteur est
 
 Pour cela, un bouton "*Charger les routes*" est crée. On y associe la
 fonction **loadLaurentRoutes**, et l'on crée un champ de type "*Texte en
-édition - Multiligne*" nommé **routes\_laurent**.
+édition - Multiligne*" nommé **routes_laurent**.
 
 ![](../../images/exemple_studio_button_3.png)
 
 Pour effectuer la requête Ajax, il faut utiliser la fonction
 **ajaxRequest()** de vMap. Au moment de la réponse de la requête, on
 concatène chacun des résultats dans
-**oFormValues.update.routes\_laurent** afin de voir apparaître le
+**oFormValues.update.routes_laurent** afin de voir apparaître le
 résultat dans l'interface.
 
 Pour avoir accès au scope depuis la fonction **loadLaurentRoutes**, on
 crée une variable globale **oFormRequired** dans laquelle on place le
-scope depuis **constructor\_form**.
+scope depuis **constructor_form**.
 
 Voici le code final :
 

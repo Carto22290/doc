@@ -113,7 +113,7 @@ Par défaut il vaut l'identifiant de la ressource.
 
 #### 2.2.2. sort_order
 
-Couplé au paramètre "order\_by", il permet de définir l'ordre avec les
+Couplé au paramètre "order_by", il permet de définir l'ordre avec les
 valeurs suivantes :
 
 -   asc: ordre ascendant
@@ -126,7 +126,7 @@ Si le paramètre limit est fourni, alors le tableau retourné se limite à
 
 #### 2.2.4. offset
 
-Souvent couplé avec les paramètres "limit" et "order\_by", il peut
+Souvent couplé avec les paramètres "limit" et "order_by", il peut
 permettre, par exemple, d'effectuer une pagination sur une liste.
 
 #### 2.2.5. attributs
@@ -193,11 +193,11 @@ quatre arguments :
 
 -   **column** : nom de la colonne sur laquelle appliquer le filtre
 -   **value** : valeur du filtre
--   **compare\_operator** : type de comparaison ("=", "!=", "<>",
+-   **compare_operator** : type de comparaison ("=", "!=", "<>",
     ">=", "<=", ">", "<", "IN", "NOT IN", "IS NULL", "IS NOT
     NULL", "LIKE", "INTERSECT")
--   **compare\_operator\_options (optionnel)** : ajoute des options
-    suivant le type de compare\_operator.
+-   **compare_operator_options (optionnel)** : ajoute des options
+    suivant le type de compare_operator.
 
 La structure est la suivante :
 
@@ -298,7 +298,7 @@ auteur='laurent' AND (allume='true' OR route_id=10)
 
 ------------------------------------------------------------------------
 
-On peut utiliser "compare\_operator" = "IN" en utilisant des valeurs
+On peut utiliser "compare_operator" = "IN" en utilisant des valeurs
 situées dans un tableau :
 
 ``` json
@@ -331,7 +331,7 @@ auteur='laurent' AND (allume='true' OR route_id IN (5, 10))
 
 ------------------------------------------------------------------------
 
-Il est possible d'utiliser "compare\_operator" = "LIKE" avec des valeurs
+Il est possible d'utiliser "compare_operator" = "LIKE" avec des valeurs
 suivies ou précédées du caractère "%":
 
 ``` json
@@ -350,7 +350,7 @@ auteur LIKE 'laur'%
 
 ------------------------------------------------------------------------
 
-En utilisant "compare\_operator\_options.case\_insensitive" sur un type
+En utilisant "compare_operator_options.case_insensitive" sur un type
 "LIKE", on peut rendre le filtre insensible à la casse :
 
 ``` json
@@ -401,7 +401,7 @@ On peut effectuer des intersections géométriques utilisant PostGIS :
 
 ------------------------------------------------------------------------
 
-L'option "source\_proj" utilisée ici n'est pas obligatoire mais
+L'option "source_proj" utilisée ici n'est pas obligatoire mais
 conseillée si on connaît le système de projection de la table:
 
 ``` json
@@ -457,7 +457,7 @@ Parmi les fichiers indispensables, se trouvent les fichiers suivants :
 ### 3.2. Création de la première ressource
 
 Dans cet exemple, nous cherchons à créer la ressource "villes" qui
-permettra de lister les villes contenues dans la table "f\_villes\_l93"
+permettra de lister les villes contenues dans la table "f_villes_l93"
 installée par défaut avec vMap.
 
 Chaque ressource est définie par deux fichiers PHP :
@@ -779,13 +779,13 @@ Les différents formats sont :
 -   **group** : pour les valeurs à passer entre simple quotes et
     séparées par des virgules.
 -   **geometry** : pour les géométries à passer entre simple quotes.
--   **quoted\_string** : comme string mais pour intégrer des caractères
+-   **quoted_string** : comme string mais pour intégrer des caractères
     spéciaux ex: 'ma lampe%'.
--   **column\_name**, **schema\_name**, **table\_name** : pour les noms
+-   **column_name**, **schema_name**, **table_name** : pour les noms
     de colonnes, tables, schémas. Attention car pour ces types de
     paramètre executeWithParams() ne s'occupera pas des quotes, il faut
-    donc les mettre à l'avance ex: SELECT "\[column\_name\]" FROM
-    \[schema\_name\].\[table\_name\] WHERE table='\[table\_name\]'.
+    donc les mettre à l'avance ex: SELECT "\[column_name\]" FROM
+    \[schema_name\].\[table_name\] WHERE table='\[table_name\]'.
 
 ### 4.2 Exemples
 

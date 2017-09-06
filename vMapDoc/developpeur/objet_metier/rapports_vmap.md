@@ -150,9 +150,9 @@ de type "map" avec les paramètres suivants :
 
 -   target : cible sur laquelle doit se poser la carte ("\#" +
     l'identifiant de votre balise image)
--   map\_id : identifiant de la carte à utiliser
--   resolution\_coeff : coefficient de résolution
--   scale\_target : nom de la variable qui contiend l'échelle de la
+-   map_id : identifiant de la carte à utiliser
+-   resolution_coeff : coefficient de résolution
+-   scale_target : nom de la variable qui contiend l'échelle de la
     carte dans le template HTML
 
 Exemple:
@@ -168,8 +168,8 @@ Exemple:
 ```
 
 Ici on vient afficher le(s) objets métier sur la carte 120 dans la
-balise image "\#map\_image" tout en mettant son échelle dans la variable
-"map\_scale".
+balise image "\#map_image" tout en mettant son échelle dans la variable
+"map_scale".
 
 #### 3.2.2. Configuration des webservices
 
@@ -203,7 +203,7 @@ Exemple:
 
 Dans cet exemple, une requête au webservice vitis/genericquerys permet
 d'interroger de façon générique des tables. Avec cet appel et en
-utilisant les doubles accolades {{BO.route\_id}}, l'ensemble des lampes
+utilisant les doubles accolades {{BO.route_id}}, l'ensemble des lampes
 contenues dans la route sont affichées.
 
 #### 3.2.2. Configuration des images
@@ -228,7 +228,7 @@ Exemple :
 ## 4. Exemple complet
 
 Ci-dessous un exemple complet actuellement visible sur
-[https://demo.veremes.net/vmap/?map\\\_id=29](https://demo.veremes.net/vmap/?map\_id=29).
+[https://demo.veremes.net/vmap/?map\\_id=29](https://demo.veremes.net/vmap/?map_id=29).
 Dans cet exemple, un projet d'éclairage public contient deux entités :
 
 -   les routes
