@@ -1,4 +1,4 @@
-Objets métiers
+Onglet objets métiers
 ==============
 
 .. figure:: ../../liste_objets_metier.png
@@ -10,9 +10,9 @@ Objets métiers
 Un objet métier est une entité qui associe à un calque, les attributs
 d’une table ou vue de base de données. De la sorte, les attributs associés au
 calque sont affichables et éditables, dans le requêteur et dans le
-formulaire de création d’objet, accessibles dans le mode Carte. 
+formulaire de création d’objet, accessibles dans le mode Carte.
 
-Un objet métier permet donc de gérer des données vectorielles stockées en base. 
+Un objet métier permet donc de gérer des données vectorielles stockées en base.
 
 Le mode Développement permet l’ajout, l’édition et la suppression
 d’objets métier.
@@ -64,7 +64,7 @@ Renseigner les champs suivants :
 ~~~~~~~~~~~~~~~~
 
 Pour chaque objet métier, plusieurs formulaires sont utilisables et
-paramétrables : 
+paramétrables :
 
 3.1.1. Formulaire de recherche de l’objet métier (search)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -101,7 +101,7 @@ en édition.
 
 Utilisable par les personnes ayant des **droit en insertion** sur la
 table liée et accessible par le bouton **"Éditer les attributs"**, il
-permet à l'utilisateur de créer un objet et de renseigner ses attributs.  
+permet à l'utilisateur de créer un objet et de renseigner ses attributs.
 
 .. figure:: ../../images/formulaire_insert.png
    :alt: image
@@ -112,7 +112,7 @@ permet à l'utilisateur de créer un objet et de renseigner ses attributs.
 Afin d'administrer ces formulaires pouvant être très complexes, un studio a été developpé pour gérer
 graphiquement les différents formulaires des objets métier.
 
-Le studio est accessible via la section Formulaire après avoir édité un objet métier. 
+Le studio est accessible via la section Formulaire après avoir édité un objet métier.
 
 .. figure:: ../../images/formulaire_studio.png
    :alt: image
@@ -158,11 +158,11 @@ des formulaires :
 3.2.2.1. La zone d'administration du fichier
 ''''''''''''''''''''''''''''''''''''''''''''
 
-Il s'agit d'une des zones fondamentales car elle permet la sauvegarde et l'affichage des fichiers. 
+Il s'agit d'une des zones fondamentales car elle permet la sauvegarde et l'affichage des fichiers.
 
-Il existe trois types de formulaires : 
+Il existe trois types de formulaires :
 
-- le **formulaire par défaut**, formulaire généré automatiquement. Le développeur peut choisir de conserver en l'état ce formulaire ou de le personnaliser. 
+- le **formulaire par défaut**, formulaire généré automatiquement. Le développeur peut choisir de conserver en l'état ce formulaire ou de le personnaliser.
 
 - le **formulaire publié**, formulaire en cours d'utilisation dans l'application
 
@@ -171,7 +171,7 @@ Il existe trois types de formulaires :
 .. figure:: ../../images/formulaire_zone_fichier.png
    :alt: image
 
-Pour modifier un formulaire, l'administrateur clique sur le bouton 
+Pour modifier un formulaire, l'administrateur clique sur le bouton
 **Perso** puis  sélectionne le type de formulaire sur lequel il veut
 travailler (display, search, update, insert). Il édite ce dernier et **publie le formulaire personnalisé** car sans cela
 les modifications ne seraient pas visibles par les utilisateurs finaux.
@@ -180,7 +180,7 @@ Le menu déroulant **Fichier** permet de gérer les
 versions des formulaires (publier le formulaire personnalisé, régénérer
 le formulaire par défaut etc..)
 
-Le menu déroulant **Édition> Gestion des onglets** permet d'agencer le  formulaire en répartissant les attributs sur plusieurs onglets. 
+Le menu déroulant **Édition> Gestion des onglets** permet d'agencer le  formulaire en répartissant les attributs sur plusieurs onglets.
 
 3.2.2.2. La zone de prévisualisation
 ''''''''''''''''''''''''''''''''''''
@@ -197,7 +197,7 @@ JSON ainsi que l'ajout de JavaScript au formulaire.
 
 .. note::
 
-    Les onglets ne sont volontairement pas affichés dans cette zone. Ils sont affichés lors de l'utilisation réelle du formulaire. 
+    Les onglets ne sont volontairement pas affichés dans cette zone. Ils sont affichés lors de l'utilisation réelle du formulaire.
 
 3.2.2.3. La zone de gestion de mise en page
 '''''''''''''''''''''''''''''''''''''''''''
@@ -208,8 +208,8 @@ attributs, et via la case "Voir / modifier les lignes", il peut regrouper plusie
 .. figure:: ../../images/formulaire_zone_attributs.png
    :alt: image
 
-Le bouton **Sources de données** en bas de zone,  permet la configuration des attributs de type liste. 
-En savoir plus sur le  `Gestionnaire  de source de 
+Le bouton **Sources de données** en bas de zone,  permet la configuration des attributs de type liste.
+En savoir plus sur le  `Gestionnaire  de source de
 données <cas_utilisation_studio.html>`__
 
 
