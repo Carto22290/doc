@@ -12,7 +12,7 @@ Deux profils d’utilisateurs sont à distinguer :
 
 ## 1. Création d'utilisateurs et de groupes PostgreSQL
 
-Le mode ‘Utilisateurs &gt; Onglet Utilisateurs’ liste l’ensemble des
+Le mode Utilisateurs > Onglet Utilisateurs liste l’ensemble des
 utilisateurs. Il permet l’ajout de nouveaux utilisateurs, leur édition
 et suppression. Après avoir cliqué sur ‘Ajouter un utilisateur’, le
 formulaire suivant s’affiche :
@@ -32,7 +32,7 @@ mots de passe des utilisateurs ne pourront pas être changés.
 
 ### 2.1 Ajout de domaines Active Directory
 
-Le mode ‘Utilisateurs&gt; Onglet Domaines’ liste les domaines Active
+Le mode Utilisateurs > Onglet Domaines liste les domaines Active
 Directory. Il permet de créer, modifier et supprimer des domaines. Le
 bouton ‘Ajouter un Domaine’ affiche le formulaire suivant.
 
@@ -73,33 +73,33 @@ pg_hba.conf situé dans le dossier data.
 Avant modification vous devriez avoir la configuration suivante :
 
 ```
-host    all        u_scheduler      127.0.0.1/32            trust
-host    all        +superusers      127.0.0.1/32            md5
-host    all        all              127.0.0.1/32            md5
+host    all     u_scheduler         127.0.0.1/32    trust
+host    all     +superusers         127.0.0.1/32    md5
+host    all     all                 127.0.0.1/32    md5
 # IPv6 local connections:
-host    all        u_scheduler      ::1/128                 trust
-host    all        +superusers      ::1/128                 md5
-host    all        all              ::1/128                 md5
+host    all     u_scheduler         ::1/128         trust
+host    all     +superusers         ::1/128         md5
+host    all     all                 ::1/128         md5
 ```
 
 Vous devez rajouter les deux lignes suivantes :
 
 ```
-host    all         +gtf_nomdomaine  127.0.0.1/32       ldap ldapserver=nomduserveur ldapprefix=""
-host    all         +gtf_nomdomaine  ::1/128            ldap ldapserver=nomduserveur ldapprefix=""
+host    all     +gtf_nomdomaine     127.0.0.1/32    ldap ldapserver=nomduserveur ldapprefix=""
+host    all     +gtf_nomdomaine     ::1/128         ldap ldapserver=nomduserveur ldapprefix=""
 ```
 
 Pour obtenir :
 
 ```
-host    all         u_scheduler     127.0.0.1/32            trust
-host    all         +superusers     127.0.0.1/32            md5
-host    all         +gtf_nomdomaine 127.0.0.1/32            ldap ldapserver=nomduserveur ldapprefix=""
-host    all         all             127.0.0.1/32            md5
+host    all      u_scheduler        127.0.0.1/32    trust
+host    all      +superusers        127.0.0.1/32    md5
+host    all      +gtf_nomdomaine    127.0.0.1/32    ldap ldapserver=nomduserveur ldapprefix=""
+host    all      all                127.0.0.1/32    md5
 # IPv6 local connections:
-host    all         u_scheduler     ::1/128                 trust
-host    all         +superusers     ::1/128                 md5
-host    all         +gtf_nomdomaine ::1/128                 ldap ldapserver=nomduserveur ldapprefix=""
+host    all      u_scheduler        ::1/128         trust
+host    all      +superusers        ::1/128         md5
+host    all      +gtf_nomdomaine    ::1/128         ldap ldapserver=nomduserveur ldapprefix=""
 ```
 
 ### 2.2 Import d'utilisateurs d'Active Directory

@@ -5,7 +5,7 @@
 ## 1. Définition
 
 Le mode visualisation cartographique, accessible aux utilisateurs en
-ayant droits (vmap\_user) permet l'affichage des cartes. La liste des
+ayant droits (vmap_user) permet l'affichage des cartes. La liste des
 cartes disponibles pour l'utilisateur connecté dépend des groupes
 auxquels il appartient.
 

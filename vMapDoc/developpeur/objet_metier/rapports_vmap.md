@@ -228,7 +228,7 @@ Exemple :
 ## 4. Exemple complet
 
 Ci-dessous un exemple complet actuellement visible sur
-[https://demo.veremes.net/vmap/?map\\_id=29](https://demo.veremes.net/vmap/?map_id=29).
+[https://demo.veremes.net/vmap/?map_id=29](https://demo.veremes.net/vmap/?map_id=29).
 Dans cet exemple, un projet d'éclairage public contient deux entités :
 
 -   les routes

@@ -14,7 +14,7 @@ onglets :
 
 ![](../../images/exemple_studio_onglets.png)
 
-Le gestionnaire d'onglets est accessible via le bouton **Édition &gt;
+Le gestionnaire d'onglets est accessible via le bouton **Édition >
 Gestion des onglets** dans la zone d'administration des formulaires :
 
 ![](../../gestionnaire_onglets.png)
@@ -222,7 +222,7 @@ Trois types de cartes sont disponibles :
 -   **Carte Bing :** carte contenant une couche Bing (nécessite une clé)
 -   **Carte vMap :** carte complexe pouvant contenir plusieurs couches
     et définie par un fichier JSON téléchargeable depuis **Mode
-    vMap &gt; Cartes &gt; Gestion des cartes &gt; Ma carte &gt;
+    vMap > Cartes > Gestion des cartes > Ma carte >
     Télécharger**
 
 Une fois la carte sélectionnée, l'administrateur peut définir l'emprise

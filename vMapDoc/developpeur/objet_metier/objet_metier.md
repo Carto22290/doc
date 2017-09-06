@@ -159,7 +159,7 @@ Le menu déroulant **Fichier** permet de gérer les versions des
 formulaires (publier le formulaire personnalisé, régénérer le formulaire
 par défaut etc..)
 
-Le menu déroulant **Édition&gt; Gestion des onglets** permet d'agencer
+Le menu déroulant **Édition> Gestion des onglets** permet d'agencer
 le formulaire en répartissant les attributs sur plusieurs onglets.
 
 ##### 3.2.2.2. La zone de prévisualisation
