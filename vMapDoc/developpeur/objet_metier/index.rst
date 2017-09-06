@@ -8,7 +8,6 @@ Objet métiers
 ====================================
 
 .. toctree::
-   :caption: Sommaire
    :maxdepth: 2
 
  objet_metier
