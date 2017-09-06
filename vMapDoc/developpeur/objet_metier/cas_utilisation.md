@@ -17,7 +17,7 @@ onglets :
 Le gestionnaire d'onglets est accessible via le bouton **Édition >
 Gestion des onglets** dans la zone d'administration des formulaires :
 
-![](../../gestionnaire_onglets.png)
+![](../../images/gestionnaire_onglets.png)
 
 Une fois l'outil affiché, il est possible de cocher ou décocher les
 attributs à afficher sur les différents onglets tout en ayant un aperçu

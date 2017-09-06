@@ -1,6 +1,6 @@
 # Onglet objets métiers
 
-![](../../liste_objets_metier.png)
+![](../../images/liste_objets_metier.png)
 
 ## 1. Définition
 
@@ -24,16 +24,16 @@ La création d’un objet métier s’opère en deux temps :
 
 ## 2. Création d’un objet métier
 
-![](../../creation_objet_metier.png)
+![](../../images/creation_objet_metier.png)
 
 Renseigner les champs suivants :
 
 -   Titre : nom de l’objet métier tel qu’il apparaîtra dans le requêteur
     et dans le formulaire de création d’objet
 
-![](../../lampe_requeteur.png)
+![](../../images/lampe_requeteur.png)
 
-![création d'objet](../../lampe_creation.png)
+![création d'objet](../../images/lampe_creation.png)
 
 -   Champs id : champ identifiant de la table.
 -   Base de données : nom de la base de données à laquelle se connecter
@@ -42,12 +42,12 @@ Renseigner les champs suivants :
 -   SQL Summary : requête SQL pour définir les champs à afficher dans
     l’infobulle d’un objet :
 
-![](../../infobulle.png)
+![](../../images/infobulle.png)
 
 -   SQL List : requête SQL pour définir les champs à afficher dans la
     liste des objets sélectionnés du requêteur :
 
-![](../../liste_requeteur.png)
+![](../../images/liste_requeteur.png)
 
 ## 3. Formulaires
 
