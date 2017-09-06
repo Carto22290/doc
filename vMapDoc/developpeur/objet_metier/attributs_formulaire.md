@@ -1,6 +1,6 @@
 # Attributs de formulaire
 
-# 1. Définition
+## 1. Définition
 
 Les attributs d'un formulaire peuvent être créés, édités et supprimés
 dans le studio. Certains attributs exploitent des valeurs issues de base
@@ -15,9 +15,9 @@ fenêtre de définition en bas à gauche du studio.
 >
 > Un nom d'attribut ne peut pas contenir d'espace.
 
-# 2. Édition des attributs
+## 2. Édition des attributs
 
-## 2.1. Bouton radio
+### 2.1. Bouton radio
 
 ![](../../images/bouton_radio1.png)
 
@@ -29,7 +29,7 @@ en entrant le libellé du bouton et la valeur envoyée en base. Le bouton
 
 ![](../../images/bouton_radio.png)
 
-## 2.2. Boîte à cocher
+### 2.2. Boîte à cocher
 
 ![](../../images/boite_a_cocher1.png)
 
@@ -38,12 +38,12 @@ formulaire. Définir si la boîte doit être cochée par défaut ou pas.
 
 ![](../../images/boite_a_cocher.png)
 
-## 2.3. Paramètres de type Carte Bing, OSM, vMap
+### 2.3. Paramètres de type Carte Bing, OSM, vMap
  vMap permet d'exploiter les services
 web OSM, Bing Maps ou Vitis vMap pour personnaliser un formulaire en
 exploitant leurs ressources cartographiques.
 
-### 2.3.1. Carte OSM
+#### 2.3.1. Carte OSM
 
 ![Carte OSM](../../images/carte_osm.png)
 
@@ -90,7 +90,7 @@ affichés sur la carte du formulaire de demande :
 
 ![](../../images/c_formulaire_carteOSM.png)
 
-### 2.3.2. Carte Bing
+#### 2.3.2. Carte Bing
 
 ![image](../../images/c_formulaire_carte_bing.png)
 
@@ -108,7 +108,7 @@ carte à afficher dans le formulaire de demande :
 -   Aerial WithLabels
 -   Road
 
-### 2.3.3. carte vMap
+#### 2.3.3. carte vMap
 
 ![Carte vMap](../../images/carte_vmap.png)
 
@@ -123,13 +123,13 @@ Procéder ensuite de la même façon qu'avec les autres ressources de type
 carte, en nommant le paramètre et son libellé, puis en paramétrant
 l'affichage des outils propres aux cartes.
 
-## 2.6. Champ caché
+### 2.6. Champ caché
 
 Un attribut de type Champ caché permet de masquer un attribut. Il est
 exploité dans le formulaire mais n'est pas apparent. Nommer le paramètre
 et définir la valeur à exploiter.
 
-## 2.7. Couleur
+### 2.7. Couleur
 
 ![Attribut de type sélecteur de couleur](../../images/selecteur_couleur.png)
 
@@ -137,7 +137,7 @@ Un attribut de tye Choix de la couleur insère un sélecteur de couleurs.
 Nommer le paramètre et le libellé à afficher dans le formulaire, et
 définir la couleur par défaut.
 
-## 2.8. Curseur
+### 2.8. Curseur
 
 Un attribut de tye curseur insère un curseur dans le formulaire. Nommer
 le paramètre et le libellé à afficher et définir les valeurs minimales
@@ -145,9 +145,9 @@ et maximales de la plage de données ainsi que la valeur par défaut.
 
 ![Attribut de type curseur](../../images/curseur.png)
 
-## 2.9. Paramètres de type Date
+### 2.9. Paramètres de type Date
 
-### 2.9.1. Date
+#### 2.9.1. Date
 
 Un attribut de type Date insère une date sous la forme jj/mm/aaaa. Un
 calendrier s'affiche dans le formulaire pour faciliter la date à entrer.
@@ -157,7 +157,7 @@ défaut.
 
 ![Attribut de type curseur](../../images/date.png)
 
-### 2.9.2. Date/heure
+#### 2.9.2. Date/heure
 
 Un attribut de type Date et heure insère une date sous la forme
 jj/mm/aaaa hh:mm. Un calendrier et une montre facilite la saisie la date
@@ -166,29 +166,29 @@ et del'heure dans le formulaire.
 Nommer le paramètre et le libellé à afficher et définir la valeur par
 défaut.
 
-## 2.10. Document - objet métier
+### 2.10. Document - objet métier
 
-## 2.12. Décimal
+### 2.12. Décimal
 
-## 2.13. Editeur de code CodeMirror
+### 2.13. Editeur de code CodeMirror
 
-## 2.14. Entier
+### 2.14. Entier
 
-## 2.15. Grille objet métier
+### 2.15. Grille objet métier
 
-## 2.16. Grille section vitis
+### 2.16. Grille section vitis
 
-## 2.17. Image Objet métier
+### 2.17. Image Objet métier
 
-## 2.18. Image URL
+### 2.18. Image URL
 
-## 2.19. Interface bouton
+### 2.19. Interface bouton
 
-## 2.20. Interface ligne de séparation
+### 2.20. Interface ligne de séparation
 
-## 2.21. Label
+### 2.21. Label
 
-## 2.22. Lien
+### 2.22. Lien
 
 ![Attribut de type curseur](../../images/lien.png)
 
@@ -201,6 +201,6 @@ Définir ensuite les paramètres du lien :
 -   Cible : si laissé vide, la page s'ouvre dans un nouvel onglet.
 -   Valeur : adresse du lien
 
-## 2.23. Liste
+### 2.23. Liste
 
-## 2.24. Texte
+### 2.24. Texte

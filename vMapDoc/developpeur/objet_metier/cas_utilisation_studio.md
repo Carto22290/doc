@@ -3,7 +3,7 @@
 Ce document décrit des exemples d'utilisation du studio utiles pour
 comprendre son fonctionnement ainsi que l'intégralité de l'application.
 
-# 1. Personnalisation d'un formulaire : répartition d'attributs sur plusieurs onglets
+## 1. Personnalisation d'un formulaire : répartition d'attributs sur plusieurs onglets
 
 L'exemple ci-dessous illustre l'agencement d'un formulaire en deux
 onglets :
@@ -32,14 +32,14 @@ déplacer des onglets en cliquant sur leur nom.
 **Remarque** : un attribut peut se situer sur plusieurs onglets à la
 fois, ceci peut être utile pour afficher un label.
 
-# 2. Personnalisation d'un formulaire : insertion d'un attribut de type lien
+## 2. Personnalisation d'un formulaire : insertion d'un attribut de type lien
 
 Il est souvent utile, lors de l'utilisation d'un objet métier, de mettre
 en place des liens vers d'autres plateformes.
 
 Dans vMap ceci est possible à deux endroits distincts :
 
-## 2.1. Dans l'info-bulle d'un objet
+### 2.1. Dans l'info-bulle d'un objet
 
 ![](../../images/exemple_studio_lien_1.png)
 
@@ -70,7 +70,7 @@ On peut également définir l'attribut *target* qui permet de choisir un
 nouvel onglet à chaque fois si on donne pour valeur "*\_blank*" ou alors
 de stipuler un nom pour utiliser toujours le même onglet.
 
-## 2.2. Dans le formulaire
+### 2.2. Dans le formulaire
 
 ![](../../images/exemple_studio_lien_2.png)
 
@@ -83,7 +83,7 @@ insérant un attribut de type *"Lien"* et en utilisant les fonction
 En utilisant les champs *"Texte"* et *"Cible"* on peut également
 modifier le texte à afficher ainsi que l'onglet cible.
 
-# 3. Utilisation du gestionnaire de source de données : insertion d'une liste déroulante
+## 3. Utilisation du gestionnaire de source de données : insertion d'une liste déroulante
 
 Le gestionnaire de sources de données permet la création, l'édition et
 la suppression de sources de données à associer à des attributs de type:
@@ -130,7 +130,7 @@ lampe en édition. Chaque route est définie par un identifiant numérique
 
 ![](../../images/exemple_studio_datasource_9.png)
 
-## 3.1. Source de données de type texte
+### 3.1. Source de données de type texte
 
 Le type texte permet de renseigner soi-même le contenu de la source de
 données.
@@ -146,7 +146,7 @@ fois que l'on veut, en allant à la ligne pour chaque élément.
 
 ![](../../images/exemple_studio_datasource_4.png)
 
-## 3.2. Source de données de type valeurs d'une table locale
+### 3.2. Source de données de type valeurs d'une table locale
 
 Type utilisé lors de l'exemple précédent, il permet d'aller directement
 chercher en base de données (sur le serveur en cours) le contenu d'une
@@ -167,7 +167,7 @@ formulaire aient des droits en consultation sur la table.**
 
 ![](../../images/exemple_studio_datasource_5.png)
 
-## 3.3. Source de données de Type service web
+### 3.3. Source de données de Type service web
 
 Parfois, le type "*Valeurs d'une table locale*" ne suffit pas car on
 veut utiliser une ressource d'un service web précédemment créé, afin
@@ -179,7 +179,7 @@ de type "*GET*" à la ressource en question.
 
 ![](../../images/exemple_studio_datasource_6.png)
 
-## 3.4. Source de données de type objet métier
+### 3.4. Source de données de type objet métier
 
 Il est également possible d'interroger directement un objet métier selon
 une des trois solutions suivantes :
@@ -193,7 +193,7 @@ une des trois solutions suivantes :
 
 ![](../../images/exemple_studio_datasource_7.png)
 
-## 3.5. Source de données de type base de données externe
+### 3.5. Source de données de type base de données externe
 
 Plus complexe mais plus puissant, ce type de source permet d'interroger
 des bases de données d'un serveur externe selon un login et un mot de
@@ -205,7 +205,7 @@ information.
 
 ![](../../images/exemple_studio_datasource_8.png)
 
-# 4. Personnalisation d'un formulaire : insertion d'un attribut de type carte
+## 4. Personnalisation d'un formulaire : insertion d'un attribut de type carte
 
 Le studio permet d'exploiter les services web OSM, Bing Maps ou Vitis
 vMap pour personnaliser un formulaire en exploitant leurs ressources
@@ -236,7 +236,7 @@ graphiquement via les boites à cocher de la zone "*Définition*".
 
 ![](../../images/exemple_studio_carte_3.png)
 
-# 5. Personnalisation d'un formulaire : insertion d'un champ de chargement de Document/Image
+## 5. Personnalisation d'un formulaire : insertion d'un champ de chargement de Document/Image
 
 Il est possible d'associer des documents ainsi que des images aux
 enregistrements liés à un objet métier en utilisant respectivement les
@@ -262,7 +262,7 @@ leur nom est stocké en base :
 plusieurs fichiers doivent être téléversés, il faut créer plusieurs
 attributs ou sinon les compresser dans un fichier .zip
 
-# 6. Personnalisation d'un formulaire : insertion d'une grille de sous-objets
+## 6. Personnalisation d'un formulaire : insertion d'une grille de sous-objets
 
 Il est assez régulier d'avoir plusieurs objets métiers qui dépendent les
 uns des autres. Dans ce cas, il est très utile lors de l'édition d'un
@@ -288,7 +288,7 @@ parent.
 
 ![](../../images/exemple_studio_grille_2.png)
 
-# 7. Edition de JavaScript associé à un formulaire : opérer une conversion rgb/rgba
+## 7. Edition de JavaScript associé à un formulaire : opérer une conversion rgb/rgba
 
 vMap est un logiciel personnalisable. Il peut être utilise d'associer du
 code JavaScript aux différents formulaires.
@@ -523,14 +523,14 @@ De cette façon, écrire le code complet :
 };
 ```
 
-# 8. Personnalisation d'un formulaire : insertion d'une fonction appelée depuis un Bouton - événement JavaScript
+## 8. Personnalisation d'un formulaire : insertion d'une fonction appelée depuis un Bouton - événement JavaScript
 
 L'exemple précédent illustre la façon dont intégrer du code dans un
 formulaire objet métier via "*constructor\_form*". Dans ce nouvel
 exemple, une fonction appelée depuis un bouton dans l'interface est
 créée.
 
-# 8.1. Bouton Hello world
+## 8.1. Bouton Hello world
 
 Dans une première partie, une popup "Hello world" est affichée lors du
 clic sur le bouton. Il faut pour cela ajouter un attribut de type
@@ -572,7 +572,7 @@ Voici le résultat côté client :
 
 ![](../../images/exemple_studio_button_2.png)
 
-# 8.2. Bouton Ajax
+## 8.2. Bouton Ajax
 
 Dans une deuxième partie, une requête Ajax est effectuée lors du clic
 sur le bouton. Elle permettra de récupérer les routes dont l'auteur est

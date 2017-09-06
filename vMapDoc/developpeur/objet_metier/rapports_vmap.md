@@ -2,7 +2,7 @@
 
 ![](../../images/liste_rapports_objets_metier.png)
 
-# 1. Définition
+## 1. Définition
 
 Un rapport sur un objet métier permet de générer des fichiers au format
 .pdf ou .doc sur les informations relative à un un objet sélectionné
@@ -22,7 +22,7 @@ informations de chacun des éléments est généré.
 
 ![](../../images/exemple_rapport_pdf.png)
 
-# 2. Utilisation
+## 2. Utilisation
 
 Pour générer un rapport sur objet métier, sélectionner un objet sur la
 carte en cliquant dessus, l'ajouter au panier, puis sélectionner les
@@ -31,7 +31,7 @@ rapport voulu.
 
 ![](../../images/creation_rapport_vmap.png)
 
-# 3. Administration
+## 3. Administration
 
 L'onglet Rapports du menu Développement permet la création, l'édition et
 la suppression de rapports.
@@ -50,7 +50,7 @@ Dans l'interface d'administration renseigner les éléments suivants :
 
 ![](../../images/administration_rapports.png)
 
-## 3.1. Configuration de la définition HTML
+### 3.1. Configuration de la définition HTML
 
 Le bloc de défintion HTML permet de configurer la mise en page du
 rapport. Il est recommandé de procéder en trois parties :
@@ -60,7 +60,7 @@ rapport. Il est recommandé de procéder en trois parties :
 -   le script : balise script qui lance du JavaScript lors de la
     génération (gestion des sauts de page, par exemple).
 
-### 3.1.1. Utilisation des variables
+#### 3.1.1. Utilisation des variables
 
 Dans le corps, la librairie AngularJS est accessible, c'est à dire que
 l'on peut utiliser la syntaxe suivante pour afficher le contenu d'une
@@ -91,7 +91,7 @@ d'une route :
 </div>
 ```
 
-### 3.1.2. Affichage de la carte dans un rapport
+#### 3.1.2. Affichage de la carte dans un rapport
 
 Si on veut afficher une ou plusieurs cartes dans un rapport, créer dans
 une première partie, une balise image avec l'"id" de son choix (il est
@@ -108,7 +108,7 @@ référer à la partie [3.2.1. Configuration des cartes à utiliser dans le
 template
 HTML](#3.2.1-configuration-des-cartes-a-utiliser-dans-le-template-html)
 
-## 3.2. Configuration des objets JSON
+### 3.2. Configuration des objets JSON
 
 Pour bien configurer un rapport, il est utile de configurer la partie
 Objets JSON. Le but est de pouvoir ajouter des cartes au rapport,
@@ -143,7 +143,7 @@ Exemple:
 }]
 ```
 
-### 3.2.1 Configuration des cartes à utiliser dans le template HTML
+#### 3.2.1 Configuration des cartes à utiliser dans le template HTML
 
 On peut inclure des cartes dans les formulaires en utilisant des objets
 de type "map" avec les paramètres suivants :
@@ -171,7 +171,7 @@ Ici on vient afficher le(s) objets métier sur la carte 120 dans la
 balise image "\#map\_image" tout en mettant son échelle dans la variable
 "map\_scale".
 
-### 3.2.2. Configuration des webservices
+#### 3.2.2. Configuration des webservices
 
 On peut demander à effectuer des requêtes vers des webservices vMap
 (PHP) pour afficher le résultat dans la vue HTML au travers de variables
@@ -206,7 +206,7 @@ d'interroger de façon générique des tables. Avec cet appel et en
 utilisant les doubles accolades {{BO.route\_id}}, l'ensemble des lampes
 contenues dans la route sont affichées.
 
-### 3.2.2. Configuration des images
+#### 3.2.2. Configuration des images
 
 On peut afficher des images pré-définies en utilisant le type image et
 les paramètres suivants :
@@ -225,7 +225,7 @@ Exemple :
 }
 ```
 
-# 4. Exemple complet
+## 4. Exemple complet
 
 Ci-dessous un exemple complet actuellement visible sur
 [https://demo.veremes.net/vmap/?map\\\_id=29](https://demo.veremes.net/vmap/?map\_id=29).
@@ -236,7 +236,7 @@ Dans cet exemple, un projet d'éclairage public contient deux entités :
 
 Chaque lampe est associée à une route
 
-## 4.1 Définition HTML
+### 4.1 Définition HTML
 
 ``` html
 <!--Style-->
@@ -420,7 +420,7 @@ setTimeout(function () {
 </script>
 ```
 
-## 4.2. Objets JSON
+### 4.2. Objets JSON
 
 ``` json
 [{
