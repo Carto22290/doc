@@ -47,6 +47,13 @@ templates_path = ['_templates']
 # You can specify multiple suffix as a list of string:
 #
 # source_suffix = ['.rst', '.md']
+
+from recommonmark.parser import CommonMarkParser
+
+source_parsers = {
+    '.md': CommonMarkParser,
+}
+
 source_suffix = ['.rst', '.md']
 
 # The master toctree document.
@@ -54,9 +61,8 @@ master_doc = 'index'
 
 # General information about the project.
 project = u'vmap_doc'
-#copyright = u'2017, espada'
-copyright = u'2017, M Espada'
-author = u'M Espada'
+copyright = u'2017, Veremes'
+author = u'Veremes'
 
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the
@@ -137,7 +143,7 @@ latex_elements = {
 #  author, documentclass [howto, manual, or own class]).
 latex_documents = [
     (master_doc, 'vmap_doc.tex', u'vmap\\_doc Documentation',
-     u'espada', 'manual'),
+     u'Veremes', 'manual'),
 ]
 
 
