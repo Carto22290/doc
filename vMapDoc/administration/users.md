@@ -30,7 +30,7 @@ organisme.   L’administrateur crée le nouveau domaine, puis importe les
 utilisateurs et les groupes. L’attribution des groupes ainsi que les
 mots de passe des utilisateurs ne pourront pas être changés.
 
-### 2.1 Ajout de domaines Active Directory
+### 2.1. Ajout de domaines Active Directory
 
 Le mode Utilisateurs > Onglet Domaines liste les domaines Active
 Directory. Il permet de créer, modifier et supprimer des domaines. Le
@@ -102,7 +102,7 @@ host    all      +superusers        ::1/128         md5
 host    all      +gtf_nomdomaine    ::1/128         ldap ldapserver=nomduserveur ldapprefix=""
 ```
 
-### 2.2 Import d'utilisateurs d'Active Directory
+### 2.2. Import d'utilisateurs d'Active Directory
 
 Dans l'onglet Utilisateurs, le bouton « Importer de l’AD » permet
 d’importer des utilisateurs à partir d’un serveur Active Directory. Une
@@ -112,7 +112,7 @@ précédemment créé.   Une fois la connexion effectuée, l’administrateur
 peut soit naviguer dans l’arborescence de l’annuaire du domaine, soit
 effectuer une recherche à partir de critères.
 
-## 3 Gestion des privilèges
+## 3. Gestion des privilèges
 
 Les privilèges préfixés par "vitis_" correspondent aux droits propres
 au socle de développement Vitis :
