@@ -172,7 +172,7 @@ formulaire aient des droits en consultation sur la table.**
 Parfois, le type "*Valeurs d'une table locale*" ne suffit pas car on
 veut utiliser une ressource d'un service web précédemment créé, afin
 d'effectuer des requêtes complexes. On peut aussi souhaiter se servir
-d'un services de l'application.
+d'un service de l'application.
 
 Pour cela, on utilise le type "*Service web*" qui effectue une requête
 de type "*GET*" à la ressource en question.
